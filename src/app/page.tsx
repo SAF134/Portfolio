@@ -1,7 +1,7 @@
 import React from "react";
 import { FloatingNavbar } from "@/components/navigation/FloatingNavbar";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { AboutSection } from "@/components/sections/AboutSection";
+import { EducationSection } from "@/components/sections/EducationSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
@@ -17,7 +17,7 @@ export default function Home() {
       {/* Main Single Page Sections */}
       <main className="flex-1 w-full">
         <HeroSection />
-        <AboutSection />
+        <EducationSection />
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />

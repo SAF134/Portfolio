@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Home,
-  User,
+  GraduationCap,
   Briefcase,
   FolderGit2,
   Mail,
@@ -19,7 +19,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { id: "beranda", label: "Beranda", icon: Home },
-  { id: "tentang", label: "Tentang", icon: User },
+  { id: "pendidikan", label: "Pendidikan", icon: GraduationCap },
   { id: "pengalaman", label: "Pengalaman", icon: Briefcase },
   { id: "proyek", label: "Proyek", icon: FolderGit2 },
   { id: "kontak", label: "Kontak", icon: Mail },

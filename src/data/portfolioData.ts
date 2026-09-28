@@ -39,6 +39,16 @@ export interface CertificateItem {
   image: string;
 }
 
+export interface EducationItem {
+  id: string;
+  degree: string;
+  field: string;
+  institution: string;
+  period: string;
+  grade?: string;
+  description?: string;
+}
+
 export interface PortfolioData {
   profile: {
     fullName: string;
@@ -59,6 +69,7 @@ export interface PortfolioData {
   };
   skills: SkillItem[];
   experiences: ExperienceItem[];
+  education: EducationItem[];
   projects: ProjectItem[];
   certificates: CertificateItem[];
 }
@@ -132,6 +143,18 @@ export const portfolioData: PortfolioData = {
         "Merombak antarmuka lama menggunakan Tailwind CSS, menciptakan aplikasi yang responsif dan intuitif bagi eksekutif kantor maupun staf lapangan.",
       ],
       technologies: ["Laravel", "ReactJS", "Tailwind CSS", "MySQL", "PostgreSQL"],
+    },
+  ],
+  education: [
+    {
+      id: "unsika",
+      degree: "Sarjana Komputer (S.Kom.)",
+      field: "Sistem Informasi",
+      institution: "Universitas Singaperbangsa Karawang",
+      period: "2022 – 2026",
+      grade: "Lulusan Cumlaude",
+      description:
+        "Fokus pada rekayasa perangkat lunak, pengembangan aplikasi web skala industri, dan manajemen basis data relasional.",
     },
   ],
   projects: [
