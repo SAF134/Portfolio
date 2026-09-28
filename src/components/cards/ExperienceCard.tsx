@@ -85,9 +85,10 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
           {experience.technologies.map((tech) => (
             <span
               key={tech}
-              className="px-3 py-1 text-xs font-medium rounded-full bg-zinc-100 border border-[#E4E4E7] text-[#09090B]"
+              className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full bg-zinc-100 border border-[#E4E4E7] text-[#09090B]"
             >
-              {tech}
+              <span className="w-1.5 h-1.5 rounded-full bg-zinc-900 shrink-0" />
+              <span>{tech}</span>
             </span>
           ))}
         </div>
