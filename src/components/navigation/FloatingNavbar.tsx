@@ -7,7 +7,6 @@ import {
   GraduationCap,
   Briefcase,
   FolderGit2,
-  Mail,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -22,7 +21,6 @@ const navItems: NavItem[] = [
   { id: "pendidikan", label: "Pendidikan", icon: GraduationCap },
   { id: "pengalaman", label: "Pengalaman", icon: Briefcase },
   { id: "proyek", label: "Proyek", icon: FolderGit2 },
-  { id: "kontak", label: "Kontak", icon: Mail },
 ];
 
 export function FloatingNavbar() {

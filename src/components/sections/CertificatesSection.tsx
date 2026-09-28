@@ -8,7 +8,7 @@ export function CertificatesSection() {
   const { certificates } = portfolioData;
 
   return (
-    <section id="sertifikat" className="py-20 md:py-28 bg-[#F8F8F8] border-y border-[#E4E4E7]">
+    <section id="sertifikat" className="pt-20 md:pt-28 pb-28 md:pb-28 bg-[#F8F8F8] border-y border-[#E4E4E7]">
       <div className="max-w-6xl w-full mx-auto px-6 md:px-12">
         {/* Section Heading */}
         <div className="text-center mb-12 md:mb-16">
