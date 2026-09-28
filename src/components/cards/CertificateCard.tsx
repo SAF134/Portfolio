@@ -51,14 +51,6 @@ export function CertificateCard({ certificate, index, className, onClick }: Cert
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-300 ease-out"
             />
-
-            {/* Hover overlay hint */}
-            <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center pointer-events-none">
-              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-sm text-[#09090B] text-xs font-semibold shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-200">
-                <Maximize2 className="w-3.5 h-3.5" />
-                <span>Lihat Detail</span>
-              </div>
-            </div>
           </>
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-50 text-zinc-400 p-4 text-center">
