@@ -127,9 +127,20 @@ export const portfolioData: PortfolioData = {
     { name: "Google Stitch", category: "tools", slug: "googlestitch" },
     { name: "Figma", category: "tools", slug: "figma" },
     { name: "Node.js", category: "backend", slug: "nodedotjs" },
-    { name: "Git", category: "tools", slug: "git" },
   ],
   experiences: [
+    {
+      id: "proyek dosen",
+      role: "Mobile Developer",
+      company: "Universitas Telkom",
+      period: "2025 – 2026",
+      location: "Jl. Telekomunikasi No. 1, Terusan Buahbatu, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257.",
+      bulletPoints: [
+        "Merancang dan membangun aplikasi mobile berbasis Flutter untuk memantau status pengisian daya dan daya yang masuk secara real-time.",
+        "Mendesain antarmuka pengguna (UI/UX) yang intuitif dengan visualisasi metrik dan grafik daya untuk memudahkan pemantauan efisiensi pengisian."
+      ],
+      technologies: ["Flutter", "Firebase"],
+    },
     {
       id: "kp",
       role: "Unit Business Service",
@@ -141,7 +152,7 @@ export const portfolioData: PortfolioData = {
         "Berkoordinasi secara aktif dengan tim teknisi lapangan dalam pencatatan progres penanganan tiket layanan dan verifikasi lapangan.",
         "Mengelola serta merekapitulasi data administratif operasional layanan secara terstruktur guna mendukung evaluasi performa unit."
       ],
-      technologies: ["Microsoft Excel"],
+      technologies: ["Spreadsheet", "Infrastructure Excellence to provide Service Assurance (IXSA)", "Beyond Integrated Workforce Management (BIMA)", "Integrated Broadband Diagnostic Center (Ibooster)", "Auto Configuration System Ibooster (ACSIS)", "Operation Supervisory Monitoring (OSM)"],
     },
     {
       id: "organisasi",
@@ -192,7 +203,7 @@ export const portfolioData: PortfolioData = {
       title: "Portal Web Absensi Mata Kuliah",
       description:
         "Platform portal absensi terpusat dengan konsep direktori menyerupai Linktree untuk memudahkan mahasiswa dan dosen mengakses presensi perkuliahan lintas mata kuliah secara efisien.",
-      mockupImage: "/images/projects/mockup-absensi.png",
+      mockupImage: "",
       technologies: ["HTML", "CSS", "JS"],
     },
     {
@@ -200,7 +211,7 @@ export const portfolioData: PortfolioData = {
       title: "KoperGrosir – Landing Page & CMS",
       description:
         "Sebuah situs web landing page profesional yang dilengkapi dengan panel admin (CMS) terintegrasi untuk pengelolaan katalog produk koper grosir, paket bundling, dan pemesanan cepat.",
-      mockupImage: "/images/projects/mockup-kopergrosir.png",
+      mockupImage: "",
       technologies: ["Laravel", "Tailwind CSS", "MySQL", "PHP"],
     },
     {
@@ -208,7 +219,7 @@ export const portfolioData: PortfolioData = {
       title: "Platform Web Profil & Manajemen Dokumen",
       description:
         "Sistem web terpadu untuk pencatatan dan distribusi berkas digital secara aman dan responsif di berbagai perangkat.",
-      mockupImage: "/images/projects/mockup-platform.png",
+      mockupImage: "",
       technologies: ["Laravel", "Tailwind CSS", "MySQL"],
     },
   ],
@@ -218,42 +229,42 @@ export const portfolioData: PortfolioData = {
       title: "Responsive Web Design (300 Hours)",
       issuer: "freeCodeCamp",
       date: "5 Maret 2023",
-      image: "/images/certificates/freecodecamp.png",
+      image: "",
     },
     {
       id: "myskill-uiux",
       title: "UI-UX Research & Design: Fullstack Intensive Bootcamp",
       issuer: "MySkill (Batch 6)",
       date: "4 April 2023",
-      image: "/images/certificates/myskill-uiux.png",
+      image: "",
     },
     {
       id: "codepolitan",
       title: "Belajar Bootstrap CSS Framework",
       issuer: "CODEPOLITAN",
       date: "6 Maret 2024",
-      image: "/images/certificates/codepolitan-bootstrap.png",
+      image: "",
     },
     {
       id: "myskill-react",
       title: "Skill Specialization: Frontend - React",
       issuer: "MySkill",
       date: "5 Februari 2024",
-      image: "/images/certificates/myskill-react.png",
+      image: "",
     },
     {
       id: "vsga-kominfo",
       title: "Junior Web Developer (VSGA)",
       issuer: "Digitalent Kominfo",
       date: "29 Agustus 2023",
-      image: "/images/certificates/digitalent-vsga.png",
+      image: "",
     },
     {
       id: "dicoding",
       title: "Belajar Membuat Front-End Web untuk Pemula",
       issuer: "Dicoding Indonesia",
       date: "6 April 2024",
-      image: "/images/certificates/dicoding-frontend.png",
+      image: "",
     },
   ],
 };

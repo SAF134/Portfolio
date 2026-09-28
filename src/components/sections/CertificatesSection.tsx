@@ -96,8 +96,8 @@ export function CertificatesSection() {
               </button>
             </div>
 
-            {/* Modal Image View */}
-            <div className="relative w-full aspect-[4/3] bg-zinc-100 overflow-hidden">
+            {/* Modal Image View (A4 Landscape 29,7 : 21) */}
+            <div className="relative w-full aspect-[297/210] bg-zinc-100 overflow-hidden">
               <Image
                 src={selectedCert.image}
                 alt={`${selectedCert.title} - ${selectedCert.issuer}`}

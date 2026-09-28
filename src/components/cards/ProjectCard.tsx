@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Image as ImageIcon } from "lucide-react";
 import { GithubIcon } from "@/components/ui/Icons";
 import { ProjectItem } from "@/data/portfolioData";
 import { cn } from "@/lib/utils";
@@ -14,6 +14,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, className }: ProjectCardProps) {
   const hasLinks = Boolean(project.liveUrl || project.repoUrl);
+  const hasImage = Boolean(project.mockupImage && project.mockupImage.trim() !== "");
 
   return (
     <article
@@ -22,15 +23,23 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         className
       )}
     >
-      {/* Mockup Preview Container */}
+      {/* Mockup Preview Container (Strict 16:9 Aspect Ratio) */}
       <div className="relative w-full aspect-[16/9] bg-zinc-100 border-b border-[#E4E4E7] overflow-hidden">
-        <Image
-          src={project.mockupImage}
-          alt={`Pratinjau antarmuka ${project.title}`}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-500 ease-out"
-        />
+        {hasImage ? (
+          <Image
+            src={project.mockupImage}
+            alt={`Pratinjau antarmuka ${project.title}`}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+          />
+        ) : (
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-50 text-zinc-400 p-4 text-center">
+            <ImageIcon className="w-8 h-8 text-zinc-300 mb-1.5" />
+            <span className="text-xs font-mono font-medium text-zinc-500">Rasio 16:9</span>
+            <span className="text-[11px] text-zinc-400 mt-0.5">Siap dimasukkan gambar</span>
+          </div>
+        )}
       </div>
 
       {/* Content Container */}
