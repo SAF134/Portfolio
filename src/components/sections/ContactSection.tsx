@@ -13,11 +13,6 @@ export function ContactSection() {
       <div className="max-w-4xl w-full mx-auto px-6 md:px-12">
         {/* Contact Container Card */}
         <div className="rounded-[32px] bg-[#F8F8F8] border border-[#E4E4E7] p-8 sm:p-12 md:p-16 shadow-[0_4px_20px_rgba(0,0,0,0.03)] text-center flex flex-col items-center">
-          {/* Eyebrow */}
-          <span className="text-xs font-mono font-semibold tracking-widest text-[#71717A] uppercase mb-2">
-            KONTAK RESMI
-          </span>
-
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090B] tracking-tight">
             Hubungi <span className="text-zinc-500">Saya</span>.
           </h2>

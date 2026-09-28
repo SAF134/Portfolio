@@ -62,7 +62,7 @@ export function AboutSection() {
               className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#09090B] text-white hover:bg-zinc-800 text-sm font-semibold tracking-tight shadow-md hover:shadow-lg transition-all duration-150 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
             >
               <Download className="w-4 h-4" />
-              <span>UNDUH CV</span>
+              <span>UNDUH CV SAYA</span>
             </a>
           </div>
         </div>
