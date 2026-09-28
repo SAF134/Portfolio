@@ -13,7 +13,11 @@ interface CertificateCardProps {
 }
 
 export function CertificateCard({ certificate, className, onClick }: CertificateCardProps) {
-  const hasImage = Boolean(certificate.image && certificate.image.trim() !== "");
+  const hasImage = Boolean(
+    certificate.image &&
+    certificate.image.trim() !== "" &&
+    !certificate.image.endsWith("/")
+  );
 
   return (
     <div
@@ -26,7 +30,7 @@ export function CertificateCard({ certificate, className, onClick }: Certificate
           onClick?.();
         }
       }}
-      aria-label={`Sertifikat ${certificate.title}`}
+      aria-label="Lihat pratinjau sertifikat"
       className={cn(
         "group relative flex flex-col rounded-[20px] bg-white border border-[#E4E4E7] overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.03)] transition-all duration-200",
         hasImage
@@ -41,7 +45,7 @@ export function CertificateCard({ certificate, className, onClick }: Certificate
           <>
             <Image
               src={certificate.image}
-              alt={`${certificate.title} - ${certificate.issuer}`}
+              alt="Gambar Sertifikat"
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-300 ease-out"
@@ -66,8 +70,7 @@ export function CertificateCard({ certificate, className, onClick }: Certificate
 
       {/* Screen-reader descriptive caption */}
       <div className="sr-only">
-        <h4>{certificate.title}</h4>
-        <p>Diterbitkan oleh {certificate.issuer} pada {certificate.date}</p>
+        <h4>Sertifikat</h4>
       </div>
     </div>
   );

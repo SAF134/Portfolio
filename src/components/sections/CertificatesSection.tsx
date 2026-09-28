@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { X, Calendar, Award } from "lucide-react";
+import { X } from "lucide-react";
 import { CertificateCard } from "@/components/cards/CertificateCard";
 import { CertificateItem, portfolioData } from "@/data/portfolioData";
 
@@ -56,41 +56,29 @@ export function CertificatesSection() {
       </div>
 
       {/* Certificate Lightbox Modal */}
-      {selectedCert && (
+      {selectedCert && selectedCert.image && (
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={`Detail sertifikat ${selectedCert.title}`}
+          aria-label="Detail sertifikat"
           className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200"
           onClick={() => setSelectedCert(null)}
         >
           <div
-            className="relative max-w-3xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 animate-in zoom-in-95 duration-200"
+            className="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 animate-in zoom-in-95 duration-200"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-center justify-between p-5 sm:p-6 border-b border-[#E4E4E7]">
-              <div>
-                <h3 className="text-base sm:text-lg font-bold text-[#09090B] tracking-tight">
-                  {selectedCert.title}
-                </h3>
-                <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-1.5 text-xs text-[#71717A] font-mono">
-                  <div className="flex items-center gap-1">
-                    <Award className="w-3.5 h-3.5 text-zinc-800" />
-                    <span>{selectedCert.issuer}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 text-zinc-800" />
-                    <span>{selectedCert.date}</span>
-                  </div>
-                </div>
-              </div>
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#E4E4E7]">
+              <span className="text-sm font-semibold text-[#09090B] tracking-tight">
+                Pratinjau Sertifikat
+              </span>
 
               <button
                 type="button"
                 onClick={() => setSelectedCert(null)}
                 aria-label="Tutup pratinjau sertifikat"
-                className="w-10 h-10 rounded-full border border-[#E4E4E7] flex items-center justify-center text-zinc-700 hover:text-black hover:bg-zinc-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 shrink-0"
+                className="w-9 h-9 rounded-full border border-[#E4E4E7] flex items-center justify-center text-zinc-700 hover:text-black hover:bg-zinc-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 shrink-0"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -100,9 +88,9 @@ export function CertificatesSection() {
             <div className="relative w-full aspect-[297/210] bg-zinc-100 overflow-hidden">
               <Image
                 src={selectedCert.image}
-                alt={`${selectedCert.title} - ${selectedCert.issuer}`}
+                alt="Gambar Sertifikat"
                 fill
-                sizes="(max-width: 768px) 100vw, 800px"
+                sizes="(max-width: 1024px) 100vw, 1000px"
                 className="object-contain p-2 sm:p-4"
               />
             </div>

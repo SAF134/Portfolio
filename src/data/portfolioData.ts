@@ -33,9 +33,6 @@ export interface ProjectItem {
 
 export interface CertificateItem {
   id: string;
-  title: string;
-  issuer: string;
-  date: string;
   image: string;
 }
 
@@ -203,7 +200,7 @@ export const portfolioData: PortfolioData = {
       title: "Portal Web Absensi Mata Kuliah",
       description:
         "Platform portal absensi terpusat dengan konsep direktori menyerupai Linktree untuk memudahkan mahasiswa dan dosen mengakses presensi perkuliahan lintas mata kuliah secara efisien.",
-      mockupImage: "",
+      mockupImage: "/images/projects/",
       technologies: ["HTML", "CSS", "JS"],
     },
     {
@@ -211,7 +208,7 @@ export const portfolioData: PortfolioData = {
       title: "KoperGrosir – Landing Page & CMS",
       description:
         "Sebuah situs web landing page profesional yang dilengkapi dengan panel admin (CMS) terintegrasi untuk pengelolaan katalog produk koper grosir, paket bundling, dan pemesanan cepat.",
-      mockupImage: "",
+      mockupImage: "/images/projects/",
       technologies: ["Laravel", "Tailwind CSS", "MySQL", "PHP"],
     },
     {
@@ -219,52 +216,54 @@ export const portfolioData: PortfolioData = {
       title: "Platform Web Profil & Manajemen Dokumen",
       description:
         "Sistem web terpadu untuk pencatatan dan distribusi berkas digital secara aman dan responsif di berbagai perangkat.",
-      mockupImage: "",
+      mockupImage: "/images/projects/",
       technologies: ["Laravel", "Tailwind CSS", "MySQL"],
     },
   ],
   certificates: [
     {
-      id: "freecodecamp",
-      title: "Responsive Web Design (300 Hours)",
-      issuer: "freeCodeCamp",
-      date: "5 Maret 2023",
-      image: "",
+      id: "sertifikat-1",
+      image: "/images/certificates/1103223237_SertifGreatNusa1.webp",
     },
     {
-      id: "myskill-uiux",
-      title: "UI-UX Research & Design: Fullstack Intensive Bootcamp",
-      issuer: "MySkill (Batch 6)",
-      date: "4 April 2023",
-      image: "",
+      id: "sertifikat-2",
+      image: "/images/certificates/1103223237_SertifGreatNusa2.webp",
     },
     {
-      id: "codepolitan",
-      title: "Belajar Bootstrap CSS Framework",
-      issuer: "CODEPOLITAN",
-      date: "6 Maret 2024",
-      image: "",
+      id: "sertifikat-3",
+      image: "/images/certificates/1103223237_SertifGreatNusa3.webp",
     },
     {
-      id: "myskill-react",
-      title: "Skill Specialization: Frontend - React",
-      issuer: "MySkill",
-      date: "5 Februari 2024",
-      image: "",
+      id: "sertifikat-4",
+      image: "/images/certificates/1103223237_SertifGreatNusa4.webp",
     },
     {
-      id: "vsga-kominfo",
-      title: "Junior Web Developer (VSGA)",
-      issuer: "Digitalent Kominfo",
-      date: "29 Agustus 2023",
-      image: "",
+      id: "sertifikat-5",
+      image: "/images/certificates/1103223237_SyauqiAkmal_SertifikatAgunacourse.webp",
     },
     {
-      id: "dicoding",
-      title: "Belajar Membuat Front-End Web untuk Pemula",
-      issuer: "Dicoding Indonesia",
-      date: "6 April 2024",
-      image: "",
+      id: "sertifikat-6",
+      image: "/images/certificates/1103223237_SyauqiAkmal_SertifikatPython.webp",
+    },
+    {
+      id: "sertifikat-7",
+      image: "/images/certificates/1103223237_SyauqiAkmal_Sertifikatudemy.webp",
+    },
+    {
+      id: "sertifikat-8",
+      image: "/images/certificates/SertifNVIDIA_SyauqiA_.webp",
+    },
+    {
+      id: "sertifikat-9",
+      image: "/images/certificates/SYAUQI AKMAL FADHALI PANITIA.webp",
+    },
+    {
+      id: "sertifikat-10",
+      image: "/images/certificates/SYAUQI AKMAL FADHALI PCM 2024.webp",
+    },
+    {
+      id: "sertifikat-11",
+      image: "/images/certificates/SYAUQI AKMAL FADHALI Pubdok 23.webp",
     },
   ],
 };
