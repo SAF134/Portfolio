@@ -15,7 +15,7 @@ export function SkillsSection() {
           Keahlian <span className="text-zinc-500">Teknis</span>.
         </h2>
         <p className="mt-3 text-xs sm:text-sm text-[#71717A] max-w-md mx-auto">
-          Teknologi dan alat yang aktif saya gunakan untuk merancang dan membangun ekosistem aplikasi web modern.
+          Teknologi dan alat yang pernah saya gunakan untuk merancang dan membangun berbagai macam aplikasi dan website.
         </p>
 
         {/* Skills Pills Grid */}

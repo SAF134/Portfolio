@@ -16,7 +16,7 @@ export function EducationSection() {
             Riwayat <span className="text-zinc-500">Pendidikan</span>.
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-[#71717A] max-w-md mx-auto">
-            Latar belakang akademis formal selama menempuh pendidikan.
+            Latar belakang akademis formal selama menempuh perjalanan pendidikan.
           </p>
         </div>
 

@@ -75,7 +75,7 @@ export function HeroSection() {
           </div>
 
           {/* Bio text */}
-          <p className="mt-6 text-sm sm:text-base text-[#52525B] max-w-lg leading-relaxed font-normal">
+          <p className="mt-6 text-sm sm:text-base text-[#52525B] max-w-lg leading-relaxed font-normal text-justify">
             {profile.heroBio}
           </p>
 
@@ -83,7 +83,7 @@ export function HeroSection() {
           <div className="mt-8 flex flex-wrap items-center gap-3.5">
             <a
               href={profile.cvPath}
-              download="CV_Deft_Valian_Exanova.pdf"
+              download="CV_Syauqi_Akmal_Fadhali.pdf"
               className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#09090B] text-white hover:bg-zinc-800 text-sm font-medium shadow-sm transition-all duration-150 active:scale-[0.98] border border-[#09090B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
             >
               <Download className="w-4 h-4" />
