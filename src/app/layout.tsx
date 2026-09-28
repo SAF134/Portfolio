@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Deft Valian Exanova | Fullstack Developer Portfolio",
+  title: "Syauqi-Akmal-Fadhali/Portfolio",
   description:
-    "Portfolio profesional Deft Valian Exanova - Fullstack Developer berpengalaman membangun aplikasi web fungsional, interaktif, dan terukur.",
+    "Portfolio profesional Syauqi Akmal Fadhali - Fullstack Developer berpengalaman membangun aplikasi web fungsional, interaktif, dan terukur.",
   keywords: [
-    "Deft Valian Exanova",
+    "Syauqi Akmal Fadhali",
     "Fullstack Developer",
     "Web Developer Indonesia",
     "Laravel",
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     "Next.js",
     "Portfolio",
   ],
-  authors: [{ name: "Deft Valian Exanova" }],
+  authors: [{ name: "Syauqi Akmal Fadhali" }],
   openGraph: {
-    title: "Deft Valian Exanova | Fullstack Developer",
+    title: "Syauqi Akmal Fadhali | Fullstack Developer",
     description:
       "Membangun aplikasi web yang fungsional, interaktif, dan berpusat pada pengalaman pengguna.",
     type: "website",

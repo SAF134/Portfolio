@@ -1,5 +1,5 @@
 # IMPLEMENTATION PLAN & EXECUTION ROADMAP
-**Produk:** Deft Valian Exanova – Developer Portfolio Website  
+**Produk:** Syauqi Akmal Fadhali – Developer Portfolio Website  
 **Tujuan Dokumen:** Panduan langkah demi langkah (*step-by-step technical execution plan*) dari inisialisasi kode hingga rilis live di Vercel.  
 **Tech Stack:** Next.js (App Router) + Tailwind CSS + Framer Motion + Lucide React + Simple Icons + Vercel  
 **Status:** Ready to Execute  
@@ -87,7 +87,7 @@ Tujuan: Membangun komponen UI modular yang mematuhi prinsip *Anti-Slop*, memilik
 Tujuan: Merangkai seluruh komponen menjadi satu halaman *Single Page Application* yang utuh dan selaras dengan referensi desain.
 
 - [x] **4.1 Section Hero (`src/components/sections/HeroSection.tsx`):**
-  * Teks headline "HALO, SAYA", nama besar "Deft Valian Exanova.", role "Fullstack Developer", dan paragraf bio.
+  * Teks headline "HALO, SAYA", nama besar "Syauqi Akmal Fadhali.", role "Fullstack Developer", dan paragraf bio.
   * Ikon sosial media (GitHub, Instagram, LinkedIn) dengan `rel="noopener noreferrer"`.
   * Tombol CTA: `Lihat Proyek` dan `Hubungi Saya`.
   * Floating Profile Card: Foto berbingkai rounded, badge status `@dftvln Online` dengan titik hijau berdenyut (*pulse*), dan tombol `Contact Me`.
@@ -115,7 +115,7 @@ Tujuan: Merangkai seluruh komponen menjadi satu halaman *Single Page Application
   * Heading "Hubungi **Saya**." + deskripsi ajakan kolaborasi.
   * Kartu kontak langsung: Tampilan email `deftvalian2411@gmail.com`, domisili `Bekasi, Indonesia`.
   * Tombol `Kirim Email Langsung` (`mailto:`) dan tombol `Salin Email` (terhubung ke Toast).
-  * Footer teks copyright: `© 2026 Deft Valian Exanova.`
+  * Footer teks copyright: `© 2026 Syauqi Akmal Fadhali.`
 
 ---
 

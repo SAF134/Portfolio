@@ -1,5 +1,5 @@
 # DESIGN BRIEF & SYSTEM ARCHITECTURE
-**Produk:** Deft Valian Exanova – Developer Portfolio Website  
+**Produk:** Syauqi Akmal Fadhali – Developer Portfolio Website  
 **Role:** Senior Product Designer  
 **Status:** Approved for Implementation  
 **Filosofi Visual:** *Refined Monochromatic Architecture (Anti-Slop & Editorial Modern)*  
@@ -159,7 +159,7 @@ Portofolio ini mengusung arsitektur *Single Page Application (SPA)* dengan 7 zon
 
 ### 6.1 Section 1: Hero (`#beranda`)
 * **Hierarki Visual:**
-  1. *Primary:* Nama besar **Deft Valian Exanova.** dengan tipografi hitam tebal.
+  1. *Primary:* Nama besar **Syauqi Akmal Fadhali.** dengan tipografi hitam tebal.
   2. *Secondary:* Kartu profil kanan dengan foto profesional, status online menyala, dan tombol `Contact Me`.
   3. *Tertiary:* Teks deskripsi filosofi kerja dan tombol aksi ganda (`Lihat Proyek` & `Hubungi Saya`).
 * **Komponen:**

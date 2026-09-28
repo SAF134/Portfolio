@@ -1,5 +1,5 @@
 # DATA CONTENT REGISTRY (SOURCE OF TRUTH)
-**Produk:** Deft Valian Exanova – Developer Portfolio Website  
+**Produk:** Syauqi Akmal Fadhali – Developer Portfolio Website  
 **Tujuan Dokumen:** *Single Source of Truth* untuk seluruh teks, data pengalaman, keahlian, proyek, dan sertifikasi yang diekstrak dari referensi screenshot.  
 **File Output Codebase:** `src/data/portfolio.ts`  
 **Status:** Approved & Ready for Code Implementation
@@ -11,7 +11,7 @@
 | Field | Nilai Teks / Konten | Catatan |
 |---|---|---|
 | **Eyebrow Header** | `HALO, SAYA` | Displayed above name |
-| **Nama Lengkap** | `Deft Valian Exanova.` | Primary Display Heading |
+| **Nama Lengkap** | `Syauqi Akmal Fadhali.` | Primary Display Heading |
 | **Headline Role** | `Fullstack Developer` | Subtitle |
 | **Deskripsi Hero** | `Membangun aplikasi web yang fungsional, interaktif, dan berpusat pada pengalaman pengguna.` | Core value proposition |
 | **Primary CTA 1** | `Lihat Proyek` | Anchor link to `#proyek` |
@@ -21,7 +21,7 @@
 | • Instagram | `https://instagram.com/dftvln` | Reference username: `@dftvln` |
 | • LinkedIn | `https://linkedin.com/in/deftvalian` | *Default URL (dapat disesuaikan)* |
 | **Hero Card (Floating)** | | |
-| • Overlay Name | `Deft Valian Exanova` | Teks overlay pada foto profil |
+| • Overlay Name | `Syauqi Akmal Fadhali` | Teks overlay pada foto profil |
 | • Overlay Subtitle | `Fullstack Developer` | Teks sub-overlay |
 | • Username Handle | `@dftvln` | Glassmorphism badge |
 | • Status Availability | `Online` (Indicator Green `#22C55E`) | Aktif / Ready for Work |
@@ -145,7 +145,7 @@ Daftar teknologi yang teridentifikasi dari referensi (`Keahlian.png`), dikategor
 | **Lokasi Domisili** | `Bekasi, Indonesia` |
 | **Primary Action** | Tombol `Kirim Email Langsung` (`mailto:deftvalian2411@gmail.com`) |
 | **Secondary Action** | Tombol `Salin Email` (Salin ke clipboard + Toast: *"Alamat email berhasil disalin!"*) |
-| **Footer Copy** | `© 2026 Deft Valian Exanova. Dirancang & dibangun dengan presisi.` |
+| **Footer Copy** | `© 2026 Syauqi Akmal Fadhali` |
 
 ---
 

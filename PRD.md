@@ -1,7 +1,7 @@
 # PRODUCT REQUIREMENT DOCUMENT (PRD)
 
 **Nama Produk:** Personal Developer Portfolio Website  
-**Pemilik Portofolio:** Deft Valian Exanova (Fullstack Developer)  
+**Pemilik Portofolio:** Syauqi Akmal Fadhali (Fullstack Developer)  
 **Versi Dokumen:** 1.0 (MVP Specification)  
 **Status:** Approved & Finalized for Implementation  
 **Rekomendasi Technical Stack:** Next.js (App Router, Static Site Generation / `output: 'export'`) + Tailwind CSS + Framer Motion + Lucide React + Simple Icons + Vercel (100% Free Tier)
@@ -128,7 +128,7 @@ Recruiter korporat/agensi, Tech Lead / Engineering Manager, serta calon mitra bi
 * **FR-01.4:** Indikator visual aktif (*pill highlight*) berpindah secara dinamis menggunakan *IntersectionObserver* saat pengguna menggulir halaman.
 
 ### 6.2 Hero & Profile Card
-* **FR-02.1:** Menampilkan judul "HALO, SAYA", nama besar "Deft Valian Exanova.", subjudul "Fullstack Developer", serta paragraf deskripsi singkat.
+* **FR-02.1:** Menampilkan judul "HALO, SAYA", nama besar "Syauqi Akmal Fadhali.", subjudul "Fullstack Developer", serta paragraf deskripsi singkat.
 * **FR-02.2:** Ikon sosial media (GitHub, Instagram, LinkedIn) harus memiliki atribut `target="_blank"` dan `rel="noopener noreferrer"`.
 * **FR-02.3:** Kartu profil kanan memuat foto dengan rounded corners, neon glow shadow ungu/pink halus, badge `@dftvln Online` dengan status pulse hijau, dan tombol `Contact Me` yang mengarah ke `#kontak`.
 
@@ -257,7 +257,7 @@ Proyek ini dianggap **Selesai (Done)** untuk tahap MVP apabila memenuhi seluruh 
    * Largest Contentful Paint (LCP) < 2.0 detik.
    * Cumulative Layout Shift (CLS) < 0.05.
    * First Input Delay (FID) / Interaction to Next Paint (INP) < 100ms.
-4. **Kelengkapan Konten:** Seluruh konten visual dan narasi (Hero, Tentang, Keahlian, Pengalaman, Proyek, Sertifikat, Kontak) 100% menggunakan data asli milik Deft Valian Exanova tanpa teks placeholder *Lorem Ipsum*.
+4. **Kelengkapan Konten:** Seluruh konten visual dan narasi (Hero, Tentang, Keahlian, Pengalaman, Proyek, Sertifikat, Kontak) 100% menggunakan data asli milik Syauqi Akmal Fadhali tanpa teks placeholder *Lorem Ipsum*.
 5. **Fungsi Interaksi Teruji:**
    * Tombol `Salin Email` sukses menyalin dan memunculkan toast.
    * Tombol `Unduh CV` sukses memicu download berkas.

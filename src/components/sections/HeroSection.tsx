@@ -113,45 +113,12 @@ export function HeroSection() {
             <div className="relative w-[300px] sm:w-[340px] md:w-[370px] aspect-[1/1.42] rounded-[32px] overflow-hidden bg-white border border-[#E4E4E7] shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
               <Image
                 src={profile.heroCardImage}
-                alt="Foto Profil Deft Valian Exanova"
+                alt="Foto Profil Syauqi Akmal Fadhali"
                 fill
                 priority
                 sizes="(max-width: 768px) 300px, 370px"
                 className="object-cover object-top"
               />
-
-              {/* Overlay Glassmorphism Badge */}
-              <div className="absolute bottom-4 inset-x-4 p-3 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10 flex items-center justify-between text-white">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-full overflow-hidden bg-zinc-800 relative shrink-0">
-                    <Image
-                      src={profile.aboutPortraitImage}
-                      alt={profile.statusHandle}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <div className="text-xs font-semibold tracking-tight">
-                      {profile.statusHandle}
-                    </div>
-                    <div className="flex items-center gap-1.5 mt-0.5">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      <span className="text-[10px] text-zinc-300 font-mono">
-                        {profile.statusText}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                <a
-                  href={`mailto:${profile.email}`}
-                  aria-label="Hubungi saya via email"
-                  className="px-3 py-1.5 rounded-xl bg-white/20 hover:bg-white/30 text-[11px] font-semibold tracking-tight transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white inline-block text-center"
-                >
-                  Hubungi Saya
-                </a>
-              </div>
             </div>
           </div>
         </div>
