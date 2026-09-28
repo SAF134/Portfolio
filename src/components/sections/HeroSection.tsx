@@ -2,22 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
-import { FolderGit2, Mail } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { Download, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/ui/Icons";
 import { portfolioData } from "@/data/portfolioData";
 
 export function HeroSection() {
   const { profile } = portfolioData;
-
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      const topOffset = 80;
-      const elPos = el.getBoundingClientRect().top + window.pageYOffset - topOffset;
-      window.scrollTo({ top: elPos, behavior: "smooth" });
-    }
-  };
 
   return (
     <section
@@ -91,25 +81,22 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="mt-8 flex flex-wrap items-center gap-3.5">
-            <Button
-              variant="primary"
-              size="md"
-              onClick={() => scrollTo("proyek")}
-              className="gap-2 px-6"
+            <a
+              href={profile.cvPath}
+              download="CV_Deft_Valian_Exanova.pdf"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#09090B] text-white hover:bg-zinc-800 text-sm font-medium shadow-sm transition-all duration-150 active:scale-[0.98] border border-[#09090B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
             >
-              <FolderGit2 className="w-4 h-4" />
-              <span>Lihat Proyek</span>
-            </Button>
+              <Download className="w-4 h-4" />
+              <span>Unduh CV Saya</span>
+            </a>
 
-            <Button
-              variant="secondary"
-              size="md"
-              onClick={() => scrollTo("kontak")}
-              className="gap-2 px-6"
+            <a
+              href={`mailto:${profile.email}`}
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#09090B] text-white hover:bg-zinc-800 text-sm font-medium shadow-sm transition-all duration-150 active:scale-[0.98] border border-[#09090B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
             >
               <Mail className="w-4 h-4" />
               <span>Hubungi Saya</span>
-            </Button>
+            </a>
           </div>
         </div>
 
@@ -157,14 +144,13 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => scrollTo("kontak")}
-                  aria-label="Hubungi saya di bagian kontak"
-                  className="px-3 py-1.5 rounded-xl bg-white/20 hover:bg-white/30 text-[11px] font-semibold tracking-tight transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                <a
+                  href={`mailto:${profile.email}`}
+                  aria-label="Hubungi saya via email"
+                  className="px-3 py-1.5 rounded-xl bg-white/20 hover:bg-white/30 text-[11px] font-semibold tracking-tight transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white inline-block text-center"
                 >
                   Contact Me
-                </button>
+                </a>
               </div>
             </div>
           </div>
