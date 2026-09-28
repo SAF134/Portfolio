@@ -136,20 +136,20 @@ Tujuan: Menjamin kenyamanan penggunaan di semua ukuran layar dan memenuhi standa
 ## Fase 6: Quality Assurance, Lighthouse Audit & Deployment
 Tujuan: Memvalidasi kriteria selesai (Definition of Done) dan meluncurkan website ke domain publik Vercel secara live.
 
-- [ ] **6.1 Production Build Check:**
+- [x] **6.1 Production Build Check:**
   * Jalankan `npm run build` di terminal lokal.
   * Pastikan status kompilasi sukses dengan **0 TypeScript Errors** dan **0 ESLint Warnings**.
-- [ ] **6.2 Google Lighthouse Audit (Chrome DevTools):**
+- [x] **6.2 Google Lighthouse Audit (Chrome DevTools):**
   * Target Verifikasi:
     * Performance: **≥ 90**
     * Accessibility: **≥ 90**
     * Best Practices: **≥ 95**
     * SEO: **≥ 95**
-- [ ] **6.3 Deployment ke Vercel:**
+- [x] **6.3 Deployment ke Vercel:**
   * Inisialisasi git repository lokal: `git init`, `git add .`, `git commit -m "feat: complete initial portfolio website"`.
   * Hubungkan repositori ke GitHub dan deploy ke Vercel (Free Tier).
   * Pastikan SSL/HTTPS aktif otomatis dan domain live dapat diakses publik.
-- [ ] **6.4 Verifikasi Live Production:**
+- [x] **6.4 Verifikasi Live Production:**
   * Uji klik unduh CV di URL publik.
   * Uji fungsi salin email dan toast di peramban seluler (smartphone) dan desktop.
   * Uji navigasi bottom bar di perangkat smartphone asli.
@@ -165,4 +165,4 @@ Tujuan: Memvalidasi kriteria selesai (Definition of Done) dan meluncurkan websit
 | **Fase 3** | Pembangunan Reusable UI Components | 🟢 Selesai |
 | **Fase 4** | Assembly Halaman Penuh & Integrasi Section | 🟢 Selesai |
 | **Fase 5** | Polish Responsif & Aksesibilitas | 🟢 Selesai |
-| **Fase 6** | Build Check, Audit Lighthouse & Vercel Deploy | ⚪ Menunggu Mulai |
+| **Fase 6** | Build Check, Audit Lighthouse & Vercel Deploy | 🟢 Selesai |
