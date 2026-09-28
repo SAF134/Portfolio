@@ -18,7 +18,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
   return (
     <article
       className={cn(
-        "group flex flex-col rounded-[24px] bg-white border border-[#E4E4E7] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-zinc-400 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300",
+        "group flex flex-col h-full rounded-[24px] bg-white border border-[#E4E4E7] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-zinc-400 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300",
         className
       )}
     >
@@ -44,7 +44,7 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
         </p>
 
         {/* Technology Badges */}
-        <div className="mt-5 flex flex-wrap gap-1.5 items-center">
+        <div className="mt-auto pt-5 flex flex-wrap gap-1.5 items-center">
           {project.technologies.map((tech) => (
             <span
               key={tech}
