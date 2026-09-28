@@ -12,17 +12,21 @@ interface SkillBadgeProps {
 
 // Map slugs to simple-icons export keys
 const iconSlugMap: Record<string, string> = {
-  laravel: "siLaravel",
+  flutter: "siFlutter",
   react: "siReact",
   tailwindcss: "siTailwindcss",
-  postgresql: "siPostgresql",
   nextdotjs: "siNextdotjs",
-  nodedotjs: "siNodedotjs",
-  mysql: "siMysql",
+  firebase: "siFirebase",
+  arduino: "siArduino",
   typescript: "siTypescript",
-  php: "siPhp",
+  googlestitch: "siGoogle",
   figma: "siFigma",
+  nodedotjs: "siNodedotjs",
   git: "siGit",
+  laravel: "siLaravel",
+  postgresql: "siPostgresql",
+  mysql: "siMysql",
+  php: "siPhp",
   javascript: "siJavascript",
 };
 

@@ -13,10 +13,10 @@ export function ProjectsSection() {
         {/* Section Heading */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090B] tracking-tight">
-            Proyek <span className="text-zinc-500">Terbaik</span>.
+            Riwayat <span className="text-zinc-500">Proyek</span>.
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-[#52525B] max-w-lg mx-auto leading-relaxed">
-            Kumpulan proyek yang pernah saya bangun selama menempuh pendidikan.
+            Riwayat proyek yang pernah saya bangun selama menempuh pendidikan.
           </p>
         </div>
 
