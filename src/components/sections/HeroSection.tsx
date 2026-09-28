@@ -149,7 +149,7 @@ export function HeroSection() {
                   aria-label="Hubungi saya via email"
                   className="px-3 py-1.5 rounded-xl bg-white/20 hover:bg-white/30 text-[11px] font-semibold tracking-tight transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white inline-block text-center"
                 >
-                  Contact Me
+                  Hubungi Saya
                 </a>
               </div>
             </div>

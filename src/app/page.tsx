@@ -22,6 +22,13 @@ export default function Home() {
         <ProjectsSection />
         <CertificatesSection />
       </main>
+
+      {/* Minimal Architectural Footer */}
+      <footer className="py-8 pb-24 md:pb-8 bg-white border-t border-[#E4E4E7] text-center">
+        <p className="text-xs text-[#71717A] font-mono">
+          &copy; {new Date().getFullYear()} Deft Valian Exanova. Dirancang &amp; dibangun dengan presisi.
+        </p>
+      </footer>
     </div>
   );
 }

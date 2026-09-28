@@ -51,7 +51,7 @@ export function FloatingNavbar() {
         const item = navItems[i];
         const element = document.getElementById(item.id);
         if (element) {
-          const top = element.offsetTop;
+          const top = window.scrollY + element.getBoundingClientRect().top;
           if (scrollPosition >= top) {
             setActiveSection(item.id);
             break;
@@ -67,11 +67,19 @@ export function FloatingNavbar() {
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
+    if (id === "beranda") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      setActiveSection(id);
+      return;
+    }
     const element = document.getElementById(id);
     if (element) {
       const topOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - topOffset;
+      const offsetPosition = elementPosition + window.scrollY - topOffset;
 
       window.scrollTo({
         top: offsetPosition,
