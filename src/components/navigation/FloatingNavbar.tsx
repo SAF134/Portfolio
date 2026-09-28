@@ -5,8 +5,10 @@ import { motion } from "framer-motion";
 import {
   Home,
   GraduationCap,
+  Code2,
   Briefcase,
   FolderGit2,
+  Award,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -19,8 +21,10 @@ interface NavItem {
 const navItems: NavItem[] = [
   { id: "beranda", label: "Beranda", icon: Home },
   { id: "pendidikan", label: "Pendidikan", icon: GraduationCap },
+  { id: "keahlian", label: "Keahlian", icon: Code2 },
   { id: "pengalaman", label: "Pengalaman", icon: Briefcase },
   { id: "proyek", label: "Proyek", icon: FolderGit2 },
+  { id: "sertifikat", label: "Sertifikat", icon: Award },
 ];
 
 export function FloatingNavbar() {
@@ -30,6 +34,15 @@ export function FloatingNavbar() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+
+      // Check if user has scrolled near bottom of page
+      if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 60
+      ) {
+        setActiveSection(navItems[navItems.length - 1].id);
+        return;
+      }
 
       // Section intersection detection
       const scrollPosition = window.scrollY + 200;
@@ -116,7 +129,7 @@ export function FloatingNavbar() {
       {/* ================= MOBILE BOTTOM DOCK NAVBAR ================= */}
       <nav
         aria-label="Navigasi Utama Mobile"
-        className="flex md:hidden fixed bottom-4 inset-x-4 max-w-xs mx-auto z-50 items-center justify-around p-1.5 rounded-full bg-white/95 backdrop-blur-lg border border-[#E4E4E7] shadow-[0_12px_32px_rgb(0,0,0,0.12)]"
+        className="flex md:hidden fixed bottom-4 inset-x-4 max-w-[340px] mx-auto z-50 items-center justify-around p-1.5 rounded-full bg-white/95 backdrop-blur-lg border border-[#E4E4E7] shadow-[0_12px_32px_rgb(0,0,0,0.12)]"
       >
         {navItems.map((item) => {
           const isActive = activeSection === item.id;
@@ -129,7 +142,7 @@ export function FloatingNavbar() {
               onClick={(e) => scrollToSection(e, item.id)}
               aria-label={item.label}
               className={cn(
-                "relative p-2.5 rounded-full transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900",
+                "relative p-2 sm:p-2.5 rounded-full transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900",
                 isActive
                   ? "text-white"
                   : "text-[#71717A] hover:text-[#09090B]"
