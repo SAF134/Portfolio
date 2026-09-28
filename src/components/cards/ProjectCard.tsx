@@ -1,25 +1,34 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { ExternalLink, Image as ImageIcon } from "lucide-react";
+import { ExternalLink, Maximize2, Image as ImageIcon } from "lucide-react";
 import { GithubIcon } from "@/components/ui/Icons";
+import { TechBadge } from "@/components/ui/TechBadge";
 import { ProjectItem } from "@/data/portfolioData";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: ProjectItem;
+  index?: number;
   className?: string;
+  onViewDetail?: () => void;
 }
 
-export function ProjectCard({ project, className }: ProjectCardProps) {
+export function ProjectCard({ project, index, className, onViewDetail }: ProjectCardProps) {
+  const [imgError, setImgError] = useState(false);
   const hasLinks = Boolean(project.liveUrl || project.repoUrl);
-  const hasImage = Boolean(project.mockupImage && project.mockupImage.trim() !== "");
+  const hasImage = Boolean(
+    project.mockupImage &&
+    project.mockupImage.trim() !== "" &&
+    !project.mockupImage.endsWith("/") &&
+    !imgError
+  );
 
   return (
     <article
       className={cn(
-        "group flex flex-col h-full rounded-[24px] bg-white border border-[#E4E4E7] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-zinc-400 hover:shadow-[0_12px_32px_rgba(0,0,0,0.08)] transition-all duration-300",
+        "flex flex-col h-full rounded-[24px] bg-white border border-[#E4E4E7] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-zinc-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.06)] transition-all duration-300",
         className
       )}
     >
@@ -31,7 +40,8 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
             alt={`Pratinjau antarmuka ${project.title}`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-500 ease-out"
+            className="object-cover object-center"
+            onError={() => setImgError(true)}
           />
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-50 text-zinc-400 p-4 text-center">
@@ -48,25 +58,22 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
           {project.title}
         </h3>
 
+        {/* Clean clamped description */}
         <p className="mt-2.5 text-xs md:text-sm text-[#52525B] line-clamp-2 leading-relaxed">
           {project.description}
         </p>
 
-        {/* Technology Badges */}
+        {/* Technology Badges with Icons */}
         <div className="mt-auto pt-5 flex flex-wrap gap-1.5 items-center">
           {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="px-2.5 py-1 text-[11px] font-mono font-medium rounded-md bg-zinc-100 text-[#09090B] border border-[#E4E4E7]"
-            >
-              {tech}
-            </span>
+            <TechBadge key={tech} name={tech} />
           ))}
         </div>
 
-        {/* Conditional Action Buttons */}
-        {hasLinks && (
-          <div className="mt-6 pt-5 border-t border-[#E4E4E7] flex items-center gap-3">
+        {/* Card Footer / Action Bar */}
+        <div className="mt-6 pt-5 border-t border-[#E4E4E7] flex items-center justify-between gap-2">
+          {/* Optional Direct Links */}
+          <div className="flex items-center gap-3">
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
@@ -89,8 +96,23 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
                 <span>Source Code</span>
               </a>
             )}
+            {!hasLinks && index !== undefined && (
+              <span className="text-xs font-mono font-medium text-zinc-400">
+                Proyek #{index + 1}
+              </span>
+            )}
           </div>
-        )}
+
+          {/* Explicit "Lihat Detail" Button with exclusive hit box */}
+          <button
+            type="button"
+            onClick={onViewDetail}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 hover:bg-black text-white text-xs font-semibold shadow-sm hover:shadow transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 ml-auto"
+          >
+            <Maximize2 className="w-3.5 h-3.5" />
+            <span>Lihat Detail</span>
+          </button>
+        </div>
       </div>
     </article>
   );

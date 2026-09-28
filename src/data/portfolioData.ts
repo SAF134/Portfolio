@@ -196,28 +196,60 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
-      id: "absensi",
-      title: "Portal Web Absensi Mata Kuliah",
+      id: "proyek-1",
+      title: "SunVolt",
       description:
-        "Platform portal absensi terpusat dengan konsep direktori menyerupai Linktree untuk memudahkan mahasiswa dan dosen mengakses presensi perkuliahan lintas mata kuliah secara efisien.",
-      mockupImage: "/images/projects/",
-      technologies: ["HTML", "CSS", "JS"],
+        "Aplikasi Monitoring Pengisian Daya Kendaraan Listrik Ringan Berbasis Tenaga Surya.",
+      mockupImage: "/images/projects/sunvolt.webp",
+      technologies: ["Flutter", "Firebase", "Google Stitch"],
     },
     {
-      id: "kopergrosir",
-      title: "KoperGrosir – Landing Page & CMS",
+      id: "proyek-2",
+      title: "MyIPK",
       description:
-        "Sebuah situs web landing page profesional yang dilengkapi dengan panel admin (CMS) terintegrasi untuk pengelolaan katalog produk koper grosir, paket bundling, dan pemesanan cepat.",
-      mockupImage: "/images/projects/",
-      technologies: ["Laravel", "Tailwind CSS", "MySQL", "PHP"],
+        "Aplikasi Manajemen Akademik Mahasiswa (IPK, Jadwal, dan Tugas).",
+      mockupImage: "/images/projects/myipk.webp",
+      technologies: ["Flutter", "Google Stitch"],
     },
     {
-      id: "platform-dokumen",
-      title: "Platform Web Profil & Manajemen Dokumen",
+      id: "proyek-3",
+      title: "MyFish",
       description:
-        "Sistem web terpadu untuk pencatatan dan distribusi berkas digital secara aman dan responsif di berbagai perangkat.",
+        "Aplikasi Monitoring & Kontrol Pemberi Pakan Ikan Otomatis.",
+      mockupImage: "/images/projects/myfish.webp",
+      technologies: ["Flutter", "Firebase", "Google Stitch"],
+    },
+    {
+      id: "proyek-4",
+      title: "PetaSare",
+      description:
+        "Website Pemetaan Interaktif Lokasi Hotel Kota Bandung.",
+      mockupImage: "/images/projects/petasare.webp",
+      technologies: ["Laravel", "Leaflet Map", "Bootstrap"],
+    },
+    {
+      id: "proyek-5",
+      title: "PetaBuitenzorg",
+      description:
+        "Aplikasi Pemetaan Interaktif lokasi Hotel, SPBU, Rumah Sakit, dan Mall di Kota Bogor.",
+      mockupImage: "/images/projects/petabuitenzorg.webp",
+      technologies: ["Flutter", "Google Stitch"],
+    },
+    {
+      id: "proyek-6",
+      title: "Klikin",
+      description:
+        "Aplikasi Pengetuk Layar Smartphone Otomatis.",
       mockupImage: "/images/projects/",
-      technologies: ["Laravel", "Tailwind CSS", "MySQL"],
+      technologies: ["Flutter", "Google Stitch"],
+    },
+    {
+      id: "proyek-7",
+      title: "Timerin",
+      description:
+        "Aplikasi Timer dengan overlay.",
+      mockupImage: "/images/projects/",
+      technologies: ["Flutter", "Google Stitch"],
     },
   ],
   certificates: [
