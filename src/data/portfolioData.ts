@@ -131,19 +131,30 @@ export const portfolioData: PortfolioData = {
   ],
   experiences: [
     {
-      id: "advics",
-      role: "Fullstack Developer",
-      company: "PT Advics Manufacturing Indonesia",
-      period: "Aug 2025 – Feb 2026",
-      location: "Karawang, Indonesia",
+      id: "kp",
+      role: "Unit Business Service",
+      company: "PT Telkom Indonesia (Persero) Tbk",
+      period: "Juni 2025 – Agustus 2025",
+      location: "Jl. Raya Pajajaran No.37, RT.04/RW.06, Bantarjati, Kecamatan Bogor Utara, Kota Bogor, Jawa Barat 16153.",
       bulletPoints: [
-        "Menggantikan proses manual dengan membangun Sistem NG Scanning (integrasi QR) dan otomatisasi pipeline dokumen Scrap Evidence.",
-        "Membangun aplikasi inti yang scalable (Sistem Warehouse, Manajemen Aset IT, dan Help Desk) menggunakan ekosistem Laravel dan ReactJS.",
-        "Mengelola ribuan data secara konkuren dengan kecepatan tinggi menggunakan teknik seperti lazy loading pada lingkungan sistem yang berat.",
-        "Merombak antarmuka lama menggunakan Tailwind CSS, menciptakan aplikasi yang responsif dan intuitif bagi eksekutif kantor maupun staf lapangan.",
+        "Mendukung operasional harian unit dalam pemantauan status penyediaan dan pemeliharaan layanan telekomunikasi pelanggan enterprise.",
+        "Berkoordinasi secara aktif dengan tim teknisi lapangan dalam pencatatan progres penanganan tiket layanan dan verifikasi lapangan.",
+        "Mengelola serta merekapitulasi data administratif operasional layanan secara terstruktur guna mendukung evaluasi performa unit."
       ],
-      technologies: ["Laravel", "ReactJS", "Tailwind CSS", "MySQL", "PostgreSQL"],
+      technologies: ["Microsoft Excel"],
     },
+    {
+      id: "organisasi",
+      role: "Publikasi & Dokumentasi",
+      company: "Persatuan Catur Mahasiswa",
+      period: "2023 – 2024",
+      location: "Jl. Telekomunikasi No. 1, Terusan Buahbatu, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257.",
+      bulletPoints: [
+        "Mengelola publikasi visual dan mendokumentasikan rangkaian kegiatan latihan rutin serta kejuaraan internal organisasi.",
+        "Merancang sertifikat digital dan materi grafis kepanitiaan untuk puluhan peserta dan jajaran panitia kegiatan."
+      ],
+      technologies: ["Canva"],
+    }
   ],
   education: [
     {
