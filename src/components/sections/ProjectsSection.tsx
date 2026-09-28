@@ -41,18 +41,16 @@ export function ProjectsSection() {
     <section id="proyek" className="py-20 md:py-28 bg-white overflow-hidden">
       <div className="max-w-6xl w-full mx-auto px-6 md:px-12">
         {/* Header & Carousel Controls */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-          <div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090B] tracking-tight">
-              Karya <span className="text-zinc-500">Terbaik</span>.
-            </h2>
-            <p className="mt-3 text-xs sm:text-sm text-[#52525B] max-w-lg leading-relaxed">
-              Kumpulan proyek yang telah saya bangun, mulai dari desain antarmuka hingga sistem backend yang kompleks.
-            </p>
-          </div>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090B] tracking-tight">
+            Karya <span className="text-zinc-500">Terbaik</span>.
+          </h2>
+          <p className="mt-3 text-xs sm:text-sm text-[#52525B] max-w-lg mx-auto leading-relaxed">
+            Kumpulan proyek yang telah saya bangun, mulai dari desain antarmuka hingga sistem backend yang kompleks.
+          </p>
 
           {/* Previous / Next Navigation Buttons */}
-          <div className="flex items-center gap-2 self-start md:self-end">
+          <div className="flex items-center justify-center gap-3 mt-6">
             <button
               type="button"
               onClick={() => handleScroll("left")}
