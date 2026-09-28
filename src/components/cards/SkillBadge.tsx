@@ -28,6 +28,9 @@ const iconSlugMap: Record<string, string> = {
   mysql: "siMysql",
   php: "siPhp",
   javascript: "siJavascript",
+  map: "siLeaflet",
+  leaflet: "siLeaflet",
+  leafletmap: "siLeaflet",
 };
 
 export function SkillBadge({ name, slug, className }: SkillBadgeProps) {

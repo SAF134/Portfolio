@@ -124,6 +124,7 @@ export const portfolioData: PortfolioData = {
     { name: "Google Stitch", category: "tools", slug: "googlestitch" },
     { name: "Figma", category: "tools", slug: "figma" },
     { name: "Node.js", category: "backend", slug: "nodedotjs" },
+    { name: "Leaflet Map", category: "tools", slug: "map" }
   ],
   experiences: [
     {
@@ -136,7 +137,7 @@ export const portfolioData: PortfolioData = {
         "Merancang dan membangun aplikasi mobile berbasis Flutter untuk memantau status pengisian daya dan daya yang masuk secara real-time.",
         "Mendesain antarmuka pengguna (UI/UX) yang intuitif dengan visualisasi metrik dan grafik daya untuk memudahkan pemantauan efisiensi pengisian."
       ],
-      technologies: ["Flutter", "Firebase"],
+      technologies: ["Flutter", "Firebase", "Google Stitch","Leaflet Map"],
     },
     {
       id: "kp",
@@ -201,7 +202,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Aplikasi Monitoring Pengisian Daya Kendaraan Listrik Ringan Berbasis Tenaga Surya.",
       mockupImage: "/images/projects/sunvolt.webp",
-      technologies: ["Flutter", "Firebase", "Google Stitch"],
+      technologies: ["Flutter", "Firebase", "Google Stitch", "Leaflet Map"],
     },
     {
       id: "proyek-2",
@@ -225,7 +226,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Website Pemetaan Interaktif Lokasi Hotel Kota Bandung.",
       mockupImage: "/images/projects/petasare.webp",
-      technologies: ["Laravel", "Leaflet Map", "Bootstrap"],
+      technologies: ["Typescript", "Next JS", "Leaflet Map", "TailwindCSS"],
     },
     {
       id: "proyek-5",
@@ -233,7 +234,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Aplikasi Pemetaan Interaktif lokasi Hotel, SPBU, Rumah Sakit, dan Mall di Kota Bogor.",
       mockupImage: "/images/projects/petabuitenzorg.webp",
-      technologies: ["Flutter", "Google Stitch"],
+      technologies: ["Flutter", "Google Stitch", "Leaflet Map"],
     },
     {
       id: "proyek-6",
