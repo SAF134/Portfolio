@@ -37,7 +37,7 @@ export function HeroSection() {
           </span>
 
           {/* Large Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#09090B] tracking-tight leading-[1.08]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090B] tracking-tight leading-[1.12]">
             {profile.fullName.split(" ")[0]} {profile.fullName.split(" ")[1]}{" "}
             <span className="text-zinc-400">
               {profile.fullName.split(" ")[2] || ""}
@@ -45,11 +45,36 @@ export function HeroSection() {
           </h1>
 
           {/* Subtitle Role */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-zinc-800 mt-3 tracking-tight">
+          <h2 className="text-base sm:text-lg md:text-xl font-semibold text-zinc-700 mt-2.5 tracking-tight">
             {profile.headlineRole}
           </h2>
 
-          {/* Social Links */}
+          {/* Bio text */}
+          <p className="mt-5 text-sm sm:text-base text-[#52525B] max-w-lg leading-relaxed font-normal text-justify">
+            {profile.heroBio}
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="mt-7 flex flex-wrap items-center gap-3.5">
+            <a
+              href={profile.cvPath}
+              download="CV_Syauqi_Akmal_Fadhali.pdf"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#09090B] text-white hover:bg-zinc-800 text-sm font-medium shadow-sm transition-all duration-150 active:scale-[0.98] border border-[#09090B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
+            >
+              <Download className="w-4 h-4" />
+              <span>Unduh CV Saya</span>
+            </a>
+
+            <a
+              href={`mailto:${profile.email}`}
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#09090B] text-white hover:bg-zinc-800 text-sm font-medium shadow-sm transition-all duration-150 active:scale-[0.98] border border-[#09090B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
+            >
+              <Mail className="w-4 h-4" />
+              <span>Hubungi Saya</span>
+            </a>
+          </div>
+
+          {/* Social Links (Moved below CTA buttons) */}
           <div className="flex items-center gap-3 mt-6">
             {profile.socials.map((social) => {
               const Icon =
@@ -72,31 +97,6 @@ export function HeroSection() {
                 </a>
               );
             })}
-          </div>
-
-          {/* Bio text */}
-          <p className="mt-6 text-sm sm:text-base text-[#52525B] max-w-lg leading-relaxed font-normal text-justify">
-            {profile.heroBio}
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="mt-8 flex flex-wrap items-center gap-3.5">
-            <a
-              href={profile.cvPath}
-              download="CV_Syauqi_Akmal_Fadhali.pdf"
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#09090B] text-white hover:bg-zinc-800 text-sm font-medium shadow-sm transition-all duration-150 active:scale-[0.98] border border-[#09090B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
-            >
-              <Download className="w-4 h-4" />
-              <span>Unduh CV Saya</span>
-            </a>
-
-            <a
-              href={`mailto:${profile.email}`}
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-[#09090B] text-white hover:bg-zinc-800 text-sm font-medium shadow-sm transition-all duration-150 active:scale-[0.98] border border-[#09090B] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
-            >
-              <Mail className="w-4 h-4" />
-              <span>Hubungi Saya</span>
-            </a>
           </div>
         </div>
 

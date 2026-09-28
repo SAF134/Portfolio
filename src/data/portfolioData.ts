@@ -79,9 +79,9 @@ export const portfolioData: PortfolioData = {
   profile: {
     fullName: "Syauqi Akmal Fadhali.",
     headlineRole: "Software Engineer/Software Development/Web Development",
-    eyebrow: "HALO, SAYA",
+    eyebrow: "HALO, PERKENALKAN SAYA",
     heroBio:
-      "Halo, perkenalkan nama saya Syauqi Akmal Fadhali. Saya adalah seorang sarjana teknik komputer lulusan Universitas Telkom dengan fokus minat dan keahlian pada rekayasa perangkat lunak, khususnya pengembangan aplikasi mobile dan web. Memiliki ketertarikan mendalam dalam merancang, membangun antarmuka pengguna, dan mentransformasikan ide menjadi solusi digital yang fungsional dan terstruktur. Berpengalaman mengembangkan berbagai aplikasi menggunakan Flutter, Dart, JavaScript, serta integrasi API melalui proyek akademik dan portofolio mandiri. Pribadi yang berorientasi pada pemecahan masalah, adaptif terhadap perkembangan teknologi baru, dan berdedikasi untuk berkontribusi secara profesional.",
+      "Saya adalah seorang sarjana teknik komputer lulusan Universitas Telkom dengan fokus minat dan keahlian pada rekayasa perangkat lunak, khususnya pengembangan aplikasi mobile dan web. Memiliki ketertarikan mendalam dalam merancang, membangun antarmuka pengguna, dan mentransformasikan ide menjadi solusi digital yang fungsional dan terstruktur. Berpengalaman mengembangkan berbagai aplikasi menggunakan Flutter, Dart, JavaScript, serta integrasi API melalui proyek akademik dan portofolio mandiri. Pribadi yang berorientasi pada pemecahan masalah, adaptif terhadap perkembangan teknologi baru, dan berdedikasi untuk berkontribusi secara profesional.",
     aboutTitle: "SAYA SYAUQI AKMAL FADHALI",
     aboutSubtitle: "FULLSTACK DEVELOPER",
     aboutParagraphs: [
