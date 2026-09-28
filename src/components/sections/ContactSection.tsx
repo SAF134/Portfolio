@@ -63,12 +63,6 @@ export function ContactSection() {
             />
           </div>
         </div>
-
-        {/* Footer Sub-Note & Copyright */}
-        <div className="mt-16 pt-8 border-t border-[#E4E4E7] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#71717A] text-center sm:text-left">
-          <p>© 2026 Deft Valian Exanova. Seluruh hak cipta dilindungi.</p>
-          <p className="font-mono text-[11px]">Dirancang & dibangun dengan presisi teknis.</p>
-        </div>
       </div>
     </footer>
   );

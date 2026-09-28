@@ -125,17 +125,6 @@ export function FloatingNavbar() {
             );
           })}
         </div>
-
-        <div className="h-4 w-[1px] bg-[#E4E4E7] mx-1" aria-hidden="true" />
-
-        {/* Status indicator badge */}
-        <div className="flex items-center gap-1.5 px-3 py-1">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-          </span>
-          <span className="text-[11px] font-mono text-zinc-500 font-medium">Online</span>
-        </div>
       </nav>
 
       {/* ================= MOBILE BOTTOM DOCK NAVBAR ================= */}
@@ -181,14 +170,6 @@ export function FloatingNavbar() {
             </a>
           );
         })}
-
-        {/* Status Dot Mobile */}
-        <div className="pr-2 pl-1" title="Status: Online">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-          </span>
-        </div>
       </nav>
     </>
   );
