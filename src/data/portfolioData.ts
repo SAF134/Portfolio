@@ -140,6 +140,7 @@ export const portfolioData: PortfolioData = {
         "Mendesain antarmuka pengguna (UI/UX) yang intuitif dengan visualisasi metrik dan grafik daya untuk memudahkan pemantauan efisiensi pengisian."
       ],
       technologies: ["Flutter", "Firebase", "Google Stitch","Leaflet Map"],
+      logo: "/images/experience/evconn.png"
     },
     {
       id: "kp",
@@ -153,11 +154,12 @@ export const portfolioData: PortfolioData = {
         "Mengelola serta merekapitulasi data administratif operasional layanan secara terstruktur guna mendukung evaluasi performa unit."
       ],
       technologies: ["Spreadsheet", "Infrastructure Excellence to provide Service Assurance (IXSA)", "Beyond Integrated Workforce Management (BIMA)", "Integrated Broadband Diagnostic Center (Ibooster)", "Auto Configuration System Ibooster (ACSIS)", "Operation Supervisory Monitoring (OSM)"],
+      logo: "/images/experience/pttelkom.png"
     },
     {
       id: "organisasi",
       role: "Publikasi & Dokumentasi",
-      company: "Persatuan Catur Mahasiswa",
+      company: "Persatuan Catur Mahasiswa (PCM) UKM Universitas Telkom",
       period: "2023 – 2024",
       location: "Jl. Telekomunikasi No. 1, Terusan Buahbatu, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257.",
       bulletPoints: [
@@ -165,6 +167,7 @@ export const portfolioData: PortfolioData = {
         "Merancang sertifikat digital dan materi grafis kepanitiaan untuk puluhan peserta dan jajaran panitia kegiatan."
       ],
       technologies: ["Canva"],
+      logo: "/images/experience/pcm.png"
     }
   ],
   education: [
@@ -174,6 +177,7 @@ export const portfolioData: PortfolioData = {
       address: "Jl. Telekomunikasi No. 1, Terusan Buahbatu, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257.",
       field: "S1 Teknik Komputer",
       period: "2022 – 2026",
+      logo: "/images/education/telkom.png"
     },
     {
       id: "sma",
@@ -181,6 +185,7 @@ export const portfolioData: PortfolioData = {
       address: "Jl. SPN Lido, Desa Srogol, Kecamatan Cigombong, Kabupaten Bogor, Jawa Barat 16110.",
       field: "Matematika dan Ilmu Pengetahuan Alam (MIPA)",
       period: "2019 – 2022",
+      logo: "/images/education/alkahfi.png"
     },
     {
       id: "smp",
@@ -188,6 +193,7 @@ export const portfolioData: PortfolioData = {
       address: "Jl. Hegarmanah IV No.47, RT.01/RW.08, Kelurahan Gunungbatu, Kecamatan Bogor Barat, Kota Bogor, Jawa Barat 16118.",
       field: "Islam Terpadu (IT)",
       period: "2016 – 2019",
+      logo: "/images/education/insantama.png"
     },
     {
       id: "sd",
@@ -195,6 +201,7 @@ export const portfolioData: PortfolioData = {
       address: "Jl. Hegarmanah IV No.47, RT.01/RW.08, Kelurahan Gunungbatu, Kecamatan Bogor Barat, Kota Bogor, Jawa Barat 16118.",
       field: "Islam Terpadu (IT)",
       period: "2010 – 2016",
+      logo: "/images/education/insantama.png"
     },
   ],
   projects: [

@@ -19,7 +19,6 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
     experience.company.toLowerCase().includes("persatuan");
 
   const HeaderIcon = isOrganisasi ? Users : Briefcase;
-  const badgeLabel = isOrganisasi ? "Organisasi Mahasiswa" : "Kerja Praktik";
 
   return (
     <article
@@ -45,14 +44,9 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
             )}
           </div>
           <div>
-            <div className="flex flex-wrap items-center gap-2.5">
-              <h3 className="text-lg sm:text-xl font-bold text-[#09090B] tracking-tight">
-                {experience.role}
-              </h3>
-              <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-zinc-100 border border-[#E4E4E7] text-[11px] font-medium text-zinc-700">
-                {badgeLabel}
-              </span>
-            </div>
+            <h3 className="text-lg sm:text-xl font-bold text-[#09090B] tracking-tight">
+              {experience.role}
+            </h3>
 
             <p className="text-sm sm:text-base font-semibold text-zinc-800 mt-1">
               {experience.company}
