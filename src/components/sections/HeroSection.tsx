@@ -110,14 +110,14 @@ export function HeroSection() {
             />
 
             {/* Main Profile Card Container */}
-            <div className="relative w-[300px] sm:w-[340px] md:w-[370px] aspect-[1/1.42] rounded-[32px] overflow-hidden bg-white border border-[#E4E4E7] shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
+            <div className="relative w-[280px] sm:w-[320px] md:w-[340px] lg:w-[350px] aspect-[9/16] rounded-[32px] overflow-hidden bg-white border border-[#E4E4E7] shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
               <Image
                 src={profile.heroCardImage}
                 alt="Foto Profil Syauqi Akmal Fadhali"
                 fill
                 priority
-                sizes="(max-width: 768px) 300px, 370px"
-                className="object-cover object-top"
+                sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, 350px"
+                className="object-cover object-center"
               />
             </div>
           </div>
