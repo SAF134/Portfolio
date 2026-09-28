@@ -8,11 +8,12 @@ import { cn } from "@/lib/utils";
 
 interface CertificateCardProps {
   certificate: CertificateItem;
+  index?: number;
   className?: string;
   onClick?: () => void;
 }
 
-export function CertificateCard({ certificate, className, onClick }: CertificateCardProps) {
+export function CertificateCard({ certificate, index, className, onClick }: CertificateCardProps) {
   const hasImage = Boolean(
     certificate.image &&
     certificate.image.trim() !== "" &&
@@ -34,7 +35,7 @@ export function CertificateCard({ certificate, className, onClick }: Certificate
       className={cn(
         "group relative flex flex-col rounded-[20px] bg-white border border-[#E4E4E7] overflow-hidden shadow-[0_1px_3px_rgba(0,0,0,0.03)] transition-all duration-200",
         hasImage
-          ? "hover:border-zinc-500 hover:shadow-[0_10px_25px_rgba(0,0,0,0.06)] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
+          ? "hover:border-zinc-400 hover:shadow-[0_10px_25px_rgba(0,0,0,0.06)] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
           : "cursor-default",
         className
       )}
@@ -52,8 +53,8 @@ export function CertificateCard({ certificate, className, onClick }: Certificate
             />
 
             {/* Hover overlay hint */}
-            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center">
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-sm text-[#09090B] text-xs font-semibold shadow-md transform translate-y-2 group-hover:translate-y-0 transition-transform duration-200">
+            <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center pointer-events-none">
+              <div className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-sm text-[#09090B] text-xs font-semibold shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform duration-200">
                 <Maximize2 className="w-3.5 h-3.5" />
                 <span>Lihat Detail</span>
               </div>
@@ -67,6 +68,28 @@ export function CertificateCard({ certificate, className, onClick }: Certificate
           </div>
         )}
       </div>
+
+      {/* Card Action Bar with explicit "Lihat Detail" Button */}
+      {hasImage && (
+        <div className="p-3.5 bg-white border-t border-[#E4E4E7] flex items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 text-zinc-500 text-xs font-medium">
+            <Award className="w-3.5 h-3.5 text-zinc-400" />
+            <span>Sertifikat {index !== undefined ? `#${index + 1}` : ""}</span>
+          </div>
+
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onClick?.();
+            }}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 hover:bg-black text-white text-xs font-semibold shadow-sm hover:shadow transition-colors"
+          >
+            <Maximize2 className="w-3.5 h-3.5" />
+            <span>Lihat Detail</span>
+          </button>
+        </div>
+      )}
 
       {/* Screen-reader descriptive caption */}
       <div className="sr-only">
