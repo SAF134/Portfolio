@@ -19,6 +19,7 @@ export interface ExperienceItem {
   location: string;
   bulletPoints: string[];
   technologies: string[];
+  logo?: string;
 }
 
 export interface ProjectItem {
@@ -45,6 +46,7 @@ export interface EducationItem {
   degree?: string;
   grade?: string;
   description?: string;
+  logo?: string;
 }
 
 export interface PortfolioData {
@@ -130,7 +132,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "proyek dosen",
       role: "Mobile Developer",
-      company: "Universitas Telkom",
+      company: "Laboratorium Everything Connected (EvConn).",
       period: "2025 – 2026",
       location: "Jl. Telekomunikasi No. 1, Terusan Buahbatu, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257.",
       bulletPoints: [

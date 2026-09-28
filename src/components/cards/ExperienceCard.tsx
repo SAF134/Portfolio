@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Briefcase, Users, Calendar, MapPin, Wrench } from "lucide-react";
 import { ExperienceItem } from "@/data/portfolioData";
 import { cn } from "@/lib/utils";
@@ -30,8 +31,18 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
       {/* Header Info */}
       <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-6 border-b border-[#E4E4E7]">
         <div className="flex items-start gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-zinc-100 border border-[#E4E4E7] flex items-center justify-center shrink-0 text-zinc-800">
-            <HeaderIcon className="w-6 h-6" />
+          <div className="relative w-12 h-12 rounded-2xl bg-zinc-100 border border-[#E4E4E7] overflow-hidden flex items-center justify-center shrink-0 text-zinc-800">
+            {experience.logo ? (
+              <Image
+                src={experience.logo}
+                alt={`Logo ${experience.company}`}
+                fill
+                sizes="48px"
+                className="object-contain p-1.5"
+              />
+            ) : (
+              <HeaderIcon className="w-6 h-6" />
+            )}
           </div>
           <div>
             <div className="flex flex-wrap items-center gap-2.5">

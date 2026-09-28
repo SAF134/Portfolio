@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { GraduationCap, Calendar, MapPin, BookOpen, Award } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 
@@ -29,8 +30,18 @@ export function EducationSection() {
             >
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-zinc-100 border border-[#E4E4E7] flex items-center justify-center shrink-0 text-zinc-800">
-                    <GraduationCap className="w-6 h-6" />
+                  <div className="relative w-12 h-12 rounded-2xl bg-zinc-100 border border-[#E4E4E7] overflow-hidden flex items-center justify-center shrink-0 text-zinc-800">
+                    {item.logo ? (
+                      <Image
+                        src={item.logo}
+                        alt={`Logo ${item.institution || item.degree}`}
+                        fill
+                        sizes="48px"
+                        className="object-contain p-1.5"
+                      />
+                    ) : (
+                      <GraduationCap className="w-6 h-6" />
+                    )}
                   </div>
                   <div>
                     {/* 1. Nama Sekolah/Institut/Universitas */}
