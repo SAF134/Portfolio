@@ -13,10 +13,10 @@ export function ExperienceSection() {
         {/* Section Heading */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090B] tracking-tight">
-            Pengalaman <span className="text-zinc-500">Kerja</span>.
+            Pengalaman Kerja Praktik & <span className="text-zinc-500">Organisasi</span>.
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-[#71717A] max-w-md mx-auto">
-            Jejak karir profesional dan kontribusi rekayasa perangkat lunak pada lingkungan industri berskala besar.
+            Jejak pengalaman kerja praktik & organisasi selama menempuh pendidikan.
           </p>
         </div>
 

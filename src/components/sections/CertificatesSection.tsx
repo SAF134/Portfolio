@@ -39,7 +39,7 @@ export function CertificatesSection() {
             Sertifikat & <span className="text-zinc-500">Penghargaan</span>.
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-[#71717A] max-w-md mx-auto">
-            Bukti verifikasi dan sertifikasi resmi kompetensi dalam rekayasa web dan arsitektur sistem.
+            Bukti mengikuti webinar, seminar, serta sertifikasi yang pernah saya ikuti selama menempuh pendidikan.
           </p>
         </div>
 

@@ -41,10 +41,11 @@ export interface CertificateItem {
 
 export interface EducationItem {
   id: string;
-  degree: string;
-  field: string;
   institution: string;
+  address: string;
+  field: string;
   period: string;
+  degree?: string;
   grade?: string;
   description?: string;
 }
@@ -147,14 +148,18 @@ export const portfolioData: PortfolioData = {
   ],
   education: [
     {
-      id: "unsika",
-      degree: "Sarjana Komputer (S.Kom.)",
-      field: "Sistem Informasi",
-      institution: "Universitas Singaperbangsa Karawang",
+      id: "sarjana",
+      institution: "Universitas Telkom",
+      address: "Bandung, Jawa Barat",
+      field: "S1 Teknik Komputer",
       period: "2022 – 2026",
-      grade: "Lulusan Cumlaude",
-      description:
-        "Fokus pada rekayasa perangkat lunak, pengembangan aplikasi web skala industri, dan manajemen basis data relasional.",
+    },
+    {
+      id: "smk",
+      institution: "SMK Wikrama Bandung",
+      address: "Bandung, Jawa Barat",
+      field: "Teknik Komputer dan Informatika",
+      period: "2019 – 2022",
     },
   ],
   projects: [

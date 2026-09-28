@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { GraduationCap, Calendar, Award } from "lucide-react";
+import { GraduationCap, Calendar, MapPin, BookOpen, Award } from "lucide-react";
 import { portfolioData } from "@/data/portfolioData";
 
 export function EducationSection() {
@@ -33,9 +33,10 @@ export function EducationSection() {
                     <GraduationCap className="w-6 h-6" />
                   </div>
                   <div>
+                    {/* 1. Nama Sekolah/Institut/Universitas */}
                     <div className="flex flex-wrap items-center gap-2">
                       <h3 className="text-lg sm:text-xl font-bold text-[#09090B] tracking-tight">
-                        {item.degree}
+                        {item.institution || item.degree}
                       </h3>
                       {item.grade && (
                         <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#09090B] text-white text-[11px] font-semibold tracking-wide">
@@ -44,17 +45,26 @@ export function EducationSection() {
                         </span>
                       )}
                     </div>
-                    <p className="text-sm sm:text-base font-semibold text-zinc-700 mt-1">
-                      {item.institution}
-                    </p>
-                    <p className="text-xs sm:text-sm text-[#71717A] font-mono mt-0.5">
-                      Program Studi: {item.field}
-                    </p>
+
+                    {/* 2. Alamat */}
+                    {item.address && (
+                      <div className="flex items-center gap-1.5 text-xs sm:text-sm text-[#52525B] mt-1.5">
+                        <MapPin className="w-3.5 h-3.5 text-zinc-500 shrink-0" />
+                        <span>{item.address}</span>
+                      </div>
+                    )}
+
+                    {/* 3. Program Studi */}
+                    <div className="flex items-center gap-1.5 text-xs sm:text-sm text-zinc-700 mt-2 font-medium">
+                      <BookOpen className="w-3.5 h-3.5 text-zinc-500 shrink-0" />
+                      <span>Program Studi: <strong className="text-[#09090B] font-semibold">{item.field}</strong></span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-1.5 text-xs sm:text-sm text-[#71717A] font-mono shrink-0 sm:self-start">
-                  <Calendar className="w-3.5 h-3.5" />
+                {/* 4. Periode */}
+                <div className="flex items-center gap-1.5 text-xs sm:text-sm text-[#71717A] font-mono shrink-0 sm:self-start bg-zinc-50 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-full border sm:border-0 border-[#E4E4E7] self-start">
+                  <Calendar className="w-3.5 h-3.5 text-zinc-500" />
                   <span>{item.period}</span>
                 </div>
               </div>
