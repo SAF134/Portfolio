@@ -16,7 +16,7 @@ export function EducationSection() {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090B] tracking-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
             Riwayat <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 bg-clip-text text-transparent">Pendidikan</span><span className="text-blue-600 drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]">.</span>
           </h2>
-          <p className="mt-3 text-xs sm:text-sm text-[#71717A] max-w-md mx-auto">
+          <p className="mt-3 text-xs sm:text-sm text-zinc-600 max-w-md mx-auto">
             Latar belakang akademis formal selama menempuh perjalanan pendidikan.
           </p>
         </div>
@@ -74,7 +74,7 @@ export function EducationSection() {
                 </div>
 
                 {/* 4. Periode */}
-                <div className="flex items-center gap-1.5 text-xs sm:text-sm text-[#71717A] font-mono shrink-0 sm:self-start bg-zinc-50 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-full border sm:border-0 border-[#E4E4E7] self-start">
+                <div className="flex items-center gap-1.5 text-xs sm:text-sm text-zinc-600 font-mono shrink-0 sm:self-start bg-zinc-50 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-full border sm:border-0 border-[#E4E4E7] self-start">
                   <Calendar className="w-3.5 h-3.5 text-zinc-500" />
                   <span>{item.period}</span>
                 </div>

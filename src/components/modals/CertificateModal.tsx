@@ -92,8 +92,7 @@ export function CertificateModal({
               alt={`Sertifikat ${currentIndex + 1}`}
               fill
               sizes="(max-width: 1200px) 100vw, 1200px"
-              quality={95}
-              priority
+              quality={85}
               className="object-contain"
             />
           </div>

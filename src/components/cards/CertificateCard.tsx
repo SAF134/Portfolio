@@ -40,8 +40,8 @@ export function CertificateCard({ certificate, index, className, onClick }: Cert
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-50 text-zinc-400 p-4 text-center">
             <Award className="w-8 h-8 text-zinc-300 mb-1.5" />
-            <span className="text-xs font-mono font-medium text-zinc-500">A4 Landscape (29,7 : 21)</span>
-            <span className="text-[11px] text-zinc-400 mt-0.5">Proyek ini sedang dalam proses pembuatan</span>
+            <span className="text-xs font-mono font-medium text-zinc-600">A4 Landscape (29,7 : 21)</span>
+            <span className="text-[11px] text-zinc-600 mt-0.5">Proyek ini sedang dalam proses pembuatan</span>
           </div>
         )}
       </div>
@@ -49,7 +49,7 @@ export function CertificateCard({ certificate, index, className, onClick }: Cert
       {/* Card Action Bar with explicit "Lihat Detail" Button */}
       {hasImage && (
         <div className="p-3.5 bg-white border-t border-[#E4E4E7] flex items-center justify-between gap-2">
-          <div className="flex items-center gap-1.5 text-zinc-500 text-xs font-medium">
+          <div className="flex items-center gap-1.5 text-zinc-600 text-xs font-medium">
             <Award className="w-3.5 h-3.5 text-amber-500" />
             <span>Sertifikat {index !== undefined ? `#${index + 1}` : ""}</span>
           </div>
@@ -67,7 +67,7 @@ export function CertificateCard({ certificate, index, className, onClick }: Cert
 
       {/* Screen-reader descriptive caption */}
       <div className="sr-only">
-        <h4>Sertifikat</h4>
+        <h3>Sertifikat</h3>
       </div>
     </div>
   );

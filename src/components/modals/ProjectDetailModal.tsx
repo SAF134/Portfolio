@@ -110,8 +110,7 @@ export function ProjectDetailModal({
                 alt={`Pratinjau antarmuka ${project.title}`}
                 fill
                 sizes="(max-width: 1200px) 100vw, 1200px"
-                quality={95}
-                priority
+                quality={85}
                 className="object-contain"
               />
             ) : (

@@ -34,7 +34,7 @@ export function HeroSection() {
         <div className="lg:col-span-7 flex flex-col items-start z-10">
           {/* Eyebrow & Availability Status Badge with Ambient Glow */}
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="text-xs md:text-sm font-mono font-semibold tracking-widest text-[#71717A] uppercase">
+            <span className="text-xs md:text-sm font-mono font-semibold tracking-widest text-zinc-600 uppercase">
               {profile.eyebrow}
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/90 text-emerald-700 text-xs font-medium shadow-[0_2px_12px_-2px_rgba(16,185,129,0.3)]">
@@ -49,19 +49,19 @@ export function HeroSection() {
           {/* Large Title with Accent Dot and Subtle Depth */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090B] tracking-tight leading-[1.12] drop-shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
             {profile.fullName.split(" ")[0]} {profile.fullName.split(" ")[1]}{" "}
-            <span className="text-zinc-400">
+            <span className="text-zinc-600">
               {profile.fullName.split(" ")[2]?.replace(".", "") || ""}
             </span>
             <span className="text-blue-600 drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]">.</span>
           </h1>
 
           {/* Subtitle Role */}
-          <h2 className="text-base sm:text-lg md:text-xl font-semibold text-zinc-700 mt-2.5 tracking-tight">
+          <p className="text-base sm:text-lg md:text-xl font-semibold text-zinc-700 mt-2.5 tracking-tight">
             {profile.headlineRole}
-          </h2>
+          </p>
 
           {/* Bio text */}
-          <p className="mt-5 text-sm sm:text-base text-[#52525B] max-w-lg leading-relaxed font-normal text-left">
+          <p className="mt-5 text-sm sm:text-base text-[#52525B] max-w-lg leading-relaxed font-normal text-justify">
             {profile.heroBio}
           </p>
 

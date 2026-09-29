@@ -45,8 +45,8 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-50 text-zinc-400 p-4 text-center">
             <ImageIcon className="w-8 h-8 text-zinc-300 mb-1.5" />
-            <span className="text-xs font-mono font-medium text-zinc-500">Rasio 16:9</span>
-            <span className="text-[11px] text-zinc-400 mt-0.5">Proyek ini sedang dalam proses pembuatan</span>
+            <span className="text-xs font-mono font-medium text-zinc-600">Rasio 16:9</span>
+            <span className="text-[11px] text-zinc-600 mt-0.5">Proyek ini sedang dalam proses pembuatan</span>
           </div>
         )}
       </div>
@@ -72,7 +72,7 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
         {/* Card Footer / Action Bar */}
         <div className="mt-6 pt-4 border-t border-[#E4E4E7] flex flex-col gap-3">
           {/* Label Proyek: (Icon Proyek) + Proyek #1 */}
-          <div className="flex items-center gap-1.5 text-zinc-500 text-xs font-mono font-medium">
+          <div className="flex items-center gap-1.5 text-zinc-600 text-xs font-mono font-medium">
             <FolderKanban className="w-3.5 h-3.5 text-zinc-400" />
             <span>Proyek {index !== undefined ? `#${index + 1}` : ""}</span>
           </div>
@@ -97,7 +97,7 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
                 onClick={() => {
                   if (onViewDetail) onViewDetail();
                 }}
-                className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-zinc-50/80 hover:bg-zinc-100 border border-dashed border-zinc-300 hover:border-zinc-400 text-zinc-500 hover:text-zinc-700 text-xs font-medium shadow-[0_1px_4px_rgba(0,0,0,0.02)] transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-zinc-50/80 hover:bg-zinc-100 border border-dashed border-zinc-300 hover:border-zinc-400 text-zinc-600 hover:text-zinc-800 text-xs font-medium shadow-[0_1px_4px_rgba(0,0,0,0.02)] transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
                 title="Tautan bukti proyek dapat diisi pada portfolioData.ts (Klik untuk melihat detail proyek)"
               >
                 <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />

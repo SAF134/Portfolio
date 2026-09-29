@@ -32,36 +32,49 @@ export function FloatingNavbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+    let ticking = false;
+
+    const updateScrollState = () => {
+      const currentScrollY = window.scrollY;
+      const scrolled = currentScrollY > 20;
+      setIsScrolled((prev) => (prev !== scrolled ? scrolled : prev));
 
       // Check if user has scrolled near bottom of page
-      if (
-        window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight - 60
-      ) {
-        setActiveSection(navItems[navItems.length - 1].id);
+      const docHeight = document.documentElement.scrollHeight;
+      if (window.innerHeight + currentScrollY >= docHeight - 60) {
+        const lastId = navItems[navItems.length - 1].id;
+        setActiveSection((prev) => (prev !== lastId ? lastId : prev));
         return;
       }
 
-      // Section intersection detection
-      const scrollPosition = window.scrollY + 200;
+      // Section intersection detection using lightweight offsetTop
+      const scrollPosition = currentScrollY + 200;
 
       for (let i = navItems.length - 1; i >= 0; i--) {
         const item = navItems[i];
         const element = document.getElementById(item.id);
         if (element) {
-          const top = window.scrollY + element.getBoundingClientRect().top;
+          const top = element.offsetTop;
           if (scrollPosition >= top) {
-            setActiveSection(item.id);
+            setActiveSection((prev) => (prev !== item.id ? item.id : prev));
             break;
           }
         }
       }
     };
 
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          updateScrollState();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    updateScrollState();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -153,7 +166,7 @@ export function FloatingNavbar() {
                 "relative p-2 sm:p-2.5 rounded-full transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600",
                 isActive
                   ? "text-white"
-                  : "text-[#71717A] hover:text-[#09090B]"
+                  : "text-zinc-600 hover:text-[#09090B]"
               )}
             >
               {isActive && (

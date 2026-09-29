@@ -62,7 +62,7 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
         </div>
 
         {/* Periode Badge */}
-        <div className="flex items-center gap-1.5 text-xs sm:text-sm text-[#71717A] font-mono shrink-0 sm:self-start bg-zinc-50 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-full border sm:border-0 border-[#E4E4E7] self-start">
+        <div className="flex items-center gap-1.5 text-xs sm:text-sm text-zinc-600 font-mono shrink-0 sm:self-start bg-zinc-50 sm:bg-transparent px-3 py-1.5 sm:p-0 rounded-full border sm:border-0 border-[#E4E4E7] self-start">
           <Calendar className="w-3.5 h-3.5 text-zinc-500 shrink-0" />
           <span>{experience.period}</span>
         </div>
@@ -83,7 +83,7 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
       {/* Technologies / Tools Footer */}
       {experience.technologies && experience.technologies.length > 0 && (
         <div className="pt-5 border-t border-[#E4E4E7] flex flex-wrap items-center gap-2">
-          <div className="flex items-center gap-1.5 text-xs font-mono font-semibold tracking-wider text-zinc-500 uppercase mr-1">
+          <div className="flex items-center gap-1.5 text-xs font-mono font-semibold tracking-wider text-zinc-600 uppercase mr-1">
             <Wrench className="w-3.5 h-3.5 text-zinc-500" />
             <span>Alat &amp; Teknologi:</span>
           </div>
