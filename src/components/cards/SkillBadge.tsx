@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import * as SimpleIcons from "simple-icons";
+import { getTechIcon } from "@/lib/icons";
 import { cn } from "@/lib/utils";
 
 interface SkillBadgeProps {
@@ -10,38 +10,13 @@ interface SkillBadgeProps {
   className?: string;
 }
 
-// Map slugs to simple-icons export keys
-const iconSlugMap: Record<string, string> = {
-  flutter: "siFlutter",
-  react: "siReact",
-  tailwindcss: "siTailwindcss",
-  nextdotjs: "siNextdotjs",
-  firebase: "siFirebase",
-  arduino: "siArduino",
-  typescript: "siTypescript",
-  googlestitch: "siGoogle",
-  figma: "siFigma",
-  nodedotjs: "siNodedotjs",
-  git: "siGit",
-  laravel: "siLaravel",
-  postgresql: "siPostgresql",
-  mysql: "siMysql",
-  php: "siPhp",
-  javascript: "siJavascript",
-  map: "siLeaflet",
-  leaflet: "siLeaflet",
-  leafletmap: "siLeaflet",
-};
-
 export function SkillBadge({ name, slug, className }: SkillBadgeProps) {
-  const iconKey = iconSlugMap[slug];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const icon = iconKey ? (SimpleIcons as any)[iconKey] : null;
+  const icon = getTechIcon(slug) || getTechIcon(name);
 
   return (
     <div
       className={cn(
-        "group inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white border border-[#E4E4E7] hover:border-zinc-900 hover:bg-[#F4F4F5] shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition-all duration-150 cursor-default select-none",
+        "group inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-white border border-[#E4E4E7] hover:border-blue-400/60 hover:bg-gradient-to-r hover:from-white hover:to-blue-50/40 hover:shadow-[0_8px_20px_-4px_rgba(37,99,235,0.2)] hover:-translate-y-0.5 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.04)] transition-all duration-200 cursor-default select-none",
         className
       )}
     >

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  Home,
+  User,
   GraduationCap,
   Code2,
   Briefcase,
@@ -19,7 +19,7 @@ interface NavItem {
 }
 
 const navItems: NavItem[] = [
-  { id: "beranda", label: "Beranda", icon: Home },
+  { id: "profil", label: "Profil", icon: User },
   { id: "pendidikan", label: "Pendidikan", icon: GraduationCap },
   { id: "keahlian", label: "Keahlian", icon: Code2 },
   { id: "pengalaman", label: "Pengalaman", icon: Briefcase },
@@ -28,7 +28,7 @@ const navItems: NavItem[] = [
 ];
 
 export function FloatingNavbar() {
-  const [activeSection, setActiveSection] = useState<string>("beranda");
+  const [activeSection, setActiveSection] = useState<string>("profil");
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -67,7 +67,7 @@ export function FloatingNavbar() {
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    if (id === "beranda") {
+    if (id === "profil") {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -97,8 +97,8 @@ export function FloatingNavbar() {
         className={cn(
           "hidden md:flex fixed top-5 left-1/2 -translate-x-1/2 z-50 items-center justify-between gap-1 p-1.5 rounded-full backdrop-blur-md border border-[#E4E4E7] transition-all duration-300",
           isScrolled
-            ? "bg-white/95 shadow-[0_12px_32px_rgb(0,0,0,0.08)]"
-            : "bg-white/85 shadow-[0_8px_30px_rgb(0,0,0,0.04)]"
+            ? "bg-white/95 shadow-[0_16px_36px_-8px_rgba(0,0,0,0.08),0_4px_16px_-4px_rgba(37,99,235,0.08)] border-zinc-200"
+            : "bg-white/85 shadow-[0_10px_30px_-6px_rgba(0,0,0,0.05),0_2px_10px_-2px_rgba(37,99,235,0.06)] border-zinc-200/80"
         )}
       >
         {/* Nav Links */}
@@ -113,7 +113,7 @@ export function FloatingNavbar() {
                 href={`#${item.id}`}
                 onClick={(e) => scrollToSection(e, item.id)}
                 className={cn(
-                  "relative flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-1",
+                  "relative flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-1",
                   isActive
                     ? "text-white"
                     : "text-[#52525B] hover:text-[#09090B] hover:bg-zinc-100"
@@ -123,7 +123,7 @@ export function FloatingNavbar() {
                   <motion.div
                     layoutId="desktopActivePill"
                     transition={{ type: "spring", stiffness: 450, damping: 32 }}
-                    className="absolute inset-0 bg-[#09090B] rounded-full -z-10 shadow-sm"
+                    className="absolute inset-0 bg-gradient-to-r from-zinc-900 via-black to-zinc-900 rounded-full -z-10 shadow-[0_2px_10px_rgba(37,99,235,0.25)] border border-zinc-800"
                   />
                 )}
                 <Icon className="w-3.5 h-3.5" />
@@ -137,7 +137,7 @@ export function FloatingNavbar() {
       {/* ================= MOBILE BOTTOM DOCK NAVBAR ================= */}
       <nav
         aria-label="Navigasi Utama Mobile"
-        className="flex md:hidden fixed bottom-4 inset-x-4 max-w-[340px] mx-auto z-50 items-center justify-around p-1.5 rounded-full bg-white/95 backdrop-blur-lg border border-[#E4E4E7] shadow-[0_12px_32px_rgb(0,0,0,0.12)]"
+        className="flex md:hidden fixed bottom-4 inset-x-4 max-w-[340px] mx-auto z-50 items-center justify-around p-1.5 rounded-full bg-white/95 backdrop-blur-lg border border-[#E4E4E7] shadow-[0_12px_36px_-6px_rgba(0,0,0,0.12),0_4px_16px_-4px_rgba(37,99,235,0.1)]"
       >
         {navItems.map((item) => {
           const isActive = activeSection === item.id;
@@ -150,7 +150,7 @@ export function FloatingNavbar() {
               onClick={(e) => scrollToSection(e, item.id)}
               aria-label={item.label}
               className={cn(
-                "relative p-2 sm:p-2.5 rounded-full transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900",
+                "relative p-2 sm:p-2.5 rounded-full transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600",
                 isActive
                   ? "text-white"
                   : "text-[#71717A] hover:text-[#09090B]"
@@ -160,7 +160,7 @@ export function FloatingNavbar() {
                 <motion.div
                   layoutId="mobileActivePill"
                   transition={{ type: "spring", stiffness: 450, damping: 32 }}
-                  className="absolute inset-0 bg-[#09090B] rounded-full -z-10 shadow-sm"
+                  className="absolute inset-0 bg-gradient-to-r from-zinc-900 via-black to-zinc-900 rounded-full -z-10 shadow-[0_2px_10px_rgba(37,99,235,0.25)] border border-zinc-800"
                 />
               )}
               <Icon className="w-4 h-4" />

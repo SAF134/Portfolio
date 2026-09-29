@@ -23,7 +23,7 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
   return (
     <article
       className={cn(
-        "rounded-[24px] bg-white border border-[#E4E4E7] p-6 sm:p-8 md:p-9 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-zinc-400 transition-all duration-200",
+        "rounded-[24px] bg-white border border-[#E4E4E7] p-6 sm:p-8 md:p-9 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04),0_10px_30px_-10px_rgba(99,102,241,0.06)] hover:border-indigo-400/50 hover:shadow-[0_20px_40px_-10px_rgba(99,102,241,0.16)] hover:-translate-y-1 transition-all duration-300 ease-out",
         className
       )}
     >
@@ -73,7 +73,7 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
         {experience.bulletPoints.map((point, index) => (
           <div key={index} className="flex items-start gap-3">
             <span className="w-1.5 h-1.5 rounded-full bg-zinc-900 mt-2 shrink-0" />
-            <p className="text-xs sm:text-sm text-[#52525B] leading-relaxed text-justify sm:text-left">
+            <p className="text-xs sm:text-sm text-[#52525B] leading-relaxed text-left">
               {point}
             </p>
           </div>
@@ -90,9 +90,9 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
           {experience.technologies.map((tech) => (
             <span
               key={tech}
-              className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full bg-zinc-100 border border-[#E4E4E7] text-[#09090B]"
+              className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full bg-zinc-50 hover:bg-gradient-to-r hover:from-white hover:to-indigo-50/40 border border-[#E4E4E7] hover:border-indigo-300 shadow-[0_1px_3px_rgba(0,0,0,0.02)] hover:shadow-[0_4px_12px_-2px_rgba(99,102,241,0.12)] text-[#09090B] transition-all duration-150"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-zinc-900 shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0" />
               <span>{tech}</span>
             </span>
           ))}

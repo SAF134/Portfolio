@@ -1,43 +1,8 @@
 "use client";
 
 import React from "react";
-import * as SimpleIcons from "simple-icons";
+import { getTechIcon } from "@/lib/icons";
 import { cn } from "@/lib/utils";
-
-// Mapping of normalized technology names to SimpleIcons export keys
-const techIconMap: Record<string, string> = {
-  flutter: "siFlutter",
-  firebase: "siFirebase",
-  googlestitch: "siGoogle",
-  stitch: "siGoogle",
-  laravel: "siLaravel",
-  leafletmap: "siLeaflet",
-  leaflet: "siLeaflet",
-  bootstrap: "siBootstrap",
-  html: "siHtml5",
-  html5: "siHtml5",
-  css: "siCss",
-  css3: "siCss",
-  js: "siJavascript",
-  javascript: "siJavascript",
-  tailwindcss: "siTailwindcss",
-  tailwind: "siTailwindcss",
-  mysql: "siMysql",
-  php: "siPhp",
-  react: "siReact",
-  reactjs: "siReact",
-  nextjs: "siNextdotjs",
-  nextdotjs: "siNextdotjs",
-  typescript: "siTypescript",
-  nodejs: "siNodedotjs",
-  nodedotjs: "siNodedotjs",
-  figma: "siFigma",
-  arduinoide: "siArduino",
-  arduino: "siArduino",
-  git: "siGit",
-  spreadsheet: "siGooglesheets",
-  googlesheets: "siGooglesheets",
-};
 
 interface TechBadgeProps {
   name: string;
@@ -45,10 +10,7 @@ interface TechBadgeProps {
 }
 
 export function TechBadge({ name, className }: TechBadgeProps) {
-  const norm = name.toLowerCase().replace(/[\s\-_.]/g, "");
-  const iconKey = techIconMap[norm] || techIconMap[name.toLowerCase()];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const icon = iconKey ? (SimpleIcons as any)[iconKey] : null;
+  const icon = getTechIcon(name);
 
   return (
     <span

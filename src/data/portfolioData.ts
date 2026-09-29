@@ -1,78 +1,24 @@
-export interface SocialLink {
-  platform: 'github' | 'instagram' | 'linkedin';
-  name: string;
-  url: string;
-  ariaLabel: string;
-}
+import type {
+  SocialLink,
+  SkillItem,
+  ExperienceItem,
+  ProjectItem,
+  CertificateItem,
+  EducationItem,
+  PortfolioProfile,
+  PortfolioData,
+} from "@/types/portfolio";
 
-export interface SkillItem {
-  name: string;
-  category: 'frontend' | 'backend' | 'database' | 'tools';
-  slug: string; // for simple-icons matching e.g. "laravel", "react", "tailwindcss"
-}
-
-export interface ExperienceItem {
-  id: string;
-  role: string;
-  company: string;
-  period: string;
-  location: string;
-  bulletPoints: string[];
-  technologies: string[];
-  logo?: string;
-}
-
-export interface ProjectItem {
-  id: string;
-  title: string;
-  description: string;
-  mockupImage: string;
-  technologies: string[];
-  liveUrl?: string;
-  repoUrl?: string;
-}
-
-export interface CertificateItem {
-  id: string;
-  image: string;
-}
-
-export interface EducationItem {
-  id: string;
-  institution: string;
-  address: string;
-  field: string;
-  period: string;
-  degree?: string;
-  grade?: string;
-  description?: string;
-  logo?: string;
-}
-
-export interface PortfolioData {
-  profile: {
-    fullName: string;
-    headlineRole: string;
-    eyebrow: string;
-    heroBio: string;
-    aboutTitle: string;
-    aboutSubtitle: string;
-    aboutParagraphs: string[];
-    email: string;
-    location: string;
-    statusHandle: string;
-    statusText: string;
-    heroCardImage: string;
-    aboutPortraitImage: string;
-    cvPath: string;
-    socials: SocialLink[];
-  };
-  skills: SkillItem[];
-  experiences: ExperienceItem[];
-  education: EducationItem[];
-  projects: ProjectItem[];
-  certificates: CertificateItem[];
-}
+export type {
+  SocialLink,
+  SkillItem,
+  ExperienceItem,
+  ProjectItem,
+  CertificateItem,
+  EducationItem,
+  PortfolioProfile,
+  PortfolioData,
+};
 
 export const portfolioData: PortfolioData = {
   profile: {
@@ -80,19 +26,9 @@ export const portfolioData: PortfolioData = {
     headlineRole: "Software Engineer/Software Development/Web Development",
     eyebrow: "HALO, PERKENALKAN SAYA",
     heroBio:
-      "Saya adalah seorang sarjana teknik komputer lulusan Universitas Telkom dengan fokus minat dan keahlian pada rekayasa perangkat lunak, khususnya pengembangan aplikasi mobile dan web. Memiliki ketertarikan mendalam dalam merancang, membangun antarmuka pengguna, dan mentransformasikan ide menjadi solusi digital yang fungsional dan terstruktur. Berpengalaman mengembangkan berbagai aplikasi menggunakan Flutter, Dart, JavaScript, serta integrasi API melalui proyek akademik dan portofolio mandiri. Pribadi yang berorientasi pada pemecahan masalah, adaptif terhadap perkembangan teknologi baru, dan berdedikasi untuk berkontribusi secara profesional.",
-    aboutTitle: "SAYA SYAUQI AKMAL FADHALI",
-    aboutSubtitle: "FULLSTACK DEVELOPER",
-    aboutParagraphs: [
-      "Sebagai lulusan Sistem Informasi dan Software Engineer, saya berfokus mengubah kebutuhan bisnis yang kompleks menjadi aplikasi web yang efisien.",
-      "Dari digitalisasi alur kerja operasional hingga perancangan arsitektur frontend, saya menikmati proses membangun solusi full-stack dari nol yang terukur dan memberikan dampak nyata.",
-    ],
+      "Saya adalah lulusan Teknik Komputer Universitas Telkom yang berfokus pada rekayasa perangkat lunak, khususnya pengembangan aplikasi mobile dan web modern. Berpengalaman merancang dan membangun solusi digital yang fungsional—mulai dari sistem monitoring energi dan IoT real-time terintegrasi, platform pemetaan interaktif geospasial, hingga aplikasi utilitas mobile produktivitas. Mengombinasikan desain antarmuka pengguna yang intuitif dengan arsitektur kode yang terstruktur, adaptif, serta berorientasi pada pemecahan masalah nyata.",
     email: "syauqiakmal137@gmail.com",
-    location: "Bogor, Indonesia",
-    statusHandle: "@saf.134",
-    statusText: "Online",
     heroCardImage: "/images/profile/foto-profil-syauqi.webp",
-    aboutPortraitImage: "/images/profile/about-portrait.png",
     cvPath: "/assets/CV_Syauqi_Akmal_Fadhali.pdf",
     socials: [
       {
@@ -132,7 +68,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "proyek dosen",
       role: "Mobile Developer",
-      company: "Laboratorium Everything Connected (EvConn).",
+      company: "Laboratorium Everything Connected (EvConn)",
       period: "2025 – 2026",
       location: "Jl. Telekomunikasi No. 1, Terusan Buahbatu, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257.",
       bulletPoints: [
@@ -212,6 +148,7 @@ export const portfolioData: PortfolioData = {
         "Aplikasi Monitoring Pengisian Daya Kendaraan Listrik Ringan Berbasis Tenaga Surya.",
       mockupImage: "/images/projects/sunvolt.webp",
       technologies: ["Flutter", "Firebase", "Google Stitch", "Leaflet Map"],
+      projectUrl: "https://drive.google.com/drive/folders/1KVRh-Ng_1-1mAoSuY6Rxi74PuyOcnsTq?usp=drive_link",
     },
     {
       id: "proyek-2",
@@ -220,6 +157,7 @@ export const portfolioData: PortfolioData = {
         "Aplikasi Manajemen Akademik Mahasiswa (IPK, Jadwal, dan Tugas).",
       mockupImage: "/images/projects/myipk.webp",
       technologies: ["Flutter", "Google Stitch"],
+      projectUrl: "https://drive.google.com/drive/folders/1dEgPrlv5nGuPitLvZ-blyde4vlz68SGF?usp=drive_link",
     },
     {
       id: "proyek-3",
@@ -228,6 +166,7 @@ export const portfolioData: PortfolioData = {
         "Aplikasi Monitoring & Kontrol Pemberi Pakan Ikan Otomatis.",
       mockupImage: "/images/projects/myfish.webp",
       technologies: ["Flutter", "Firebase", "Google Stitch"],
+      projectUrl: "https://drive.google.com/drive/folders/1FhioI8ia7Oa8s7rQgqq_cohsXmGCVRXW?usp=drive_link",
     },
     {
       id: "proyek-4",
@@ -236,6 +175,7 @@ export const portfolioData: PortfolioData = {
         "Website Pemetaan Interaktif Lokasi Hotel Kota Bandung.",
       mockupImage: "/images/projects/petasare.webp",
       technologies: ["Typescript", "Next JS", "Leaflet Map", "TailwindCSS"],
+      projectUrl: "https://peta-sare.vercel.app/",
     },
     {
       id: "proyek-5",
@@ -244,6 +184,7 @@ export const portfolioData: PortfolioData = {
         "Aplikasi Pemetaan Interaktif lokasi Hotel, SPBU, Rumah Sakit, dan Mall di Kota Bogor.",
       mockupImage: "/images/projects/petabuitenzorg.webp",
       technologies: ["Flutter", "Google Stitch", "Leaflet Map"],
+      projectUrl: "https://drive.google.com/drive/folders/1X3r9WhNSQhPCXoikgPJCi7P71ls08WVp?usp=drive_link",
     },
     {
       id: "proyek-6",
@@ -252,6 +193,7 @@ export const portfolioData: PortfolioData = {
         "Aplikasi Pengetuk Layar Smartphone Otomatis.",
       mockupImage: "/images/projects/",
       technologies: ["Flutter", "Google Stitch"],
+      projectUrl: "https://drive.google.com/drive/folders/19tYTYg06X_aJH-BWlw-BGdRC7ke9HzKh?usp=drive_link",
     },
     {
       id: "proyek-7",
@@ -260,36 +202,37 @@ export const portfolioData: PortfolioData = {
         "Aplikasi Timer dengan overlay.",
       mockupImage: "/images/projects/",
       technologies: ["Flutter", "Google Stitch"],
+      projectUrl: "https://drive.google.com/drive/folders/1NTjFigM09igydbg1hGQOHnIlJDz-236C?usp=drive_link",
     },
   ],
   certificates: [
     {
       id: "sertifikat-1",
-      image: "/images/certificates/1103223237_SertifGreatNusa1.webp",
+      image: "/images/certificates/sertif-greatnusa-1.webp",
     },
     {
       id: "sertifikat-2",
-      image: "/images/certificates/1103223237_SertifGreatNusa2.webp",
+      image: "/images/certificates/sertif-greatnusa-2.webp",
     },
     {
       id: "sertifikat-3",
-      image: "/images/certificates/1103223237_SertifGreatNusa3.webp",
+      image: "/images/certificates/sertif-greatnusa-3.webp",
     },
     {
       id: "sertifikat-4",
-      image: "/images/certificates/1103223237_SertifGreatNusa4.webp",
+      image: "/images/certificates/sertif-greatnusa-4.webp",
     },
     {
       id: "sertifikat-5",
-      image: "/images/certificates/1103223237_SyauqiAkmal_SertifikatAgunacourse.webp",
+      image: "/images/certificates/sertif-agunacourse.webp",
     },
     {
       id: "sertifikat-6",
-      image: "/images/certificates/1103223237_SyauqiAkmal_SertifikatPython.webp",
+      image: "/images/certificates/sertif-python.webp",
     },
     {
       id: "sertifikat-7",
-      image: "/images/certificates/1103223237_SyauqiAkmal_Sertifikatudemy.webp",
+      image: "/images/certificates/sertif-udemy.webp",
     },
     {
       id: "sertifikat-8",
@@ -306,6 +249,22 @@ export const portfolioData: PortfolioData = {
     {
       id: "sertifikat-11",
       image: "/images/certificates/SYAUQI AKMAL FADHALI Pubdok 23.webp",
+    },
+    {
+      id: "sertifikat-12",
+      image: "/images/certificates/Sertifikat-Hafalan_Syauqi-Akmal.webp",
+    },
+    {
+      id: "sertifikat-13",
+      image: "/images/certificates/Sertifikat-Tilawah_Syauqi-Akmal.webp",
+    },
+    {
+      id: "sertifikat-14",
+      image: "/images/certificates/Sertifikat-PameranCD_Syauqi-Akmal.webp",
+    },
+    {
+      id: "sertifikat-15",
+      image: "/images/certificates/Sertifikat-EIRRG_Syauqi-Akmal.webp",
     },
   ],
 };

@@ -10,23 +10,23 @@ export function EducationSection() {
 
   return (
     <section id="pendidikan" className="py-20 md:py-28 bg-[#F8F8F8] border-y border-[#E4E4E7]">
-      <div className="max-w-4xl w-full mx-auto px-6 md:px-12">
+      <div className="max-w-5xl w-full mx-auto px-6 md:px-12">
         {/* Section Heading */}
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090B] tracking-tight">
-            Riwayat <span className="text-zinc-500">Pendidikan</span>.
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090B] tracking-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.03)]">
+            Riwayat <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 bg-clip-text text-transparent">Pendidikan</span><span className="text-blue-600 drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]">.</span>
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-[#71717A] max-w-md mx-auto">
             Latar belakang akademis formal selama menempuh perjalanan pendidikan.
           </p>
         </div>
 
-        {/* Education Cards */}
+        {/* Education Cards with Ambient Shadow */}
         <div className="space-y-6">
           {education.map((item) => (
             <div
               key={item.id}
-              className="rounded-[24px] bg-white border border-[#E4E4E7] p-6 sm:p-8 md:p-9 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-zinc-400 transition-all duration-200"
+              className="rounded-[24px] bg-white border border-[#E4E4E7] p-6 sm:p-8 md:p-9 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.04),0_10px_30px_-10px_rgba(37,99,235,0.06)] hover:border-blue-400/50 hover:shadow-[0_20px_40px_-10px_rgba(37,99,235,0.16)] hover:-translate-y-1 transition-all duration-300 ease-out"
             >
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                 <div className="flex items-start gap-4">
