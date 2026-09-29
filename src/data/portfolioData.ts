@@ -23,7 +23,7 @@ export type {
 export const portfolioData: PortfolioData = {
   profile: {
     fullName: "Syauqi Akmal Fadhali.",
-    headlineRole: "Software Engineer/Software Development/Web Development",
+    headlineRole: "Software Engineer/Web Developer/Desain UI/UX",
     eyebrow: "HALO, PERKENALKAN SAYA",
     heroBio:
       "Saya adalah lulusan Teknik Komputer Universitas Telkom yang berfokus pada rekayasa perangkat lunak, khususnya pengembangan aplikasi mobile dan web modern. Berpengalaman merancang dan membangun solusi digital yang fungsional—mulai dari sistem monitoring energi dan IoT real-time terintegrasi, platform pemetaan interaktif geospasial, hingga aplikasi utilitas mobile produktivitas. Mengombinasikan desain antarmuka pengguna yang intuitif dengan arsitektur kode yang terstruktur, adaptif, serta berorientasi pada pemecahan masalah nyata.",
