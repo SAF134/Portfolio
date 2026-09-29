@@ -191,7 +191,7 @@ export const portfolioData: PortfolioData = {
       title: "Klikin",
       description:
         "Aplikasi Pengetuk Layar Smartphone Otomatis.",
-      mockupImage: "/images/projects/",
+      mockupImage: "/images/projects/klikin.webp",
       technologies: ["Flutter", "Google Stitch"],
       projectUrl: "https://drive.google.com/drive/folders/19tYTYg06X_aJH-BWlw-BGdRC7ke9HzKh?usp=drive_link",
     },
