@@ -27,12 +27,12 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
   return (
     <article
       className={cn(
-        "group flex flex-col h-full rounded-[24px] bg-white border border-[#E4E4E7] overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05),0_10px_30px_-10px_rgba(59,130,246,0.08)] hover:border-blue-400/60 hover:shadow-[0_20px_40px_-10px_rgba(59,130,246,0.22)] hover:-translate-y-1.5 transition-all duration-300 ease-out",
+        "group flex flex-col h-full rounded-[24px] bg-[var(--card-bg)] border border-[var(--card-border)] overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05),0_10px_30px_-10px_rgba(59,130,246,0.08)] hover:border-[var(--card-border-hover)] hover:shadow-[0_20px_40px_-10px_rgba(59,130,246,0.22)] hover:-translate-y-1.5 transition-all duration-300 ease-out",
         className
       )}
     >
       {/* Mockup Preview Container (Strict 16:9 Aspect Ratio) */}
-      <div className="relative w-full aspect-[16/9] bg-zinc-100 border-b border-[#E4E4E7] overflow-hidden">
+      <div className="relative w-full aspect-[16/9] bg-zinc-100 border-b border-[var(--card-border)] overflow-hidden">
         {hasImage ? (
           <Image
             src={project.mockupImage}
@@ -45,20 +45,20 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-50 text-zinc-400 p-4 text-center">
             <ImageIcon className="w-8 h-8 text-zinc-300 mb-1.5" />
-            <span className="text-xs font-mono font-medium text-zinc-600">Rasio 16:9</span>
-            <span className="text-[11px] text-zinc-600 mt-0.5">Proyek ini sedang dalam proses pembuatan</span>
+            <span className="text-xs font-mono font-medium text-[#000000]">Rasio 16:9</span>
+            <span className="text-[11px] text-[#000000] mt-0.5">Proyek ini sedang dalam proses pembuatan</span>
           </div>
         )}
       </div>
 
       {/* Content Container */}
       <div className="flex flex-col flex-1 p-6 md:p-7">
-        <h3 className="text-lg md:text-xl font-bold text-[#09090B] tracking-tight line-clamp-1">
+        <h3 className="text-lg md:text-xl font-bold text-[#000000] tracking-tight line-clamp-1">
           {project.title}
         </h3>
 
         {/* Clean clamped description */}
-        <p className="mt-2.5 text-xs md:text-sm text-[#52525B] line-clamp-2 leading-relaxed">
+        <p className="mt-2.5 text-xs md:text-sm text-[#000000] line-clamp-2 leading-relaxed">
           {project.description}
         </p>
 
@@ -70,10 +70,10 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
         </div>
 
         {/* Card Footer / Action Bar */}
-        <div className="mt-6 pt-4 border-t border-[#E4E4E7] flex flex-col gap-3">
+        <div className="mt-6 pt-4 border-t border-[var(--card-border)] flex flex-col gap-3">
           {/* Label Proyek: (Icon Proyek) + Proyek #1 */}
-          <div className="flex items-center gap-1.5 text-zinc-600 text-xs font-mono font-medium">
-            <FolderKanban className="w-3.5 h-3.5 text-zinc-400" />
+          <div className="flex items-center gap-1.5 text-[#000000] text-xs font-mono font-medium">
+            <FolderKanban className="w-3.5 h-3.5 text-[#000000]" />
             <span>Proyek {index !== undefined ? `#${index + 1}` : ""}</span>
           </div>
 
@@ -85,10 +85,10 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
                 href={safeProjectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-white hover:bg-gradient-to-r hover:from-white hover:to-blue-50/40 border border-zinc-300 hover:border-blue-500/60 text-zinc-800 hover:text-blue-700 text-xs font-semibold shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_16px_-4px_rgba(37,99,235,0.22)] transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 active:scale-[0.98]"
+                className="group/btn inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-white hover:bg-gradient-to-r hover:from-white hover:to-blue-50/40 border border-[#000000] hover:border-[#000000] text-zinc-800 hover:text-blue-700 text-xs font-semibold shadow-[0_2px_8px_-2px_rgba(0,0,0,0.05)] hover:shadow-[0_6px_16px_-4px_rgba(37,99,235,0.22)] hover:scale-[1.02] active:scale-95 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                 title="Buka bukti proyek di tab baru"
               >
-                <ExternalLink className="w-3.5 h-3.5 text-zinc-600 group-hover:text-blue-600" />
+                <ExternalLink className="w-3.5 h-3.5 text-[#000000] group-hover:text-blue-600 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-200" />
                 <span>Bukti Proyek</span>
               </a>
             ) : (
@@ -97,10 +97,10 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
                 onClick={() => {
                   if (onViewDetail) onViewDetail();
                 }}
-                className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-zinc-50/80 hover:bg-zinc-100 border border-dashed border-zinc-300 hover:border-zinc-400 text-zinc-600 hover:text-zinc-800 text-xs font-medium shadow-[0_1px_4px_rgba(0,0,0,0.02)] transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
+                className="group/btn inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-zinc-50/80 hover:bg-zinc-100 border border-dashed border-[#000000] hover:border-[#000000] text-[#000000] hover:text-zinc-800 text-xs font-medium shadow-[0_1px_4px_rgba(0,0,0,0.02)] hover:scale-[1.02] active:scale-95 transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
                 title="Tautan bukti proyek dapat diisi pada portfolioData.ts (Klik untuk melihat detail proyek)"
               >
-                <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
+                <ExternalLink className="w-3.5 h-3.5 text-zinc-400 group-hover/btn:scale-110 transition-transform duration-200" />
                 <span>Bukti Proyek</span>
               </button>
             )}
@@ -109,9 +109,9 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
             <button
               type="button"
               onClick={onViewDetail}
-              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-xs font-semibold shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_25px_-4px_rgba(37,99,235,0.4)] border border-zinc-800 hover:border-blue-500/50 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 active:scale-[0.98]"
+              className="group/btn inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-xs font-semibold shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_25px_-4px_rgba(37,99,235,0.4)] border border-zinc-800 hover:border-blue-500/50 hover:scale-[1.02] active:scale-95 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
             >
-              <Maximize2 className="w-3.5 h-3.5" />
+              <Maximize2 className="w-3.5 h-3.5 group-hover/btn:scale-115 transition-transform duration-200" />
               <span>Lihat Detail</span>
             </button>
           </div>

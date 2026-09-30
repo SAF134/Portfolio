@@ -36,9 +36,9 @@ Tujuan: Membangun fondasi proyek Next.js yang bersih, bebas bloatware, dan terko
 - [x] **1.4 Konfigurasi Tailwind Tokens (`globals.css`):**
   * Daftarkan palet monokrom:
     * `canvas`: `#FFFFFF` (pure) & `#F8F8F8` (subtle)
-    * `surface`: `#FFFFFF` (card), `#F4F4F5` (hover), `#09090B` (dark)
+    * `surface`: `#FFFFFF` (card), `#F4F4F5` (hover), `#000000` (dark)
     * `border`: `#E4E4E7` (subtle), `#71717A` (strong)
-    * `ink`: `#09090B` (primary), `#52525B` (secondary), `#71717A` (muted)
+    * `ink`: `#000000` (primary), `#000000` (secondary), `#71717A` (muted)
     * `signal`: `#22C55E` (online green)
   * Set border-radius skala: `pill (9999px)`, `card (24px)`, `subcard (16px)`, `tag (8px)`.
 - [x] **1.5 Verifikasi Build Awal:**
@@ -72,7 +72,7 @@ Tujuan: Membangun komponen UI modular yang mematuhi prinsip *Anti-Slop*, memilik
   * Integrasikan *Intersection Observer* untuk otomatis mendeteksi section yang sedang dilihat dan menggeser pill highlight aktif.
   * Tambahkan tombol smooth scroll ke ID target (`#beranda`, `#tentang`, dll.).
 - [x] **3.2 Komponen Tombol & Feedback (`src/components/ui/`):**
-  * `Button.tsx`: Varian solid black (`#09090B`), outlined border (`#E4E4E7`), dan micro-spring animation saat klik (`scale-[0.98]`).
+  * `Button.tsx`: Varian solid black (`#000000`), outlined border (`#E4E4E7`), dan micro-spring animation saat klik (`scale-[0.98]`).
   * `Toast.tsx`: Floating pill toast feedback dengan `AnimatePresence` untuk konfirmasi salin email.
   * `CopyButton.tsx`: Tombol salin email ke clipboard dengan transisi ikon dari `Copy` ke `Check`.
 - [x] **3.3 Komponen Kartu Konten (`src/components/cards/`):**

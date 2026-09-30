@@ -30,94 +30,94 @@ export function HeroSection() {
       </div>
 
       <div className="max-w-6xl w-full mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-        {/* Left Column: Headline & Intro */}
-        <div className="lg:col-span-7 flex flex-col items-start z-10">
-          {/* Eyebrow & Availability Status Badge with Ambient Glow */}
-          <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="text-xs md:text-sm font-mono font-semibold tracking-widest text-zinc-600 uppercase">
-              {profile.eyebrow}
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/90 text-emerald-700 text-xs font-medium shadow-[0_2px_12px_-2px_rgba(16,185,129,0.3)]">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-              </span>
-              <span>Tersedia untuk Peluang Karir</span>
-            </span>
-          </div>
+        {/* Left Column: Profile Info Card */}
+        <div className="lg:col-span-7 z-10 w-full">
+          <div className="relative group">
+            {/* Rich Multi-color Ambient Gradient Glow Effect */}
+            <div
+              className="absolute -inset-2 rounded-[40px] bg-gradient-to-tr from-blue-600/25 via-indigo-500/20 to-violet-600/25 opacity-70 blur-2xl group-hover:opacity-100 group-hover:scale-[1.01] transition-all duration-500"
+              aria-hidden="true"
+            />
 
-          {/* Large Title with Accent Dot and Subtle Depth */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#09090B] tracking-tight leading-[1.12] drop-shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-            {profile.fullName.split(" ")[0]} {profile.fullName.split(" ")[1]}{" "}
-            <span className="text-zinc-600">
-              {profile.fullName.split(" ")[2]?.replace(".", "") || ""}
-            </span>
-            <span className="text-blue-600 drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]">.</span>
-          </h1>
+            {/* Main Profile Info Card Container */}
+            <div className="relative w-full rounded-[32px] bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[0_20px_50px_-10px_rgba(37,99,235,0.18)] hover:-translate-y-1 hover:border-[var(--card-border-hover)] p-6 sm:p-8 md:p-10 flex flex-col items-start transition-all duration-300 ease-out">
+              {/* Eyebrow & Availability Status Badge with Ambient Glow */}
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className="text-xs md:text-sm font-mono font-semibold tracking-widest text-[#000000] uppercase">
+                  {profile.eyebrow}
+                </span>
+              </div>
 
-          {/* Subtitle Role */}
-          <p className="text-base sm:text-lg md:text-xl font-semibold text-zinc-700 mt-2.5 tracking-tight">
-            {profile.headlineRole}
-          </p>
+              {/* Large Title with Accent Dot and Subtle Depth */}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#000000] tracking-tight leading-[1.12] drop-shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+                {profile.fullName}
+              </h1>
 
-          {/* Bio text */}
-          <p className="mt-5 text-sm sm:text-base text-[#52525B] max-w-lg leading-relaxed font-normal text-justify">
-            {profile.heroBio}
-          </p>
+              {/* Subtitle Role */}
+              <p className="text-base sm:text-lg md:text-xl font-semibold text-zinc-700 mt-2.5 tracking-tight">
+                {profile.headlineRole}
+              </p>
 
-          {/* CTA Buttons with Colored Gradient Ambient Shadows */}
-          <div className="mt-7 flex flex-wrap items-center gap-3.5">
-            <a
-              href={profile.cvPath}
-              download="CV_Syauqi_Akmal_Fadhali.pdf"
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-sm font-medium shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_25px_-4px_rgba(37,99,235,0.4)] border border-zinc-800 hover:border-blue-500/50 transition-all duration-200 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-            >
-              <Download className="w-4 h-4" />
-              <span>Unduh CV Saya</span>
-            </a>
+              {/* Bio text */}
+              <p className="mt-5 text-sm sm:text-base text-[#000000] leading-relaxed font-normal text-justify">
+                {profile.heroBio}
+              </p>
 
-            <a
-              href={`mailto:${profile.email}`}
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-sm font-medium shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_25px_-4px_rgba(37,99,235,0.4)] border border-zinc-800 hover:border-blue-500/50 transition-all duration-200 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-            >
-              <Mail className="w-4 h-4" />
-              <span>Hubungi Saya</span>
-            </a>
-          </div>
-
-          {/* Social Links with Colored Brand Ambient Shadows */}
-          <div className="flex items-center gap-3 mt-6">
-            {profile.socials.map((social) => {
-              const Icon =
-                social.platform === "github"
-                  ? GithubIcon
-                  : social.platform === "linkedin"
-                  ? LinkedinIcon
-                  : InstagramIcon;
-
-              const hoverClasses =
-                social.platform === "linkedin"
-                  ? "hover:border-blue-500 hover:text-blue-600 hover:bg-blue-50/50 hover:shadow-[0_6px_20px_-2px_rgba(37,99,235,0.35)]"
-                  : social.platform === "instagram"
-                  ? "hover:border-rose-400 hover:text-rose-500 hover:bg-rose-50/50 hover:shadow-[0_6px_20px_-2px_rgba(244,63,94,0.35)]"
-                  : "hover:border-zinc-800 hover:text-black hover:bg-zinc-100 hover:shadow-[0_6px_20px_-2px_rgba(0,0,0,0.25)]";
-
-              return (
+              {/* CTA Buttons with Colored Gradient Ambient Shadows */}
+              <div className="mt-7 flex flex-wrap items-center gap-3.5">
                 <a
-                  key={social.platform}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.ariaLabel}
-                  className={cn(
-                    "w-10 h-10 rounded-full bg-white border border-[#E4E4E7] flex items-center justify-center text-zinc-700 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] transition-all duration-200 active:scale-95",
-                    hoverClasses
-                  )}
+                  href={profile.cvPath}
+                  download="CV_Syauqi_Akmal_Fadhali.pdf"
+                  className="group/btn inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-sm font-medium shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_25px_-4px_rgba(37,99,235,0.4)] border border-zinc-800 hover:border-blue-500/50 hover:scale-[1.02] active:scale-[0.97] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                 >
-                  <Icon className="w-4 h-4" />
+                  <Download className="w-4 h-4 group-hover/btn:translate-y-0.5 transition-transform duration-200" />
+                  <span>Unduh CV Saya</span>
                 </a>
-              );
-            })}
+
+                <a
+                  href={`mailto:${profile.email}`}
+                  className="group/btn inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-sm font-medium shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_25px_-4px_rgba(37,99,235,0.4)] border border-zinc-800 hover:border-blue-500/50 hover:scale-[1.02] active:scale-[0.97] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+                >
+                  <Mail className="w-4 h-4 group-hover/btn:scale-110 group-hover/btn:-rotate-6 transition-transform duration-200" />
+                  <span>Hubungi Saya</span>
+                </a>
+              </div>
+
+              {/* Social Links with Colored Brand Ambient Shadows */}
+              <div className="flex items-center gap-3 mt-6">
+                {profile.socials.map((social) => {
+                  const Icon =
+                    social.platform === "github"
+                      ? GithubIcon
+                      : social.platform === "linkedin"
+                      ? LinkedinIcon
+                      : InstagramIcon;
+
+                  const hoverClasses =
+                    social.platform === "linkedin"
+                      ? "hover:border-[#000000] hover:text-blue-600 hover:bg-blue-50/50 hover:shadow-[0_6px_20px_-2px_rgba(37,99,235,0.35)]"
+                      : social.platform === "instagram"
+                      ? "hover:border-[#000000] hover:text-rose-500 hover:bg-rose-50/50 hover:shadow-[0_6px_20px_-2px_rgba(244,63,94,0.35)]"
+                      : "hover:border-[#000000] hover:text-black hover:bg-zinc-100 hover:shadow-[0_6px_20px_-2px_rgba(0,0,0,0.25)]";
+
+                  return (
+                    <a
+                      key={social.platform}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.ariaLabel}
+                      className={cn(
+                        "group/soc w-10 h-10 rounded-full bg-white border border-[#000000] flex items-center justify-center text-zinc-700 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] hover:scale-115 hover:-rotate-6 active:scale-90 transition-all duration-200",
+                        hoverClasses
+                      )}
+                    >
+                      <Icon className="w-4 h-4 group-hover/soc:scale-110 transition-transform duration-200" />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -131,14 +131,14 @@ export function HeroSection() {
             />
 
             {/* Main Profile Card Container with Elevated Frame Shadow */}
-            <div className="relative w-[280px] sm:w-[320px] md:w-[340px] lg:w-[350px] aspect-[9/16] rounded-[32px] overflow-hidden bg-white border border-[#E4E4E7]/90 shadow-[0_20px_50px_-10px_rgba(37,99,235,0.22)]">
+            <div className="relative w-[280px] sm:w-[320px] md:w-[340px] lg:w-[350px] aspect-[9/16] rounded-[32px] overflow-hidden bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[0_20px_50px_-10px_rgba(37,99,235,0.22)] group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
               <Image
                 src={profile.heroCardImage}
                 alt="Foto Profil Syauqi Akmal Fadhali"
                 fill
                 priority
                 sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, 350px"
-                className="object-cover object-center"
+                className="object-cover object-center group-hover:scale-[1.04] transition-transform duration-500 ease-out"
               />
             </div>
           </div>

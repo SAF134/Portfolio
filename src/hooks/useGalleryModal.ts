@@ -23,10 +23,6 @@ export function useGalleryModal({ totalItems }: UseGalleryModalOptions) {
     setSelectedIndex(null);
   }, []);
 
-  const openModal = useCallback((index: number) => {
-    setSelectedIndex(index);
-  }, []);
-
   useEffect(() => {
     if (selectedIndex === null) {
       document.body.style.overflow = "";
@@ -55,10 +51,8 @@ export function useGalleryModal({ totalItems }: UseGalleryModalOptions) {
   return {
     selectedIndex,
     setSelectedIndex,
-    openModal,
     closeModal,
     handlePrev,
     handleNext,
-    isOpen: selectedIndex !== null,
   };
 }

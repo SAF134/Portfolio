@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
+:root {
+  /* ==========================================================================
+     PENGATURAN KUSTOMISASI WARNA KARTU (CARD THEME CONFIGURATION)
+     Ubah kode warna HEX di bawah ini untuk mengganti warna seluruh kartu:
+     ========================================================================== */
+  --card-bg: #d9d9d9;              /* Warna Background Seluruh Kartu */
+  --card-border: #000000;          /* Warna Garis Border Seluruh Kartu */
+  --card-border-hover: #000000;    /* Warna Garis Border Saat Hover (Disorot) */
+  --card-inner-bg: #FFFFFF;        /* Warna Background Kontainer Internal (Logo, Tag, dll) */
+
+  /* ==========================================================================
+     PENGATURAN WARNA FLOATING NAVBAR
+     Ubah kode warna HEX di bawah ini untuk kustomisasi Floating Navbar:
+     ========================================================================== */
+  --navbar-bg: #d9d9d9;            /* Warna Background Floating Navbar */
+  --navbar-border: #000000;        /* Warna Garis Border Floating Navbar */
+}
+
 @theme inline {
   --color-canvas-pure: #ffffff;
-  --color-canvas-subtle: #f8f8f8;
-  --color-surface-card: #ffffff;
-  --color-surface-hover: #f4f4f5;
-  --color-surface-dark: #09090b;
-  --color-border-subtle: #e4e4e7;
-  --color-border-strong: #71717a;
   --color-text-primary: #09090b;
-  --color-text-secondary: #52525b;
-  --color-text-muted: #71717a;
-  --color-signal-online: #22c55e;
 
   --font-sans: var(--font-plus-jakarta-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
-
-  --radius-pill: 9999px;
-  --radius-card: 24px;
-  --radius-subcard: 16px;
-  --radius-tag: 8px;
-
-  --shadow-floating: 0 12px 32px -8px rgba(0, 0, 0, 0.08);
-  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
-  --shadow-card-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
 }
 
 @layer base {

@@ -15,7 +15,7 @@ export function TechBadge({ name, className }: TechBadgeProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono font-medium rounded-md bg-zinc-100 text-[#09090B] border border-[#E4E4E7]",
+        "inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono font-medium rounded-md bg-[var(--card-inner-bg)] text-[#000000] border border-[var(--card-border)]",
         className
       )}
     >

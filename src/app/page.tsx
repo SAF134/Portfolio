@@ -25,8 +25,8 @@ export default function Home() {
 
       {/* Minimal Architectural Footer */}
       <footer className="py-8 pb-24 md:pb-8 bg-white border-t border-[#E4E4E7] text-center">
-        <p className="text-xs text-zinc-600 font-mono">
-          &copy; {new Date().getFullYear()} Syauqi Akmal Fadhali - Portfolio.
+        <p className="text-xs text-[#000000] font-mono">
+          &copy; {new Date().getFullYear()} Syauqi Akmal Fadhali. Hak Cipta Dilindungi.
         </p>
       </footer>
     </div>

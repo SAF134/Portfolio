@@ -52,11 +52,11 @@ Pemilihan warna difokuskan pada spektrum Hitam, Abu-Abu, dan Putih (*True Monoch
 | **Canvas Subtle** | `#F8F8F8` | `bg-canvas-subtle` | Aksen area section alternatif (Tentang & Kontak) agar mata tidak lelah. |
 | **Surface Card** | `#FFFFFF` | `surface-card` | Latar belakang kartu komponen dengan border tipis. |
 | **Surface Hover** | `#F4F4F5` | `surface-hover` | State saat elemen interaktif di-hover (Zircon Gray). |
-| **Surface Inverted** | `#09090B` | `surface-dark` | Hitam arang (*Obsidian Black*) untuk kartu profil aksen & tombol utama. |
+| **Surface Inverted** | `#000000` | `surface-dark` | Hitam arang (*Obsidian Black*) untuk kartu profil aksen & tombol utama. |
 | **Border Subtle** | `#E4E4E7` | `border-subtle` | Garis pembatas 1px standar kartu, navbar, dan pill badge (Zinc 200). |
 | **Border Strong** | `#71717A` | `border-strong` | Border saat elemen aktif atau dalam state *focus* (Zinc 500). |
-| **Text Primary** | `#09090B` | `text-primary` | Warna teks utama (*Pitch Black*), rasio kontras 19:1 terhadap background putih. |
-| **Text Secondary** | `#52525B` | `text-secondary` | Warna subjudul, deskripsi, dan metadata penting (Zinc 600). |
+| **Text Primary** | `#000000` | `text-primary` | Warna teks utama (*Pitch Black*), rasio kontras 19:1 terhadap background putih. |
+| **Text Secondary** | `#000000` | `text-secondary` | Warna subjudul, deskripsi, dan metadata penting (Zinc 600). |
 | **Text Muted** | `#71717A` | `text-muted` | Label kecil, timestamp, dan placeholder (Zinc 500). |
 | **Text Inverted** | `#FFFFFF` | `text-inverted` | Teks di atas background gelap (pada tombol hitam / kartu aksen). |
 | **Status Signal** | `#22C55E` | `status-online` | Satu-satunya aksen titik hijau (*Emerald 500*) untuk indikator "Online / Ready to Hire". |
@@ -98,7 +98,7 @@ Pemilihan warna difokuskan pada spektrum Hitam, Abu-Abu, dan Putih (*True Monoch
 * **Elevated Floating:** `0 12px 32px -8px rgba(0, 0, 0, 0.08)` (Untuk navbar melayang & toast notification).
 * **Card Rest:** `0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04)` (Untuk kartu konten diam).
 * **Card Hover:** `0 10px 25px -5px rgba(0, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.04)` (Transisi halus saat kartu di-hover).
-* **Focus Outline:** `0 0 0 2px #FFFFFF, 0 0 0 4px #09090B` (Memenuhi standar aksesibilitas keyboard).
+* **Focus Outline:** `0 0 0 2px #FFFFFF, 0 0 0 4px #000000` (Memenuhi standar aksesibilitas keyboard).
 
 ---
 
@@ -175,7 +175,7 @@ Portofolio ini mengusung arsitektur *Single Page Application (SPA)* dengan 7 zon
 ### 6.3 Section 3: Keahlian Teknis (`#keahlian`)
 * **Hierarki Visual:**
   1. *Heading:* "Keahlian **Teknis**."
-  2. *Komponen Grid:* Pill container fleksibel berisi logo SVG hitam-putih monokrom + teks label rapi (Laravel, ReactJS, Tailwind CSS, PostgreSQL, Next.js, MySQL, TypeScript, Figma, Git, PHP). Hover state memunculkan background `#F4F4F5` dan border `#09090B`.
+  2. *Komponen Grid:* Pill container fleksibel berisi logo SVG hitam-putih monokrom + teks label rapi (Laravel, ReactJS, Tailwind CSS, PostgreSQL, Next.js, MySQL, TypeScript, Figma, Git, PHP). Hover state memunculkan background `#F4F4F5` dan border `#000000`.
 
 ### 6.4 Section 4: Pengalaman Kerja (`#pengalaman`)
 * **Hierarki Visual:**
@@ -218,21 +218,21 @@ Portofolio ini mengusung arsitektur *Single Page Application (SPA)* dengan 7 zon
   * `desktop-top`: Mengambang di bagian atas tengah viewport dengan shadow halus.
   * `mobile-bottom`: Mengambang di bagian bawah viewport dengan lebar fleksibel dan padding sentuh ramah jempol (*thumb-zone*).
 * **State:**
-  * `Item Default`: Teks `#52525B`, background transparan.
-  * `Item Hover`: Teks `#09090B`, background `#F4F4F5`.
-  * `Item Active`: Teks `#FFFFFF`, background `#09090B` (animasi transisi layout pill via Framer Motion).
+  * `Item Default`: Teks `#000000`, background transparan.
+  * `Item Hover`: Teks `#000000`, background `#F4F4F5`.
+  * `Item Active`: Teks `#FFFFFF`, background `#000000` (animasi transisi layout pill via Framer Motion).
 
 ### 7.2 Component: `Button`
 * **Varian:**
-  * `Primary` (Solid Black): Background `#09090B`, teks `#FFFFFF`, hover background `#27272A`.
-  * `Secondary` (Outlined): Background `#FFFFFF`, border `#E4E4E7`, teks `#09090B`, hover background `#F4F4F5` & border `#09090B`.
+  * `Primary` (Solid Black): Background `#000000`, teks `#FFFFFF`, hover background `#27272A`.
+  * `Secondary` (Outlined): Background `#FFFFFF`, border `#E4E4E7`, teks `#000000`, hover background `#F4F4F5` & border `#000000`.
   * `PillIcon`: Tombol bulat untuk panah carousel, diameter 44px, border `#E4E4E7`.
 * **State:** `default`, `hover`, `active` (`scale-[0.98]`), `focus-visible`, `disabled` (`opacity-40 cursor-not-allowed`).
 
 ### 7.3 Component: `SkillBadge`
 * **Deskripsi:** Pill kecil untuk menampilkan logo dan nama teknologi.
 * **Anatomi:** Container pill, icon SVG ukuran 18x18px, label teks ukuran 13px medium.
-* **State:** `default` (border `#E4E4E7`), `hover` (border `#09090B`, sedikit terangkat -1px).
+* **State:** `default` (border `#E4E4E7`), `hover` (border `#000000`, sedikit terangkat -1px).
 
 ### 7.4 Component: `ProjectCard`
 * **Deskripsi:** Kartu geser penampil portofolio.
@@ -243,7 +243,7 @@ Portofolio ini mengusung arsitektur *Single Page Application (SPA)* dengan 7 zon
 ### 7.5 Component: `ToastNotification`
 * **Deskripsi:** Pesan feedback melayang yang muncul saat alamat email berhasil disalin.
 * **Posisi:** Melayang di bawah-tengah layar (desktop) atau atas-tengah layar (mobile).
-* **Tampilan:** Pill hitam pekat `#09090B` dengan teks putih `#FFFFFF`, ikon centang hijau kecil, dan durasi tayang otomatis 3 detik.
+* **Tampilan:** Pill hitam pekat `#000000` dengan teks putih `#FFFFFF`, ikon centang hijau kecil, dan durasi tayang otomatis 3 detik.
 
 ---
 
@@ -274,8 +274,8 @@ Portofolio ini mengusung arsitektur *Single Page Application (SPA)* dengan 7 zon
 Sesuai standar **WCAG 2.1 Level AA**:
 
 1. **Rasio Kontras Warna (Color Contrast):**
-   * Teks utama `#09090B` di atas latar `#FFFFFF` memiliki rasio kontras **19.1:1** (jauh melampaui standar minimum 4.5:1).
-   * Teks sekunder `#52525B` di atas `#FFFFFF` memiliki rasio kontras **7.3:1** (Lolos standar AAA).
+   * Teks utama `#000000` di atas latar `#FFFFFF` memiliki rasio kontras **19.1:1** (jauh melampaui standar minimum 4.5:1).
+   * Teks sekunder `#000000` di atas `#FFFFFF` memiliki rasio kontras **7.3:1** (Lolos standar AAA).
 2. **Keyboard Focus Management:**
    * Seluruh elemen interaktif (tombol, tautan sosial, item navbar, kartu carousel) memiliki ring fokus yang jelas saat ditekan via tombol `Tab`: `focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2`.
 3. **Kebutuhan ARIA:**

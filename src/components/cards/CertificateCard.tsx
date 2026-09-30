@@ -23,7 +23,7 @@ export function CertificateCard({ certificate, index, className, onClick }: Cert
   return (
     <div
       className={cn(
-        "group flex flex-col rounded-[20px] bg-white border border-[#E4E4E7] overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05),0_10px_30px_-10px_rgba(245,158,11,0.07)] hover:border-amber-400/60 hover:shadow-[0_20px_40px_-10px_rgba(245,158,11,0.2)] hover:-translate-y-1.5 transition-all duration-300 ease-out",
+        "group flex flex-col rounded-[20px] bg-[var(--card-bg)] border border-[var(--card-border)] overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05),0_10px_30px_-10px_rgba(245,158,11,0.07)] hover:border-[var(--card-border-hover)] hover:shadow-[0_20px_40px_-10px_rgba(245,158,11,0.2)] hover:-translate-y-1.5 transition-all duration-300 ease-out",
         className
       )}
     >
@@ -40,26 +40,26 @@ export function CertificateCard({ certificate, index, className, onClick }: Cert
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-50 text-zinc-400 p-4 text-center">
             <Award className="w-8 h-8 text-zinc-300 mb-1.5" />
-            <span className="text-xs font-mono font-medium text-zinc-600">A4 Landscape (29,7 : 21)</span>
-            <span className="text-[11px] text-zinc-600 mt-0.5">Proyek ini sedang dalam proses pembuatan</span>
+            <span className="text-xs font-mono font-medium text-[#000000]">A4 Landscape (29,7 : 21)</span>
+            <span className="text-[11px] text-[#000000] mt-0.5">Proyek ini sedang dalam proses pembuatan</span>
           </div>
         )}
       </div>
 
       {/* Card Action Bar with explicit "Lihat Detail" Button */}
       {hasImage && (
-        <div className="p-3.5 bg-white border-t border-[#E4E4E7] flex items-center justify-between gap-2">
-          <div className="flex items-center gap-1.5 text-zinc-600 text-xs font-medium">
-            <Award className="w-3.5 h-3.5 text-amber-500" />
+        <div className="p-3.5 bg-[var(--card-bg)] border-t border-[var(--card-border)] flex items-center justify-between gap-2">
+          <div className="flex items-center gap-1.5 text-[#000000] text-xs font-medium">
+            <Award className="w-3.5 h-3.5 text-[#000000]" />
             <span>Sertifikat {index !== undefined ? `#${index + 1}` : ""}</span>
           </div>
 
           <button
             type="button"
             onClick={onClick}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-xs font-semibold shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_25px_-4px_rgba(245,158,11,0.4)] border border-zinc-800 hover:border-amber-500/50 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2 active:scale-[0.98]"
+            className="group/btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-xs font-semibold shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_25px_-4px_rgba(245,158,11,0.4)] border border-zinc-800 hover:border-amber-500/50 hover:scale-[1.02] active:scale-95 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2"
           >
-            <Maximize2 className="w-3.5 h-3.5" />
+            <Maximize2 className="w-3.5 h-3.5 group-hover/btn:scale-115 transition-transform duration-200" />
             <span>Lihat Detail</span>
           </button>
         </div>

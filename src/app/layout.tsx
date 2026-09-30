@@ -48,7 +48,7 @@ export default function RootLayout({
       lang="id"
       className={`${plusJakartaSans.variable} ${geistMono.variable} scroll-smooth antialiased`}
     >
-      <body className="min-h-screen bg-[#FFFFFF] text-[#09090B] font-sans selection:bg-[#09090B] selection:text-[#FFFFFF]">
+      <body className="min-h-screen bg-[#FFFFFF] text-[#000000] font-sans selection:bg-[#000000] selection:text-[#FFFFFF]">
         {children}
       </body>
     </html>

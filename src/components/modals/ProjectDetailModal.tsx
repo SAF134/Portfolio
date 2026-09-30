@@ -3,6 +3,7 @@
 import React from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { X, ExternalLink, ChevronLeft, ChevronRight, Image as ImageIcon } from "lucide-react";
 import { TechBadge } from "@/components/ui/TechBadge";
 import { ProjectItem } from "@/types/portfolio";
@@ -40,21 +41,29 @@ export function ProjectDetailModal({
   );
 
   return createPortal(
-    <div
+    <motion.div
       role="dialog"
       aria-modal="true"
       aria-label={`Detail proyek ${project.title}`}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
       className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 md:p-8 bg-black/85 backdrop-blur-sm"
       onClick={onClose}
     >
-      <div
-        className="relative max-w-4xl w-full max-h-[92vh] flex flex-col bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-zinc-200"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95, y: 16 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.95, y: 16 }}
+        transition={{ type: "spring", stiffness: 350, damping: 28 }}
+        className="relative max-w-4xl w-full max-h-[92vh] flex flex-col bg-[var(--card-bg)] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-[var(--card-border)]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-5 sm:px-7 py-3.5 sm:py-4 border-b border-[#E4E4E7] bg-white">
+        <div className="flex items-center justify-between px-5 sm:px-7 py-3.5 sm:py-4 border-b border-[var(--card-border)] bg-[var(--card-bg)]">
           <div className="flex items-center gap-2.5">
-            <span className="text-sm sm:text-base font-bold text-[#09090B] tracking-tight">
+            <span className="text-sm sm:text-base font-bold text-[#000000] tracking-tight">
               {project.title}
             </span>
             <span className="px-2.5 py-0.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-mono font-medium border border-zinc-200">
@@ -63,24 +72,11 @@ export function ProjectDetailModal({
           </div>
 
           <div className="flex items-center gap-2">
-            {projectUrl && (
-              <a
-                href={projectUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-xs font-semibold shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_25px_-4px_rgba(37,99,235,0.4)] border border-zinc-800 hover:border-blue-500/50 transition-all duration-200"
-                title="Buka bukti proyek di tab baru"
-              >
-                <ExternalLink className="w-3.5 h-3.5 text-zinc-300" />
-                <span className="hidden sm:inline">Bukti Proyek</span>
-              </a>
-            )}
-
             <button
               type="button"
               onClick={onClose}
               aria-label="Tutup detail proyek"
-              className="w-9 h-9 rounded-full border border-[#E4E4E7] flex items-center justify-center text-zinc-700 hover:text-black hover:bg-zinc-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 shrink-0"
+              className="w-9 h-9 rounded-full border border-[#E4E4E7] flex items-center justify-center text-zinc-700 hover:text-black hover:bg-zinc-100 hover:rotate-90 hover:scale-105 active:scale-90 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 shrink-0"
             >
               <X className="w-5 h-5" />
             </button>
@@ -97,7 +93,7 @@ export function ProjectDetailModal({
                 type="button"
                 onClick={onPrev}
                 aria-label="Proyek sebelumnya"
-                className="absolute left-3 sm:left-5 z-10 w-9 sm:w-11 h-9 sm:h-11 rounded-full bg-white/90 hover:bg-white text-zinc-800 hover:text-black shadow-lg border border-zinc-200 flex items-center justify-center transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900"
+                className="absolute left-3 sm:left-5 z-10 w-9 sm:w-11 h-9 sm:h-11 rounded-full bg-white/90 hover:bg-white text-zinc-800 hover:text-black shadow-lg border border-zinc-200 flex items-center justify-center hover:scale-115 active:scale-90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900"
               >
                 <ChevronLeft className="w-5 sm:w-6 h-5 sm:h-6" />
               </button>
@@ -127,7 +123,7 @@ export function ProjectDetailModal({
                 type="button"
                 onClick={onNext}
                 aria-label="Proyek berikutnya"
-                className="absolute right-3 sm:right-5 z-10 w-9 sm:w-11 h-9 sm:h-11 rounded-full bg-white/90 hover:bg-white text-zinc-800 hover:text-black shadow-lg border border-zinc-200 flex items-center justify-center transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900"
+                className="absolute right-3 sm:right-5 z-10 w-9 sm:w-11 h-9 sm:h-11 rounded-full bg-white/90 hover:bg-white text-zinc-800 hover:text-black shadow-lg border border-zinc-200 flex items-center justify-center hover:scale-115 active:scale-90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900"
               >
                 <ChevronRight className="w-5 sm:w-6 h-5 sm:h-6" />
               </button>
@@ -135,18 +131,18 @@ export function ProjectDetailModal({
           </div>
 
           {/* Full Description & Tech Stack */}
-          <div className="p-6 sm:p-8 space-y-6 bg-white">
+          <div className="p-6 sm:p-8 space-y-6 bg-[var(--card-bg)]">
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-400 font-mono">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[#000000] font-mono">
                 Deskripsi Lengkap Proyek
               </h4>
-              <p className="mt-2.5 text-sm sm:text-base text-zinc-700 leading-relaxed">
+              <p className="mt-2.5 text-sm sm:text-base text-[#000000] leading-relaxed">
                 {project.description}
               </p>
             </div>
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-400 font-mono mb-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[#000000] font-mono mb-3">
                 Tools & Teknologi yang Digunakan
               </h4>
               <div className="flex flex-wrap gap-2">
@@ -158,7 +154,7 @@ export function ProjectDetailModal({
 
             {/* Bukti & Tautan Proyek Section */}
             <div className="pt-2">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-400 font-mono mb-3">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-[#000000] font-mono mb-3">
                 Bukti &amp; Tautan Proyek
               </h4>
               {projectUrl ? (
@@ -166,13 +162,13 @@ export function ProjectDetailModal({
                   href={projectUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-xs sm:text-sm font-semibold shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_28px_-4px_rgba(37,99,235,0.45)] border border-zinc-800 hover:border-blue-500/50 transition-all duration-200 active:scale-[0.98]"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-xs sm:text-sm font-semibold shadow-[0_4px_16px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_28px_-4px_rgba(37,99,235,0.45)] border border-[#000000] hover:border-[#000000] transition-all duration-200 active:scale-[0.98]"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <span>Buka Bukti Proyek (Tautan Eksternal)</span>
+                  <span>Buka Bukti Proyek</span>
                 </a>
               ) : (
-                <div className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-zinc-50 border border-dashed border-zinc-300 text-zinc-500 text-xs">
+                <div className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-zinc-50 border border-dashed border-[#000000] text-zinc-500 text-xs">
                   <span>Tautan bukti proyek belum ditambahkan (dapat diisi pada baris <code>projectUrl</code> di <code>src/data/portfolioData.ts</code>).</span>
                 </div>
               )}
@@ -181,10 +177,7 @@ export function ProjectDetailModal({
         </div>
 
         {/* Modal Footer Hint */}
-        <div className="px-5 py-3 border-t border-[#E4E4E7] bg-zinc-50 flex items-center justify-between text-xs text-zinc-500">
-          <span className="hidden sm:inline">
-            Gunakan tombol panah ◀ ▶ pada keyboard untuk navigasi cepat antar proyek.
-          </span>
+        <div className="px-5 py-3 border-t border-[var(--card-border)] bg-zinc-50 flex items-center justify-between text-xs text-zinc-500">
           <span className="sm:hidden">
             Ketuk tombol panah untuk melihat proyek lainnya.
           </span>
@@ -192,8 +185,8 @@ export function ProjectDetailModal({
             {currentIndex + 1} / {totalProjects}
           </span>
         </div>
-      </div>
-    </div>,
+      </motion.div>
+    </motion.div>,
     document.body
   );
 }
