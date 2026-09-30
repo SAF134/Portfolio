@@ -66,9 +66,6 @@ export function ProjectDetailModal({
             <span className="text-sm sm:text-base font-bold text-[#000000] tracking-tight">
               {project.title}
             </span>
-            <span className="px-2.5 py-0.5 rounded-full bg-zinc-100 text-zinc-700 text-xs font-mono font-medium border border-zinc-200">
-              {currentIndex + 1} dari {totalProjects}
-            </span>
           </div>
 
           <div className="flex items-center gap-2">
@@ -178,9 +175,6 @@ export function ProjectDetailModal({
 
         {/* Modal Footer Hint */}
         <div className="px-5 py-3 border-t border-[var(--card-border)] bg-zinc-50 flex items-center justify-between text-xs text-zinc-500">
-          <span className="sm:hidden">
-            Ketuk tombol panah untuk melihat proyek lainnya.
-          </span>
           <span className="font-mono text-zinc-400 ml-auto">
             {currentIndex + 1} / {totalProjects}
           </span>
