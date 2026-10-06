@@ -197,12 +197,12 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "proyek-7",
-      title: "Timerin",
+      title: "Website Koperasi Produsen Dirga Pangan Mandiri",
       description:
-        "Aplikasi Timer dengan overlay.",
-      mockupImage: "/images/projects/",
-      technologies: ["Flutter", "Google Stitch"],
-      projectUrl: "https://drive.google.com/drive/folders/1NTjFigM09igydbg1hGQOHnIlJDz-236C?usp=drive_link",
+        "Website resmi Koperasi Produsen Dirga Pangan Mandiri.",
+      mockupImage: "/images/projects/koperasi.webp",
+      technologies: ["Typescript", "Next JS", "TailwindCSS"],
+      projectUrl: "https://koperasi-produsen-dirga-pangan-mand.vercel.app/",
     },
   ],
   certificates: [

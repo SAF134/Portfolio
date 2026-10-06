@@ -40,26 +40,26 @@ export function HeroSection() {
             />
 
             {/* Main Profile Info Card Container */}
-            <div className="relative w-full rounded-[32px] bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[0_20px_50px_-10px_rgba(37,99,235,0.18)] hover:-translate-y-1 hover:border-[var(--card-border-hover)] p-6 sm:p-8 md:p-10 flex flex-col items-start transition-all duration-300 ease-out">
+            <div className="relative w-full rounded-[32px] bg-[var(--card-bg)] border-2 border-[var(--card-border)] shadow-[0_18px_45px_rgba(0,0,0,0.25),0_6px_18px_rgba(37,99,235,0.25)] hover:-translate-y-1 hover:border-[var(--card-border-hover)] hover:shadow-[0_26px_55px_rgba(0,0,0,0.32),0_10px_24px_rgba(37,99,235,0.35)] p-6 sm:p-8 md:p-10 flex flex-col items-start transition-all duration-300 ease-out">
               {/* Eyebrow & Availability Status Badge with Ambient Glow */}
               <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className="text-xs md:text-sm font-mono font-semibold tracking-widest text-[#000000] uppercase">
+                <span className="text-xs md:text-sm font-mono font-semibold tracking-widest text-[#000000] uppercase drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]">
                   {profile.eyebrow}
                 </span>
               </div>
 
               {/* Large Title with Accent Dot and Subtle Depth */}
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#000000] tracking-tight leading-[1.12] drop-shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#000000] tracking-tight leading-[1.12] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
                 {profile.fullName}
               </h1>
 
               {/* Subtitle Role */}
-              <p className="text-base sm:text-lg md:text-xl font-semibold text-zinc-700 mt-2.5 tracking-tight">
+              <p className="text-base sm:text-lg md:text-xl font-semibold text-zinc-800 mt-2.5 tracking-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.14)]">
                 {profile.headlineRole}
               </p>
 
               {/* Bio text */}
-              <p className="mt-5 text-sm sm:text-base text-[#000000] leading-relaxed font-normal text-justify">
+              <p className="mt-5 text-sm sm:text-base text-[#000000] leading-relaxed font-normal text-justify drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)]">
                 {profile.heroBio}
               </p>
 
@@ -68,18 +68,18 @@ export function HeroSection() {
                 <a
                   href={profile.cvPath}
                   download="CV_Syauqi_Akmal_Fadhali.pdf"
-                  className="group/btn inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-sm font-medium shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_25px_-4px_rgba(37,99,235,0.4)] border border-zinc-800 hover:border-blue-500/50 hover:scale-[1.02] active:scale-[0.97] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+                  className="group/btn inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-sm font-medium shadow-[0_6px_20px_rgba(0,0,0,0.32)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.48)] border-2 border-black hover:border-blue-500/80 hover:scale-[1.02] active:scale-[0.97] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                 >
                   <Download className="w-4 h-4 group-hover/btn:translate-y-0.5 transition-transform duration-200" />
-                  <span>Unduh CV Saya</span>
+                  <span className="drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">Unduh CV Saya</span>
                 </a>
 
                 <a
                   href={`mailto:${profile.email}`}
-                  className="group/btn inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-sm font-medium shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_25px_-4px_rgba(37,99,235,0.4)] border border-zinc-800 hover:border-blue-500/50 hover:scale-[1.02] active:scale-[0.97] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+                  className="group/btn inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-white hover:bg-gradient-to-r hover:from-white hover:to-blue-50/40 border-2 border-[#000000] hover:border-[#000000] text-zinc-900 hover:text-blue-700 text-sm font-semibold shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.3)] hover:scale-[1.02] active:scale-95 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                 >
-                  <Mail className="w-4 h-4 group-hover/btn:scale-110 group-hover/btn:-rotate-6 transition-transform duration-200" />
-                  <span>Hubungi Saya</span>
+                  <Mail className="w-4 h-4 text-[#000000] group-hover:text-blue-600 group-hover/btn:scale-110 group-hover/btn:-rotate-6 transition-transform duration-200" />
+                  <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]">Hubungi Saya</span>
                 </a>
               </div>
 
@@ -95,10 +95,10 @@ export function HeroSection() {
 
                   const hoverClasses =
                     social.platform === "linkedin"
-                      ? "hover:border-[#000000] hover:text-blue-600 hover:bg-blue-50/50 hover:shadow-[0_6px_20px_-2px_rgba(37,99,235,0.35)]"
+                      ? "hover:border-[#000000] hover:text-blue-600 hover:bg-blue-50/50 hover:shadow-[0_8px_24px_rgba(37,99,235,0.4)]"
                       : social.platform === "instagram"
-                      ? "hover:border-[#000000] hover:text-rose-500 hover:bg-rose-50/50 hover:shadow-[0_6px_20px_-2px_rgba(244,63,94,0.35)]"
-                      : "hover:border-[#000000] hover:text-black hover:bg-zinc-100 hover:shadow-[0_6px_20px_-2px_rgba(0,0,0,0.25)]";
+                      ? "hover:border-[#000000] hover:text-rose-500 hover:bg-rose-50/50 hover:shadow-[0_8px_24px_rgba(244,63,94,0.4)]"
+                      : "hover:border-[#000000] hover:text-black hover:bg-zinc-100 hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)]";
 
                   return (
                     <a
@@ -108,7 +108,7 @@ export function HeroSection() {
                       rel="noopener noreferrer"
                       aria-label={social.ariaLabel}
                       className={cn(
-                        "group/soc w-10 h-10 rounded-full bg-white border border-[#000000] flex items-center justify-center text-zinc-700 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.06)] hover:scale-115 hover:-rotate-6 active:scale-90 transition-all duration-200",
+                        "group/soc w-10 h-10 rounded-full bg-white border-2 border-[#000000] flex items-center justify-center text-zinc-700 shadow-[0_4px_14px_rgba(0,0,0,0.2)] hover:scale-115 hover:-rotate-6 active:scale-90 transition-all duration-200",
                         hoverClasses
                       )}
                     >
@@ -131,7 +131,7 @@ export function HeroSection() {
             />
 
             {/* Main Profile Card Container with Elevated Frame Shadow */}
-            <div className="relative w-[280px] sm:w-[320px] md:w-[340px] lg:w-[350px] aspect-[9/16] rounded-[32px] overflow-hidden bg-[var(--card-bg)] border border-[var(--card-border)] shadow-[0_20px_50px_-10px_rgba(37,99,235,0.22)] group-hover:-translate-y-1.5 transition-all duration-300 ease-out">
+            <div className="relative w-[280px] sm:w-[320px] md:w-[340px] lg:w-[350px] aspect-[9/16] rounded-[32px] overflow-hidden bg-[var(--card-bg)] border-2 border-[var(--card-border)] shadow-[0_18px_45px_rgba(0,0,0,0.25),0_8px_20px_rgba(37,99,235,0.3)] group-hover:-translate-y-1.5 group-hover:shadow-[0_24px_55px_rgba(0,0,0,0.32),0_10px_24px_rgba(37,99,235,0.4)] transition-all duration-300 ease-out">
               <Image
                 src={profile.heroCardImage}
                 alt="Foto Profil Syauqi Akmal Fadhali"

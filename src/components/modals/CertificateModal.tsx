@@ -43,13 +43,13 @@ export function CertificateModal({
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 16 }}
         transition={{ type: "spring", stiffness: 350, damping: 28 }}
-        className="relative max-w-5xl w-full max-h-[92vh] flex flex-col bg-[var(--card-bg)] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-[var(--card-border)]"
+        className="relative max-w-5xl w-full max-h-[92vh] flex flex-col bg-[var(--card-bg)] rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_60px_-10px_rgba(0,0,0,0.55)] border-2 border-[var(--card-border)]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-5 sm:px-7 py-3.5 sm:py-4 border-b border-[var(--card-border)] bg-[var(--card-bg)]">
+        <div className="flex items-center justify-between px-5 sm:px-7 py-3.5 sm:py-4 border-b-2 border-[var(--card-border)] bg-[var(--card-bg)]">
           <div className="flex items-center gap-2.5">
-            <span className="text-sm sm:text-base font-bold text-[#000000] tracking-tight">
+            <span className="text-sm sm:text-base font-bold text-[#000000] tracking-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.14)]">
               Pratinjau Sertifikat
             </span>
           </div>
@@ -59,7 +59,7 @@ export function CertificateModal({
               type="button"
               onClick={onClose}
               aria-label="Tutup pratinjau sertifikat"
-              className="w-9 h-9 rounded-full border border-[#E4E4E7] flex items-center justify-center text-zinc-700 hover:text-black hover:bg-zinc-100 hover:rotate-90 hover:scale-105 active:scale-90 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 shrink-0"
+              className="w-9 h-9 rounded-full border-2 border-black flex items-center justify-center text-zinc-700 hover:text-black hover:bg-zinc-100 hover:rotate-90 hover:scale-105 active:scale-90 shadow-[0_2px_8px_rgba(0,0,0,0.18)] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 shrink-0"
             >
               <X className="w-5 h-5" />
             </button>
@@ -74,14 +74,14 @@ export function CertificateModal({
               type="button"
               onClick={onPrev}
               aria-label="Sertifikat sebelumnya"
-              className="absolute left-3 sm:left-5 z-10 w-9 sm:w-11 h-9 sm:h-11 rounded-full bg-white/90 hover:bg-white text-zinc-800 hover:text-black shadow-lg border border-zinc-200 flex items-center justify-center hover:scale-115 active:scale-90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900"
+              className="absolute left-3 sm:left-5 z-10 w-9 sm:w-11 h-9 sm:h-11 rounded-full bg-white/95 hover:bg-white text-zinc-800 hover:text-black shadow-[0_4px_16px_rgba(0,0,0,0.35)] border-2 border-black flex items-center justify-center hover:scale-115 active:scale-90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900"
             >
               <ChevronLeft className="w-5 sm:w-6 h-5 sm:h-6" />
             </button>
           )}
 
           {/* Certificate Image Frame (A4 Landscape 29,7 : 21) */}
-          <div className="relative w-full max-w-4xl aspect-[297/210] bg-white rounded-xl overflow-hidden shadow-sm border border-zinc-200">
+          <div className="relative w-full max-w-4xl aspect-[297/210] bg-white rounded-xl overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.18)] border-2 border-black">
             <Image
               src={certificate.image}
               alt={`Sertifikat ${currentIndex + 1}`}
@@ -98,7 +98,7 @@ export function CertificateModal({
               type="button"
               onClick={onNext}
               aria-label="Sertifikat berikutnya"
-              className="absolute right-3 sm:right-5 z-10 w-9 sm:w-11 h-9 sm:h-11 rounded-full bg-white/90 hover:bg-white text-zinc-800 hover:text-black shadow-lg border border-zinc-200 flex items-center justify-center hover:scale-115 active:scale-90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900"
+              className="absolute right-3 sm:right-5 z-10 w-9 sm:w-11 h-9 sm:h-11 rounded-full bg-white/95 hover:bg-white text-zinc-800 hover:text-black shadow-[0_4px_16px_rgba(0,0,0,0.35)] border-2 border-black flex items-center justify-center hover:scale-115 active:scale-90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900"
             >
               <ChevronRight className="w-5 sm:w-6 h-5 sm:h-6" />
             </button>
@@ -106,7 +106,7 @@ export function CertificateModal({
         </div>
 
         {/* Modal Footer Hint */}
-        <div className="px-5 py-3 border-t border-[var(--card-border)] bg-zinc-50 flex items-center justify-between text-xs text-zinc-500">
+        <div className="px-5 py-3 border-t-2 border-[var(--card-border)] bg-zinc-50 flex items-center justify-between text-xs text-zinc-500">
           <span className="font-mono text-zinc-400 ml-auto">
             {currentIndex + 1} / {totalCertificates}
           </span>

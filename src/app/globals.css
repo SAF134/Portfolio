@@ -42,13 +42,43 @@
     html {
       scroll-behavior: auto;
     }
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
   }
+}
+
+/* ==========================================================================
+   ANIMASI MARQUEE LOOPING KEAHLIAN (SKILLS CONTINUOUS MARQUEE)
+   ========================================================================== */
+@keyframes marquee-ltr {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0, 0);
+  }
+}
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-ltr-track {
+  animation: marquee-ltr 35s linear infinite;
+  will-change: transform;
+}
+
+.marquee-rtl-track {
+  animation: marquee-rtl 35s linear infinite;
+  will-change: transform;
+}
+
+.marquee-ltr-track:hover,
+.marquee-rtl-track:hover,
+.group:hover .marquee-ltr-track,
+.group:hover .marquee-rtl-track {
+  animation-play-state: paused !important;
 }

@@ -15,7 +15,7 @@ export function TechBadge({ name, className }: TechBadgeProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono font-medium rounded-md bg-[var(--card-inner-bg)] text-[#000000] border border-[var(--card-border)]",
+        "inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono font-medium rounded-md bg-[var(--card-inner-bg)] text-[#000000] border-2 border-[var(--card-border)] shadow-[0_2px_8px_rgba(0,0,0,0.12)]",
         className
       )}
     >
@@ -32,7 +32,7 @@ export function TechBadge({ name, className }: TechBadgeProps) {
       ) : (
         <span className="w-1.5 h-1.5 rounded-full bg-zinc-400 shrink-0" />
       )}
-      <span>{name}</span>
+      <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]">{name}</span>
     </span>
   );
 }
