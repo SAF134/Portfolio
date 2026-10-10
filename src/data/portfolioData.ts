@@ -204,6 +204,15 @@ export const portfolioData: PortfolioData = {
       technologies: ["Typescript", "Next JS", "TailwindCSS"],
       projectUrl: "https://koperasi-produsen-dirga-pangan-mand.vercel.app/",
     },
+    {
+      id: "proyek-8",
+      title: "Timerin",
+      description:
+        "Aplikasi Timer Overlay untuk membantu pemain game Mobile Legends menghitung spell musuh.",
+      mockupImage: "/images/projects/timerin.webp",
+      technologies: ["Flutter", "Firebase"],
+      projectUrl: "https://drive.google.com/drive/folders/1NTjFigM09igydbg1hGQOHnIlJDz-236C",
+    },
   ],
   certificates: [
     {
