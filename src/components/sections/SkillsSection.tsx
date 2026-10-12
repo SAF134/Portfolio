@@ -3,9 +3,13 @@
 import React from "react";
 import { SkillBadge } from "@/components/cards/SkillBadge";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
 import { portfolioData } from "@/data/portfolioData";
 
 export function SkillsSection() {
+  const { language } = useLanguage();
+  const t = translations[language];
   const { skills } = portfolioData;
 
   // Baris 1: Flutter, ReactJS, TailwindCSS, Next.js, Firebase, Arduino IDE
@@ -62,10 +66,10 @@ export function SkillsSection() {
         {/* Section Heading */}
         <ScrollReveal>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#000000] tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
-            Keahlian <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 bg-clip-text text-transparent">Teknis</span><span className="text-blue-600 drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]">.</span>
+            {t.skills.titlePart1}<span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 bg-clip-text text-transparent">{t.skills.titleAccent}</span><span className="text-blue-600 drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]">.</span>
           </h2>
           <p className="mt-3 text-xs sm:text-sm text-[#000000] max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.1)]">
-            Teknologi dan alat yang pernah saya gunakan untuk merancang dan membangun berbagai macam aplikasi dan website.
+            {t.skills.subtitle}
           </p>
         </ScrollReveal>
 

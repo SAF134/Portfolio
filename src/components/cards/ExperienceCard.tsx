@@ -4,6 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { Briefcase, Users, Calendar, MapPin, Wrench } from "lucide-react";
 import { ExperienceItem } from "@/data/portfolioData";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
 import { cn } from "@/lib/utils";
 
 interface ExperienceCardProps {
@@ -12,6 +14,8 @@ interface ExperienceCardProps {
 }
 
 export function ExperienceCard({ experience, className }: ExperienceCardProps) {
+  const { language } = useLanguage();
+  const t = translations[language];
   const isOrganisasi =
     experience.id === "organisasi" ||
     experience.role.toLowerCase().includes("organisasi") ||
@@ -85,7 +89,7 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
         <div className="pt-5 border-t-2 border-[var(--card-border)] flex flex-wrap items-center gap-2">
           <div className="flex items-center gap-1.5 text-xs font-mono font-semibold tracking-wider text-[#000000] uppercase mr-1 drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">
             <Wrench className="w-3.5 h-3.5 text-[#000000]" />
-            <span>Alat &amp; Teknologi:</span>
+            <span>{t.experience.toolsLabel}</span>
           </div>
           {experience.technologies.map((tech) => (
             <span

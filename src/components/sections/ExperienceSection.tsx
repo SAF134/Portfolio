@@ -3,10 +3,14 @@
 import React from "react";
 import { ExperienceCard } from "@/components/cards/ExperienceCard";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { portfolioData } from "@/data/portfolioData";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
+import { getLocalizedPortfolioData } from "@/lib/localize";
 
 export function ExperienceSection() {
-  const { experiences } = portfolioData;
+  const { language } = useLanguage();
+  const t = translations[language];
+  const { experiences } = getLocalizedPortfolioData(language);
 
   return (
     <section id="pengalaman" className="py-20 md:py-28 bg-[#F8F8F8] border-y border-[#E4E4E7]">
@@ -15,10 +19,10 @@ export function ExperienceSection() {
         <ScrollReveal>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#000000] tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
-              Pengalaman Kerja Praktik &amp; <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 bg-clip-text text-transparent">Organisasi</span><span className="text-blue-600 drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]">.</span>
+              {t.experience.titlePart1}<span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 bg-clip-text text-transparent">{t.experience.titleAccent}</span><span className="text-blue-600 drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]">.</span>
             </h2>
             <p className="mt-3 text-xs sm:text-sm text-[#000000] max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.1)]">
-              Jejak pengalaman kerja praktik & organisasi selama menempuh pendidikan.
+              {t.experience.subtitle}
             </p>
           </div>
         </ScrollReveal>

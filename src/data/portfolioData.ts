@@ -66,6 +66,18 @@ export const portfolioData: PortfolioData = {
   ],
   experiences: [
     {
+      id: "koperasi",
+      role: "Informasi dan Teknologi",
+      company: "Koperasi Produsen Dirga Pangan Mandiri",
+      period: "2026 – Sekarang",
+      location: "Jl. Jend. A. Yani II No.18, RT.05/RW.04, Tanah Sareal, Kota Bogor, Jawa Barat 16161.",
+      bulletPoints: [
+        "Merancang dan membangun website resmi Koperasi Produsen Dirga Pangan Mandiri."
+      ],
+      technologies: ["Next JS", "Typescript", "TailwindCSS"],
+      logo: "/images/experience/koperasi-produsen.png"
+    },
+    {
       id: "proyek dosen",
       role: "Mobile Developer",
       company: "Laboratorium Everything Connected (EvConn)",

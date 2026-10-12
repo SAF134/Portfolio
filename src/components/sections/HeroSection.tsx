@@ -4,11 +4,15 @@ import React from "react";
 import Image from "next/image";
 import { Download, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/ui/Icons";
-import { portfolioData } from "@/data/portfolioData";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
+import { getLocalizedPortfolioData } from "@/lib/localize";
 import { cn } from "@/lib/utils";
 
 export function HeroSection() {
-  const { profile } = portfolioData;
+  const { language } = useLanguage();
+  const t = translations[language];
+  const { profile } = getLocalizedPortfolioData(language);
 
   return (
     <section
@@ -71,7 +75,7 @@ export function HeroSection() {
                   className="group/btn inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-sm font-medium shadow-[0_6px_20px_rgba(0,0,0,0.32)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.48)] border-2 border-black hover:border-blue-500/80 hover:scale-[1.02] active:scale-[0.97] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                 >
                   <Download className="w-4 h-4 group-hover/btn:translate-y-0.5 transition-transform duration-200" />
-                  <span className="drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">Unduh CV Saya</span>
+                  <span className="drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">{t.hero.downloadCv}</span>
                 </a>
 
                 <a
@@ -79,7 +83,7 @@ export function HeroSection() {
                   className="group/btn inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-white hover:bg-gradient-to-r hover:from-white hover:to-blue-50/40 border-2 border-[#000000] hover:border-[#000000] text-zinc-900 hover:text-blue-700 text-sm font-semibold shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.3)] hover:scale-[1.02] active:scale-95 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
                 >
                   <Mail className="w-4 h-4 text-[#000000] group-hover:text-blue-600 group-hover/btn:scale-110 group-hover/btn:-rotate-6 transition-transform duration-200" />
-                  <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]">Hubungi Saya</span>
+                  <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]">{t.hero.contactMe}</span>
                 </a>
               </div>
 

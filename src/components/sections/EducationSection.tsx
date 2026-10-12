@@ -4,10 +4,14 @@ import React from "react";
 import Image from "next/image";
 import { GraduationCap, Calendar, MapPin, BookOpen, Award } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { portfolioData } from "@/data/portfolioData";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
+import { getLocalizedPortfolioData } from "@/lib/localize";
 
 export function EducationSection() {
-  const { education } = portfolioData;
+  const { language } = useLanguage();
+  const t = translations[language];
+  const { education } = getLocalizedPortfolioData(language);
 
   return (
     <section id="pendidikan" className="py-20 md:py-28 bg-[#F8F8F8] border-y border-[#E4E4E7]">
@@ -16,10 +20,10 @@ export function EducationSection() {
         <ScrollReveal>
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#000000] tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
-              Riwayat <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 bg-clip-text text-transparent">Pendidikan</span><span className="text-blue-600 drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]">.</span>
+              {t.education.titlePart1}<span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 bg-clip-text text-transparent">{t.education.titleAccent}</span><span className="text-blue-600 drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]">.</span>
             </h2>
             <p className="mt-3 text-xs sm:text-sm text-[#000000] max-w-md mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.1)]">
-              Latar belakang akademis formal selama menempuh perjalanan pendidikan.
+              {t.education.subtitle}
             </p>
           </div>
         </ScrollReveal>
@@ -71,7 +75,7 @@ export function EducationSection() {
                     {/* 3. Program Studi */}
                     <div className="flex items-center gap-1.5 text-xs sm:text-sm text-[#000000] mt-2 font-medium drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)]">
                       <BookOpen className="w-3.5 h-3.5 text-[#000000] shrink-0" />
-                      <span>Program Studi: <strong className="text-[#000000] font-semibold">{item.field}</strong></span>
+                      <span>{t.education.fieldLabel} <strong className="text-[#000000] font-semibold">{item.field}</strong></span>
                     </div>
                   </div>
                 </div>

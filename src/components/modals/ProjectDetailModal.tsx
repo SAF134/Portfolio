@@ -8,6 +8,8 @@ import { X, ExternalLink, ChevronLeft, ChevronRight, Image as ImageIcon } from "
 import { TechBadge } from "@/components/ui/TechBadge";
 import { ProjectItem } from "@/types/portfolio";
 import { sanitizeExternalUrl } from "@/lib/utils";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
 
 interface ProjectDetailModalProps {
   project: ProjectItem | null;
@@ -26,6 +28,9 @@ export function ProjectDetailModal({
   onPrev,
   onNext,
 }: ProjectDetailModalProps) {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   if (!project || typeof document === "undefined") return null;
 
   const rawProjectUrl = project.projectUrl && project.projectUrl.trim() !== ""
@@ -44,7 +49,7 @@ export function ProjectDetailModal({
     <motion.div
       role="dialog"
       aria-modal="true"
-      aria-label={`Detail proyek ${project.title}`}
+      aria-label={`${t.projectModal.title}: ${project.title}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -72,7 +77,7 @@ export function ProjectDetailModal({
             <button
               type="button"
               onClick={onClose}
-              aria-label="Tutup detail proyek"
+              aria-label={t.projectModal.closeAria}
               className="w-9 h-9 rounded-full border-2 border-black flex items-center justify-center text-zinc-700 hover:text-black hover:bg-zinc-100 hover:rotate-90 hover:scale-105 active:scale-90 shadow-[0_2px_8px_rgba(0,0,0,0.18)] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 shrink-0"
             >
               <X className="w-5 h-5" />
@@ -89,7 +94,7 @@ export function ProjectDetailModal({
               <button
                 type="button"
                 onClick={onPrev}
-                aria-label="Proyek sebelumnya"
+                aria-label={t.projectModal.prevAria}
                 className="absolute left-3 sm:left-5 z-10 w-9 sm:w-11 h-9 sm:h-11 rounded-full bg-white/95 hover:bg-white text-zinc-800 hover:text-black shadow-[0_4px_16px_rgba(0,0,0,0.35)] border-2 border-black flex items-center justify-center hover:scale-115 active:scale-90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900"
               >
                 <ChevronLeft className="w-5 sm:w-6 h-5 sm:h-6" />
@@ -100,7 +105,7 @@ export function ProjectDetailModal({
             {hasImage ? (
               <Image
                 src={project.mockupImage}
-                alt={`Pratinjau antarmuka ${project.title}`}
+                alt={`${project.title} mockup`}
                 fill
                 sizes="(max-width: 1200px) 100vw, 1200px"
                 quality={85}
@@ -109,8 +114,8 @@ export function ProjectDetailModal({
             ) : (
               <div className="flex flex-col items-center justify-center text-zinc-400 p-6 text-center">
                 <ImageIcon className="w-12 h-12 text-zinc-500 mb-2" />
-                <span className="text-sm font-mono text-zinc-300">Rasio 16:9</span>
-                <span className="text-xs text-zinc-400 mt-1">Belum ada gambar yang dimasukkan</span>
+                <span className="text-sm font-mono text-zinc-300">{t.projectModal.placeholderRatio}</span>
+                <span className="text-xs text-zinc-400 mt-1">{t.projectModal.placeholderNotice}</span>
               </div>
             )}
 
@@ -119,7 +124,7 @@ export function ProjectDetailModal({
               <button
                 type="button"
                 onClick={onNext}
-                aria-label="Proyek berikutnya"
+                aria-label={t.projectModal.nextAria}
                 className="absolute right-3 sm:right-5 z-10 w-9 sm:w-11 h-9 sm:h-11 rounded-full bg-white/95 hover:bg-white text-zinc-800 hover:text-black shadow-[0_4px_16px_rgba(0,0,0,0.35)] border-2 border-black flex items-center justify-center hover:scale-115 active:scale-90 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900"
               >
                 <ChevronRight className="w-5 sm:w-6 h-5 sm:h-6" />
@@ -131,7 +136,7 @@ export function ProjectDetailModal({
           <div className="p-6 sm:p-8 space-y-6 bg-[var(--card-bg)]">
             <div>
               <h4 className="text-xs font-bold uppercase tracking-wider text-[#000000] font-mono drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">
-                Deskripsi Lengkap Proyek
+                {t.projectModal.fullDescHeading}
               </h4>
               <p className="mt-2.5 text-sm sm:text-base text-[#000000] leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)]">
                 {project.description}
@@ -140,7 +145,7 @@ export function ProjectDetailModal({
 
             <div>
               <h4 className="text-xs font-bold uppercase tracking-wider text-[#000000] font-mono mb-3 drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">
-                Tools & Teknologi yang Digunakan
+                {t.projectModal.toolsHeading}
               </h4>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech) => (
@@ -152,7 +157,7 @@ export function ProjectDetailModal({
             {/* Bukti & Tautan Proyek Section */}
             <div className="pt-2">
               <h4 className="text-xs font-bold uppercase tracking-wider text-[#000000] font-mono mb-3 drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">
-                Bukti &amp; Tautan Proyek
+                {t.projectModal.linksHeading}
               </h4>
               {projectUrl ? (
                 <a
@@ -162,11 +167,11 @@ export function ProjectDetailModal({
                   className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-xs sm:text-sm font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.35)] hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-2 border-[#000000] hover:border-[#000000] transition-all duration-200 active:scale-[0.98]"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <span className="drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">Buka Bukti Proyek</span>
+                  <span className="drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">{t.projectModal.openProofBtn}</span>
                 </a>
               ) : (
                 <div className="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-zinc-50 border-2 border-dashed border-[#000000] shadow-[0_2px_8px_rgba(0,0,0,0.08)] text-zinc-500 text-xs">
-                  <span>Tautan bukti proyek belum ditambahkan (dapat diisi pada baris <code>projectUrl</code> di <code>src/data/portfolioData.ts</code>).</span>
+                  <span>{t.projectModal.noLinkNotice}</span>
                 </div>
               )}
             </div>

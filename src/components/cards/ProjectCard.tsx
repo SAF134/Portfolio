@@ -5,6 +5,8 @@ import Image from "next/image";
 import { ExternalLink, Maximize2, FolderKanban, Image as ImageIcon } from "lucide-react";
 import { TechBadge } from "@/components/ui/TechBadge";
 import { ProjectItem } from "@/data/portfolioData";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
 import { cn, sanitizeExternalUrl } from "@/lib/utils";
 
 interface ProjectCardProps {
@@ -15,6 +17,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index, className, onViewDetail }: ProjectCardProps) {
+  const { language } = useLanguage();
+  const t = translations[language];
   const [imgError, setImgError] = useState(false);
   const hasImage = Boolean(
     project.mockupImage &&
@@ -45,8 +49,8 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-zinc-50 text-zinc-400 p-4 text-center">
             <ImageIcon className="w-8 h-8 text-zinc-300 mb-1.5" />
-            <span className="text-xs font-mono font-medium text-[#000000] drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">Rasio 16:9</span>
-            <span className="text-[11px] text-[#000000] mt-0.5 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)]">Proyek ini sedang dalam proses pembuatan</span>
+            <span className="text-xs font-mono font-medium text-[#000000] drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">{t.projects.ratioHint}</span>
+            <span className="text-[11px] text-[#000000] mt-0.5 drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)]">{t.projects.inProgress}</span>
           </div>
         )}
       </div>
@@ -74,7 +78,7 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
           {/* Label Proyek: (Icon Proyek) + Proyek #1 */}
           <div className="flex items-center gap-1.5 text-[#000000] text-xs font-mono font-medium drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)]">
             <FolderKanban className="w-3.5 h-3.5 text-[#000000]" />
-            <span>Proyek {index !== undefined ? `#${index + 1}` : ""}</span>
+            <span>{t.projects.projectBadge} {index !== undefined ? `#${index + 1}` : ""}</span>
           </div>
 
           {/* Action Buttons: Bukti Proyek (Secondary) & Lihat Detail (Primary) */}
@@ -89,7 +93,7 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
                 title="Buka bukti proyek di tab baru"
               >
                 <ExternalLink className="w-3.5 h-3.5 text-[#000000] group-hover:text-blue-600 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-200" />
-                <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]">Bukti Proyek</span>
+                <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]">{t.projects.btnProof}</span>
               </a>
             ) : (
               <button
@@ -101,7 +105,7 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
                 title="Tautan bukti proyek dapat diisi pada portfolioData.ts (Klik untuk melihat detail proyek)"
               >
                 <ExternalLink className="w-3.5 h-3.5 text-zinc-400 group-hover/btn:scale-110 transition-transform duration-200" />
-                <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">Bukti Proyek</span>
+                <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">{t.projects.btnProof}</span>
               </button>
             )}
 
@@ -112,7 +116,7 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
               className="group/btn inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-xs font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.32)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.48)] border-2 border-black hover:border-blue-500/80 hover:scale-[1.02] active:scale-95 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
             >
               <Maximize2 className="w-3.5 h-3.5 group-hover/btn:scale-115 transition-transform duration-200" />
-              <span className="drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">Lihat Detail</span>
+              <span className="drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">{t.projects.btnDetail}</span>
             </button>
           </div>
         </div>

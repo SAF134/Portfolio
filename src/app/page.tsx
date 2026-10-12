@@ -6,6 +6,7 @@ import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { CertificatesSection } from "@/components/sections/CertificatesSection";
+import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -24,11 +25,7 @@ export default function Home() {
       </main>
 
       {/* Minimal Architectural Footer */}
-      <footer className="py-8 pb-24 md:pb-8 bg-white border-t border-[#E4E4E7] text-center">
-        <p className="text-xs text-[#000000] font-mono drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">
-          &copy; {new Date().getFullYear()} Syauqi Akmal Fadhali. Hak Cipta Dilindungi.
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }

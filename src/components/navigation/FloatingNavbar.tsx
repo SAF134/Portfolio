@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import {
   User,
@@ -10,6 +10,8 @@ import {
   FolderGit2,
   Award,
 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/data/translations";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -18,16 +20,22 @@ interface NavItem {
   icon: React.ElementType;
 }
 
-const navItems: NavItem[] = [
-  { id: "profil", label: "Profil", icon: User },
-  { id: "pendidikan", label: "Pendidikan", icon: GraduationCap },
-  { id: "keahlian", label: "Keahlian", icon: Code2 },
-  { id: "pengalaman", label: "Pengalaman", icon: Briefcase },
-  { id: "proyek", label: "Proyek", icon: FolderGit2 },
-  { id: "sertifikat", label: "Sertifikat", icon: Award },
-];
-
 export function FloatingNavbar() {
+  const { language, setLanguage, toggleLanguage } = useLanguage();
+  const t = translations[language];
+
+  const navItems: NavItem[] = useMemo(
+    () => [
+      { id: "profil", label: t.nav.profil, icon: User },
+      { id: "pendidikan", label: t.nav.pendidikan, icon: GraduationCap },
+      { id: "keahlian", label: t.nav.keahlian, icon: Code2 },
+      { id: "pengalaman", label: t.nav.pengalaman, icon: Briefcase },
+      { id: "proyek", label: t.nav.proyek, icon: FolderGit2 },
+      { id: "sertifikat", label: t.nav.sertifikat, icon: Award },
+    ],
+    [t.nav]
+  );
+
   const [activeSection, setActiveSection] = useState<string>("profil");
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -76,7 +84,7 @@ export function FloatingNavbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     updateScrollState();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navItems]);
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -140,17 +148,56 @@ export function FloatingNavbar() {
                   />
                 )}
                 <Icon className="w-3.5 h-3.5" />
-                <span className={cn(isActive && "drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]")}>{item.label}</span>
+                <span className={cn(isActive && "drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]")}>
+                  {item.label}
+                </span>
               </a>
             );
           })}
+
+          {/* Pemisah Halus */}
+          <div className="w-[1.5px] h-4 bg-black/25 mx-1" aria-hidden="true" />
+
+          {/* Tombol Pengalih Bahasa (ID / EN) di Sebelah Kanan Tombol Sertifikat */}
+          <div
+            className="flex items-center p-0.5 rounded-full bg-white border-2 border-black shadow-[0_2px_8px_rgba(0,0,0,0.18)] ml-0.5"
+            role="group"
+            aria-label="Pilihan Bahasa"
+          >
+            <button
+              type="button"
+              onClick={() => setLanguage("ID")}
+              aria-label="Ganti ke Bahasa Indonesia"
+              className={cn(
+                "px-2.5 py-1 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer",
+                language === "ID"
+                  ? "bg-black text-white shadow-sm"
+                  : "text-zinc-700 hover:text-black hover:bg-black/5"
+              )}
+            >
+              ID
+            </button>
+            <button
+              type="button"
+              onClick={() => setLanguage("EN")}
+              aria-label="Switch to English"
+              className={cn(
+                "px-2.5 py-1 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer",
+                language === "EN"
+                  ? "bg-black text-white shadow-sm"
+                  : "text-zinc-700 hover:text-black hover:bg-black/5"
+              )}
+            >
+              EN
+            </button>
+          </div>
         </div>
       </nav>
 
       {/* ================= MOBILE BOTTOM DOCK NAVBAR ================= */}
       <nav
         aria-label="Navigasi Utama Mobile"
-        className="flex md:hidden fixed bottom-4 inset-x-4 max-w-[340px] mx-auto z-50 items-center justify-around p-1.5 rounded-full bg-[var(--navbar-bg,#d9d9d9)] backdrop-blur-lg border-2 border-[var(--navbar-border,#000000)] shadow-[0_16px_40px_rgba(0,0,0,0.28),0_6px_18px_rgba(0,0,0,0.18)]"
+        className="flex md:hidden fixed bottom-4 inset-x-4 max-w-[360px] mx-auto z-50 items-center justify-around p-1.5 rounded-full bg-[var(--navbar-bg,#d9d9d9)] backdrop-blur-lg border-2 border-[var(--navbar-border,#000000)] shadow-[0_16px_40px_rgba(0,0,0,0.28),0_6px_18px_rgba(0,0,0,0.18)]"
       >
         {navItems.map((item) => {
           const isActive = activeSection === item.id;
@@ -180,6 +227,20 @@ export function FloatingNavbar() {
             </a>
           );
         })}
+
+        {/* Pemisah Halus */}
+        <div className="w-[1.5px] h-4 bg-black/25 mx-0.5" aria-hidden="true" />
+
+        {/* Tombol Pengalih Bahasa Mobile di Sebelah Kanan Tombol Sertifikat */}
+        <button
+          type="button"
+          onClick={toggleLanguage}
+          aria-label={`Ganti bahasa (saat ini ${language})`}
+          className="flex items-center justify-center px-2.5 py-1 rounded-full bg-white border-2 border-black text-xs font-black text-black shadow-[0_2px_8px_rgba(0,0,0,0.18)] active:scale-95 transition-transform cursor-pointer"
+          title={language === "ID" ? "Ganti ke Bahasa Inggris" : "Switch to Indonesian"}
+        >
+          <span>{language}</span>
+        </button>
       </nav>
     </>
   );
