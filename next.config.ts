@@ -42,6 +42,9 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  experimental: {
+    agentUpgrade: "security",
+  },
   poweredByHeader: false,
   images: {
     qualities: [75, 85, 95],
@@ -57,4 +60,3 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
-
