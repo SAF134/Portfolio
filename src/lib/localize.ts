@@ -6,7 +6,7 @@ const englishContent = {
     eyebrow: "HELLO, NICE TO MEET YOU",
     headlineRole: "Software Engineer / Web Developer / UI & UX Designer",
     heroBio:
-      "I am a Computer Engineering graduate from Telkom University focused on software engineering, particularly modern mobile and web application development. Experienced in designing and building functional digital solutions—ranging from integrated real-time IoT and energy monitoring systems, interactive geospatial mapping platforms, to mobile productivity utility apps. Combining intuitive user interface design with structured, adaptable code architecture oriented towards solving real-world problems.",
+      "I am a Computer Engineering graduate from Telkom University focused on software engineering, particularly modern mobile and web application development. Experienced in designing and building functional digital solutions ranging from integrated real-time IoT and energy monitoring systems, interactive geospatial mapping platforms, to mobile productivity utility apps. Combining intuitive user interface design with structured, adaptable code architecture oriented towards solving real-world problems.",
   },
   experiences: {
     koperasi: {
@@ -63,7 +63,7 @@ const englishContent = {
     },
     "proyek-2": {
       description:
-        "Student Academic Management Application (GPA, Schedules, and Tasks).",
+        "Student Academic Management Application for features such as GPA, course schedules, assignments, and events.",
     },
     "proyek-3": {
       description:

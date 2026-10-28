@@ -26,7 +26,7 @@ export const portfolioData: PortfolioData = {
     headlineRole: "Software Engineer/Web Developer/Desain UI & UX",
     eyebrow: "HALO, PERKENALKAN SAYA",
     heroBio:
-      "Saya adalah lulusan Teknik Komputer Universitas Telkom yang berfokus pada rekayasa perangkat lunak, khususnya pengembangan aplikasi mobile dan web modern. Berpengalaman merancang dan membangun solusi digital yang fungsional—mulai dari sistem monitoring energi dan IoT real-time terintegrasi, platform pemetaan interaktif geospasial, hingga aplikasi utilitas mobile produktivitas. Mengombinasikan desain antarmuka pengguna yang intuitif dengan arsitektur kode yang terstruktur, adaptif, serta berorientasi pada pemecahan masalah nyata.",
+      "Saya adalah lulusan Teknik Komputer Universitas Telkom yang berfokus pada rekayasa perangkat lunak, khususnya pengembangan aplikasi mobile dan web modern. Berpengalaman merancang dan membangun solusi digital yang fungsional mulai dari sistem monitoring energi dan IoT real-time terintegrasi, platform pemetaan interaktif geospasial, hingga aplikasi utilitas mobile produktivitas. Mengombinasikan desain antarmuka pengguna yang intuitif dengan arsitektur kode yang terstruktur, adaptif, serta berorientasi pada pemecahan masalah nyata.",
     email: "syauqiakmal137@gmail.com",
     heroCardImage: "/images/profile/foto-profil-syauqi.webp",
     cvPath: "/assets/CV_Syauqi_Akmal_Fadhali.pdf",
@@ -164,10 +164,10 @@ export const portfolioData: PortfolioData = {
     },
     {
       id: "proyek-2",
-      title: "MyIPK",
+      title: "Nguliah",
       description:
-        "Aplikasi Manajemen Akademik Mahasiswa (IPK, Jadwal, dan Tugas).",
-      mockupImage: "/images/projects/myipk.webp",
+        "Aplikasi Manajemen Akademik Mahasiswa seperti Nilai IPK, Jadwal Kuliah, Tugas kuliah, dan Acara.",
+      mockupImage: "/images/projects/nguliah.webp",
       technologies: ["Flutter", "Google Stitch"],
       projectUrl: "https://drive.google.com/drive/folders/1dEgPrlv5nGuPitLvZ-blyde4vlz68SGF?usp=drive_link",
     },
@@ -223,7 +223,7 @@ export const portfolioData: PortfolioData = {
         "Aplikasi Timer Overlay untuk membantu pemain game Mobile Legends menghitung spell musuh.",
       mockupImage: "/images/projects/timerin.webp",
       technologies: ["Flutter", "Firebase"],
-      projectUrl: "https://drive.google.com/drive/folders/1NTjFigM09igydbg1hGQOHnIlJDz-236C",
+      projectUrl: "https://timerin.vercel.app/",
     },
   ],
   certificates: [
