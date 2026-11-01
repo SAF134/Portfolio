@@ -72,7 +72,8 @@ export const portfolioData: PortfolioData = {
       period: "2026 – Sekarang",
       location: "Jl. Jend. A. Yani II No.18, RT.05/RW.04, Tanah Sareal, Kota Bogor, Jawa Barat 16161.",
       bulletPoints: [
-        "Merancang dan membangun website resmi Koperasi Produsen Dirga Pangan Mandiri."
+        "Merancang dan membangun website resmi Koperasi Produsen Dirga Pangan Mandiri.",
+        "Menjadi salah satu koperasi."
       ],
       technologies: ["Next JS", "Typescript", "TailwindCSS"],
       logo: "/images/experience/koperasi-produsen.png"
@@ -177,7 +178,7 @@ export const portfolioData: PortfolioData = {
       description:
         "Aplikasi Monitoring & Kontrol Pemberi Pakan Ikan Otomatis.",
       mockupImage: "/images/projects/myfish.webp",
-      technologies: ["Flutter", "Firebase", "Google Stitch"],
+      technologies: ["Flutter", "Firebase", "ESP32", "Motor Servo"],
       projectUrl: "https://drive.google.com/drive/folders/1FhioI8ia7Oa8s7rQgqq_cohsXmGCVRXW?usp=drive_link",
     },
     {
