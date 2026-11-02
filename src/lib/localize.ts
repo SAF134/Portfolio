@@ -4,7 +4,7 @@ import type { Language } from "@/context/LanguageContext";
 const englishContent = {
   profile: {
     eyebrow: "HELLO, NICE TO MEET YOU",
-    headlineRole: "Software Engineer / Web Developer / UI & UX Designer",
+    headlineRole: "Software Engineer/Web Developr /UI & UX Designer/Fullstack Developer",
     heroBio:
       "I am a Computer Engineering graduate from Telkom University focused on software engineering, particularly modern mobile and web application development. Experienced in designing and building functional digital solutions ranging from integrated real-time IoT and energy monitoring systems, interactive geospatial mapping platforms, to mobile productivity utility apps. Combining intuitive user interface design with structured, adaptable code architecture oriented towards solving real-world problems.",
   },
