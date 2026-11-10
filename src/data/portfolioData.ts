@@ -136,22 +136,6 @@ export const portfolioData: PortfolioData = {
       period: "2019 – 2022",
       logo: "/images/education/alkahfi.png"
     },
-    {
-      id: "smp",
-      institution: "SMPIT Insantama Bogor",
-      address: "Jl. Hegarmanah IV No.47, RT.01/RW.08, Kelurahan Gunungbatu, Kecamatan Bogor Barat, Kota Bogor, Jawa Barat 16118.",
-      field: "Islam Terpadu (IT)",
-      period: "2016 – 2019",
-      logo: "/images/education/insantama.png"
-    },
-    {
-      id: "sd",
-      institution: "SDIT Insantama Bogor",
-      address: "Jl. Hegarmanah IV No.47, RT.01/RW.08, Kelurahan Gunungbatu, Kecamatan Bogor Barat, Kota Bogor, Jawa Barat 16118.",
-      field: "Islam Terpadu (IT)",
-      period: "2010 – 2016",
-      logo: "/images/education/insantama.png"
-    },
   ],
   projects: [
     {
