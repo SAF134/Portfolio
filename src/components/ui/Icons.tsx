@@ -41,3 +41,53 @@ export function InstagramIcon({ className = "w-4 h-4" }: { className?: string })
     </svg>
   );
 }
+
+export function IndonesiaFlag({ className = "w-4 h-2.5" }: { className?: string }) {
+  return (
+    <svg
+      role="img"
+      viewBox="0 0 50 30"
+      className={className}
+      aria-label="Bendera Indonesia"
+      aria-hidden="true"
+    >
+      <rect width="50" height="15" fill="#E70011" />
+      <rect y="15" width="50" height="15" fill="#FFFFFF" />
+    </svg>
+  );
+}
+
+export function UKFlag({ className = "w-4 h-2.5" }: { className?: string }) {
+  const rawId = React.useId();
+  const clipId = "uk_flag_" + rawId.replace(/[^a-zA-Z0-9]/g, "");
+
+  return (
+    <svg
+      role="img"
+      viewBox="0 0 50 30"
+      className={className}
+      aria-label="Bendera Inggris / UK"
+      aria-hidden="true"
+    >
+      <defs>
+        <clipPath id={clipId}>
+          <path d="M25,15h25v15zv15h-25zh-25v-15zv-15h25z" />
+        </clipPath>
+      </defs>
+      <path d="M0,0v30h50v-30z" fill="#012169" />
+      <path d="M0,0 50,30M50,0 0,30" stroke="#FFFFFF" strokeWidth="6" />
+      <path
+        d="M0,0 50,30M50,0 0,30"
+        clipPath={`url(#${clipId})`}
+        stroke="#C8102E"
+        strokeWidth="4"
+      />
+      <path
+        d="M-1 11h22v-12h8v12h22v8h-22v12h-8v-12h-22z"
+        fill="#C8102E"
+        stroke="#FFFFFF"
+        strokeWidth="2"
+      />
+    </svg>
+  );
+}

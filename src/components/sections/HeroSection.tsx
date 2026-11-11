@@ -44,31 +44,31 @@ export function HeroSection() {
             />
 
             {/* Main Profile Info Card Container */}
-            <div className="relative w-full rounded-[32px] bg-[var(--card-bg)] border-2 border-[var(--card-border)] shadow-[0_18px_45px_rgba(0,0,0,0.25),0_6px_18px_rgba(37,99,235,0.25)] hover:-translate-y-1 hover:border-[var(--card-border-hover)] hover:shadow-[0_26px_55px_rgba(0,0,0,0.32),0_10px_24px_rgba(37,99,235,0.35)] p-6 sm:p-8 md:p-10 flex flex-col items-start transition-all duration-300 ease-out">
+            <div className="relative w-full rounded-[32px] bg-[var(--card-bg)] border-2 border-[var(--card-border)] shadow-[0_18px_45px_rgba(0,0,0,0.25),0_6px_18px_rgba(37,99,235,0.25)] hover:-translate-y-1 hover:border-[var(--card-border-hover)] hover:shadow-[0_26px_55px_rgba(0,0,0,0.32),0_10px_24px_rgba(37,99,235,0.35)] p-6 sm:p-8 md:p-10 flex flex-col items-center sm:items-start text-center sm:text-left transition-all duration-300 ease-out">
               {/* Eyebrow & Availability Status Badge with Ambient Glow */}
-              <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className="text-xs md:text-sm font-mono font-semibold tracking-widest text-[#000000] uppercase drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]">
+              <div className="w-full flex flex-wrap items-center justify-center sm:justify-start gap-3 mb-4">
+                <span className="text-xs md:text-sm font-mono font-semibold tracking-widest text-[#000000] uppercase text-center sm:text-left drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]">
                   {profile.eyebrow}
                 </span>
               </div>
 
               {/* Large Title with Accent Dot and Subtle Depth */}
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#000000] tracking-tight leading-[1.12] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+              <h1 className="w-full text-center sm:text-left text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#000000] tracking-tight leading-[1.12] drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
                 {profile.fullName}
               </h1>
 
               {/* Subtitle Role */}
-              <p className="text-base sm:text-lg md:text-xl font-semibold text-zinc-800 mt-2.5 tracking-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.14)]">
+              <p className="w-full text-center sm:text-left text-base sm:text-lg md:text-xl font-semibold text-zinc-800 mt-2.5 tracking-tight drop-shadow-[0_1px_2px_rgba(0,0,0,0.14)]">
                 {profile.headlineRole}
               </p>
 
               {/* Bio text */}
-              <p className="mt-5 text-sm sm:text-base text-[#000000] leading-relaxed font-normal text-justify drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)]">
+              <p className="w-full mt-5 text-sm sm:text-base text-[#000000] leading-relaxed font-normal text-justify drop-shadow-[0_1px_1px_rgba(0,0,0,0.08)]">
                 {profile.heroBio}
               </p>
 
               {/* CTA Buttons with Colored Gradient Ambient Shadows */}
-              <div className="mt-7 flex flex-wrap items-center gap-3.5">
+              <div className="mt-7 flex flex-wrap items-center justify-center sm:justify-start gap-3.5 w-full">
                 <a
                   href={profile.cvPath}
                   download="CV_Syauqi_Akmal_Fadhali.pdf"
@@ -88,7 +88,7 @@ export function HeroSection() {
               </div>
 
               {/* Social Links with Colored Brand Ambient Shadows */}
-              <div className="flex items-center gap-3 mt-6">
+              <div className="flex items-center justify-center sm:justify-start gap-3 mt-6 w-full">
                 {profile.socials.map((social) => {
                   const Icon =
                     social.platform === "github"

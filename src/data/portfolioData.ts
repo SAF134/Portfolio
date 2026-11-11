@@ -69,11 +69,11 @@ export const portfolioData: PortfolioData = {
       id: "koperasi",
       role: "Informasi dan Teknologi",
       company: "Koperasi Produsen Dirga Pangan Mandiri",
-      period: "2026 – Sekarang",
-      location: "Jl. Jend. A. Yani II No.18, RT.05/RW.04, Tanah Sareal, Kota Bogor, Jawa Barat 16161.",
+      period: "Oktober 2026 – Sekarang",
+      location: "Kota Bogor, Jawa Barat.",
       bulletPoints: [
         "Merancang dan membangun website resmi Koperasi Produsen Dirga Pangan Mandiri.",
-        "Menjadi salah satu koperasi."
+        "Menjadi salah satu pendiri koperasi."
       ],
       technologies: ["Next JS", "Typescript", "TailwindCSS"],
       logo: "/images/experience/koperasi-produsen.png"
@@ -82,8 +82,8 @@ export const portfolioData: PortfolioData = {
       id: "proyek dosen",
       role: "Mobile Developer",
       company: "Laboratorium Everything Connected (EvConn)",
-      period: "2025 – 2026",
-      location: "Jl. Telekomunikasi No. 1, Terusan Buahbatu, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257.",
+      period: "September 2025 – Agustus 2026",
+      location: "Kabupaten Bandung, Jawa Barat.",
       bulletPoints: [
         "Merancang dan membangun aplikasi mobile berbasis Flutter untuk memantau status pengisian daya dan daya yang masuk secara real-time.",
         "Mendesain antarmuka pengguna (UI/UX) yang intuitif dengan visualisasi metrik dan grafik daya untuk memudahkan pemantauan efisiensi pengisian."
@@ -96,13 +96,13 @@ export const portfolioData: PortfolioData = {
       role: "Unit Business Service",
       company: "PT Telkom Indonesia (Persero) Tbk",
       period: "Juni 2025 – Agustus 2025",
-      location: "Jl. Raya Pajajaran No.37, RT.04/RW.06, Bantarjati, Kecamatan Bogor Utara, Kota Bogor, Jawa Barat 16153.",
+      location: "Kota Bogor, Jawa Barat.",
       bulletPoints: [
         "Mendukung operasional harian unit dalam pemantauan status penyediaan dan pemeliharaan layanan telekomunikasi pelanggan enterprise.",
         "Berkoordinasi secara aktif dengan tim teknisi lapangan dalam pencatatan progres penanganan tiket layanan dan verifikasi lapangan.",
         "Mengelola serta merekapitulasi data administratif operasional layanan secara terstruktur guna mendukung evaluasi performa unit."
       ],
-      technologies: ["Spreadsheet", "Infrastructure Excellence to provide Service Assurance (IXSA)", "Beyond Integrated Workforce Management (BIMA)", "Integrated Broadband Diagnostic Center (Ibooster)", "Auto Configuration System Ibooster (ACSIS)", "Operation Supervisory Monitoring (OSM)"],
+      technologies: ["Spreadsheet"],
       logo: "/images/experience/pttelkom.png"
     },
     {
@@ -110,7 +110,7 @@ export const portfolioData: PortfolioData = {
       role: "Publikasi & Dokumentasi",
       company: "Persatuan Catur Mahasiswa (PCM) UKM Universitas Telkom",
       period: "2023 – 2024",
-      location: "Jl. Telekomunikasi No. 1, Terusan Buahbatu, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257.",
+      location: "Kabupaten Bandung, Jawa Barat.",
       bulletPoints: [
         "Mengelola publikasi visual dan mendokumentasikan rangkaian kegiatan latihan rutin serta kejuaraan internal organisasi.",
         "Merancang sertifikat digital dan materi grafis kepanitiaan untuk puluhan peserta dan jajaran panitia kegiatan."
@@ -123,15 +123,15 @@ export const portfolioData: PortfolioData = {
     {
       id: "sarjana",
       institution: "Universitas Telkom",
-      address: "Jl. Telekomunikasi No. 1, Terusan Buahbatu, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257.",
+      address: "Kabupaten Bandung, Jawa Barat.",
       field: "S1 Teknik Komputer",
       period: "2022 – 2026",
       logo: "/images/education/telkom.png"
     },
     {
       id: "sma",
-      institution: "SMAIT Al Kahfi Bogor",
-      address: "Jl. SPN Lido, Desa Srogol, Kecamatan Cigombong, Kabupaten Bogor, Jawa Barat 16110.",
+      institution: "SMAIT Al Kahfi",
+      address: "Kabupaten Bogor, Jawa Barat.",
       field: "Matematika dan Ilmu Pengetahuan Alam (MIPA)",
       period: "2019 – 2022",
       logo: "/images/education/alkahfi.png"
@@ -255,14 +255,6 @@ export const portfolioData: PortfolioData = {
     {
       id: "sertifikat-11",
       image: "/images/certificates/SYAUQI AKMAL FADHALI Pubdok 23.webp",
-    },
-    {
-      id: "sertifikat-12",
-      image: "/images/certificates/Sertifikat-PameranCD_Syauqi-Akmal.webp",
-    },
-    {
-      id: "sertifikat-13",
-      image: "/images/certificates/Sertifikat-EIRRG_Syauqi-Akmal.webp",
     },
   ],
 };

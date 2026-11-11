@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/data/translations";
+import { IndonesiaFlag, UKFlag } from "@/components/ui/Icons";
 import { cn } from "@/lib/utils";
 
 interface NavItem {
@@ -116,14 +117,14 @@ export function FloatingNavbar() {
       <nav
         aria-label="Navigasi Utama Desktop"
         className={cn(
-          "hidden md:flex fixed top-5 left-1/2 -translate-x-1/2 z-50 items-center justify-between gap-1 p-1.5 rounded-full backdrop-blur-md border-2 border-[var(--navbar-border,#000000)] bg-[var(--navbar-bg,#d9d9d9)] transition-all duration-300",
+          "hidden md:flex fixed top-4 lg:top-5 left-1/2 -translate-x-1/2 z-50 items-center justify-center p-1.5 px-3 md:px-3 lg:px-4 rounded-full backdrop-blur-md border-2 border-[var(--navbar-border,#000000)] bg-[var(--navbar-bg,#d9d9d9)] max-w-[calc(100vw-2rem)] transition-all duration-300",
           isScrolled
             ? "shadow-[0_18px_40px_rgba(0,0,0,0.25),0_6px_16px_rgba(0,0,0,0.16)]"
             : "shadow-[0_14px_32px_rgba(0,0,0,0.2),0_4px_12px_rgba(0,0,0,0.12)]"
         )}
       >
         {/* Nav Links */}
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0.5 lg:gap-1">
           {navItems.map((item) => {
             const isActive = activeSection === item.id;
             const Icon = item.icon;
@@ -134,7 +135,7 @@ export function FloatingNavbar() {
                 href={`#${item.id}`}
                 onClick={(e) => scrollToSection(e, item.id)}
                 className={cn(
-                  "relative flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-1",
+                  "relative flex items-center gap-1.5 lg:gap-2 px-2.5 md:px-2.5 lg:px-3.5 py-1.5 rounded-full text-[11px] md:text-[11.5px] lg:text-xs font-semibold whitespace-nowrap transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-1",
                   isActive
                     ? "text-white"
                     : "text-zinc-800 hover:text-black hover:bg-black/10"
@@ -147,7 +148,7 @@ export function FloatingNavbar() {
                     className="absolute inset-0 bg-gradient-to-r from-zinc-900 via-black to-zinc-900 rounded-full -z-10 shadow-[0_4px_14px_rgba(0,0,0,0.45)] border-2 border-black"
                   />
                 )}
-                <Icon className="w-3.5 h-3.5" />
+                <Icon className="w-3.5 h-3.5 shrink-0" />
                 <span className={cn(isActive && "drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]")}>
                   {item.label}
                 </span>
@@ -156,11 +157,11 @@ export function FloatingNavbar() {
           })}
 
           {/* Pemisah Halus */}
-          <div className="w-[1.5px] h-4 bg-black/25 mx-1" aria-hidden="true" />
+          <div className="w-[1.5px] h-4 bg-black/25 mx-1.5 lg:mx-2 shrink-0" aria-hidden="true" />
 
           {/* Tombol Pengalih Bahasa (ID / EN) di Sebelah Kanan Tombol Sertifikat */}
           <div
-            className="flex items-center p-0.5 rounded-full bg-white border-2 border-black shadow-[0_2px_8px_rgba(0,0,0,0.18)] ml-0.5"
+            className="flex items-center p-0.5 rounded-full bg-white border-2 border-black shadow-[0_2px_8px_rgba(0,0,0,0.18)] shrink-0"
             role="group"
             aria-label="Pilihan Bahasa"
           >
@@ -169,26 +170,38 @@ export function FloatingNavbar() {
               onClick={() => setLanguage("ID")}
               aria-label="Ganti ke Bahasa Indonesia"
               className={cn(
-                "px-2.5 py-1 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer",
+                "flex items-center gap-1 md:gap-1.5 px-2 md:px-2 lg:px-2.5 py-1 rounded-full text-[11px] lg:text-xs font-bold transition-all duration-200 cursor-pointer",
                 language === "ID"
                   ? "bg-black text-white shadow-sm"
                   : "text-zinc-700 hover:text-black hover:bg-black/5"
               )}
             >
-              ID
+              <IndonesiaFlag
+                className={cn(
+                  "w-3.5 h-[9px] lg:w-4 lg:h-2.5 rounded-[2px] overflow-hidden shrink-0 shadow-[0_0_1px_rgba(0,0,0,0.5)]",
+                  language === "ID" ? "border border-white/30" : "border border-black/20"
+                )}
+              />
+              <span>ID</span>
             </button>
             <button
               type="button"
               onClick={() => setLanguage("EN")}
               aria-label="Switch to English"
               className={cn(
-                "px-2.5 py-1 rounded-full text-xs font-bold transition-all duration-200 cursor-pointer",
+                "flex items-center gap-1 md:gap-1.5 px-2 md:px-2 lg:px-2.5 py-1 rounded-full text-[11px] lg:text-xs font-bold transition-all duration-200 cursor-pointer",
                 language === "EN"
                   ? "bg-black text-white shadow-sm"
                   : "text-zinc-700 hover:text-black hover:bg-black/5"
               )}
             >
-              EN
+              <UKFlag
+                className={cn(
+                  "w-3.5 h-[9px] lg:w-4 lg:h-2.5 rounded-[2px] overflow-hidden shrink-0 shadow-[0_0_1px_rgba(0,0,0,0.5)]",
+                  language === "EN" ? "border border-white/30" : "border border-black/20"
+                )}
+              />
+              <span>EN</span>
             </button>
           </div>
         </div>
@@ -236,9 +249,14 @@ export function FloatingNavbar() {
           type="button"
           onClick={toggleLanguage}
           aria-label={`Ganti bahasa (saat ini ${language})`}
-          className="flex items-center justify-center px-2.5 py-1 rounded-full bg-white border-2 border-black text-xs font-black text-black shadow-[0_2px_8px_rgba(0,0,0,0.18)] active:scale-95 transition-transform cursor-pointer"
+          className="flex items-center justify-center gap-1.5 px-2.5 py-1 rounded-full bg-white border-2 border-black text-xs font-black text-black shadow-[0_2px_8px_rgba(0,0,0,0.18)] active:scale-95 transition-transform cursor-pointer"
           title={language === "ID" ? "Ganti ke Bahasa Inggris" : "Switch to Indonesian"}
         >
+          {language === "ID" ? (
+            <IndonesiaFlag className="w-4 h-2.5 rounded-[2px] overflow-hidden shrink-0 shadow-[0_0_1px_rgba(0,0,0,0.5)] border border-black/20" />
+          ) : (
+            <UKFlag className="w-4 h-2.5 rounded-[2px] overflow-hidden shrink-0 shadow-[0_0_1px_rgba(0,0,0,0.5)] border border-black/20" />
+          )}
           <span>{language}</span>
         </button>
       </nav>

@@ -40,7 +40,7 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
         {hasImage ? (
           <Image
             src={project.mockupImage}
-            alt={`Pratinjau antarmuka ${project.title}`}
+            alt={language === "ID" ? `Pratinjau antarmuka ${project.title}` : `${project.title} interface preview`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-500 ease-out"
@@ -90,7 +90,7 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/btn inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-white hover:bg-gradient-to-r hover:from-white hover:to-blue-50/40 border-2 border-[#000000] hover:border-[#000000] text-zinc-800 hover:text-blue-700 text-xs font-semibold shadow-[0_4px_14px_rgba(0,0,0,0.18)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.3)] hover:scale-[1.02] active:scale-95 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
-                title="Buka bukti proyek di tab baru"
+                title={language === "ID" ? "Buka bukti proyek di tab baru" : "Open project proof in a new tab"}
               >
                 <ExternalLink className="w-3.5 h-3.5 text-[#000000] group-hover:text-blue-600 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-200" />
                 <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.12)]">{t.projects.btnProof}</span>
@@ -102,7 +102,7 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
                   if (onViewDetail) onViewDetail();
                 }}
                 className="group/btn inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-zinc-50/80 hover:bg-zinc-100 border-2 border-dashed border-[#000000] hover:border-[#000000] text-[#000000] hover:text-zinc-800 text-xs font-medium shadow-[0_3px_10px_rgba(0,0,0,0.12)] hover:scale-[1.02] active:scale-95 transition-all duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
-                title="Tautan bukti proyek dapat diisi pada portfolioData.ts (Klik untuk melihat detail proyek)"
+                title={language === "ID" ? "Tautan bukti proyek dapat diisi pada portfolioData.ts (Klik untuk melihat detail proyek)" : "Project proof link can be configured in portfolioData.ts (Click to view project details)"}
               >
                 <ExternalLink className="w-3.5 h-3.5 text-zinc-400 group-hover/btn:scale-110 transition-transform duration-200" />
                 <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">{t.projects.btnProof}</span>

@@ -4,7 +4,7 @@ import React from "react";
 import { CertificateCard } from "@/components/cards/CertificateCard";
 import { CertificateModal } from "@/components/modals/CertificateModal";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { portfolioData } from "@/data/portfolioData";
+import { getLocalizedPortfolioData } from "@/lib/localize";
 import { useGalleryModal } from "@/hooks/useGalleryModal";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/data/translations";
@@ -12,7 +12,7 @@ import { translations } from "@/data/translations";
 export function CertificatesSection() {
   const { language } = useLanguage();
   const t = translations[language];
-  const { certificates } = portfolioData;
+  const { certificates } = getLocalizedPortfolioData(language);
   const {
     selectedIndex,
     setSelectedIndex,
