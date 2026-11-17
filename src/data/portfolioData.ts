@@ -66,6 +66,21 @@ export const portfolioData: PortfolioData = {
   ],
   experiences: [
     {
+      id: "magang",
+      role: "Programmer",
+      company: "Rumah Sakit Azra",
+      period: "November 2026 - Mei 2027",
+      location: "Kota Bogor, Jawa Barat.",
+      bulletPoints: [
+        "Merancang dan membangun aplikasi mobile dokter azra seperti jadwal dan cuti dokter.",
+      ],
+      activityPhotos: [
+        "",
+      ],
+      technologies: ["Flutter", "Google Stitch"],
+      logo: "/images/experience/azra.png"
+    },
+    {
       id: "koperasi",
       role: "Informasi dan Teknologi",
       company: "Koperasi Produsen Dirga Pangan Mandiri",
@@ -73,7 +88,10 @@ export const portfolioData: PortfolioData = {
       location: "Kota Bogor, Jawa Barat.",
       bulletPoints: [
         "Merancang dan membangun website resmi Koperasi Produsen Dirga Pangan Mandiri.",
-        "Menjadi salah satu pendiri koperasi."
+        "Menjadi salah satu pendiri koperasi produsen."
+      ],
+      activityPhotos: [
+        "",
       ],
       technologies: ["Next JS", "Typescript", "TailwindCSS"],
       logo: "/images/experience/koperasi-produsen.png"
@@ -87,6 +105,10 @@ export const portfolioData: PortfolioData = {
       bulletPoints: [
         "Merancang dan membangun aplikasi mobile berbasis Flutter untuk memantau status pengisian daya dan daya yang masuk secara real-time.",
         "Mendesain antarmuka pengguna (UI/UX) yang intuitif dengan visualisasi metrik dan grafik daya untuk memudahkan pemantauan efisiensi pengisian."
+      ],
+      activityPhotos: [
+        "/images/experience/evconn1.webp",
+        "/images/experience/evconn2.webp",
       ],
       technologies: ["Flutter", "Firebase", "Google Stitch","Leaflet Map"],
       logo: "/images/experience/evconn.png"
@@ -102,18 +124,25 @@ export const portfolioData: PortfolioData = {
         "Berkoordinasi secara aktif dengan tim teknisi lapangan dalam pencatatan progres penanganan tiket layanan dan verifikasi lapangan.",
         "Mengelola serta merekapitulasi data administratif operasional layanan secara terstruktur guna mendukung evaluasi performa unit."
       ],
+      activityPhotos: [
+        "/images/experience/telkom1.webp",
+        "/images/experience/telkom2.webp",
+      ],
       technologies: ["Spreadsheet"],
       logo: "/images/experience/pttelkom.png"
     },
     {
       id: "organisasi",
       role: "Publikasi & Dokumentasi",
-      company: "Persatuan Catur Mahasiswa (PCM) UKM Universitas Telkom",
+      company: "UKM Persatuan Catur Mahasiswa",
       period: "2023 – 2024",
       location: "Kabupaten Bandung, Jawa Barat.",
       bulletPoints: [
         "Mengelola publikasi visual dan mendokumentasikan rangkaian kegiatan latihan rutin serta kejuaraan internal organisasi.",
         "Merancang sertifikat digital dan materi grafis kepanitiaan untuk puluhan peserta dan jajaran panitia kegiatan."
+      ],
+      activityPhotos: [
+        "/images/experience/pcm1.webp",
       ],
       technologies: ["Canva"],
       logo: "/images/experience/pcm.png"

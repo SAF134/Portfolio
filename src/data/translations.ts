@@ -30,6 +30,7 @@ export interface Translations {
     titleAccent: string;
     subtitle: string;
     toolsLabel: string;
+    btnActivityPhoto: string;
   };
   projects: {
     titlePart1: string;
@@ -69,6 +70,13 @@ export interface Translations {
     prevAria: string;
     nextAria: string;
   };
+  experiencePhotoModal: {
+    title: string;
+    closeAria: string;
+    prevAria: string;
+    nextAria: string;
+    emptyNotice: string;
+  };
   footer: {
     copyright: string;
   };
@@ -105,6 +113,7 @@ export const translations: Record<Language, Translations> = {
       titleAccent: "Organisasi",
       subtitle: "Jejak pengalaman kerja praktik & organisasi selama menempuh pendidikan.",
       toolsLabel: "Alat & Teknologi:",
+      btnActivityPhoto: "Foto Kegiatan",
     },
     projects: {
       titlePart1: "Riwayat ",
@@ -144,6 +153,13 @@ export const translations: Record<Language, Translations> = {
       prevAria: "Sertifikat sebelumnya",
       nextAria: "Sertifikat berikutnya",
     },
+    experiencePhotoModal: {
+      title: "Foto Kegiatan",
+      closeAria: "Tutup foto kegiatan",
+      prevAria: "Foto sebelumnya",
+      nextAria: "Foto berikutnya",
+      emptyNotice: "Belum ada foto kegiatan yang ditambahkan.",
+    },
     footer: {
       copyright: "Hak Cipta Dilindungi.",
     },
@@ -178,6 +194,7 @@ export const translations: Record<Language, Translations> = {
       titleAccent: "Organization",
       subtitle: "Track record of practical work and organizational experience during my studies.",
       toolsLabel: "Tools & Technologies:",
+      btnActivityPhoto: "Activity Photos",
     },
     projects: {
       titlePart1: "Project ",
@@ -216,6 +233,13 @@ export const translations: Record<Language, Translations> = {
       closeAria: "Close certificate preview",
       prevAria: "Previous certificate",
       nextAria: "Next certificate",
+    },
+    experiencePhotoModal: {
+      title: "Activity Photos",
+      closeAria: "Close activity photos",
+      prevAria: "Previous photo",
+      nextAria: "Next photo",
+      emptyNotice: "No activity photos have been added yet (can be configured in activityPhotos in src/data/portfolioData.ts).",
     },
     footer: {
       copyright: "All Rights Reserved.",

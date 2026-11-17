@@ -1,7 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { ExperienceCard } from "@/components/cards/ExperienceCard";
+import { ExperiencePhotoModal } from "@/components/modals/ExperiencePhotoModal";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/data/translations";
@@ -11,6 +12,12 @@ export function ExperienceSection() {
   const { language } = useLanguage();
   const t = translations[language];
   const { experiences } = getLocalizedPortfolioData(language);
+  const [selectedExpId, setSelectedExpId] = useState<string | null>(null);
+
+  const selectedExperience =
+    selectedExpId !== null
+      ? experiences.find((exp) => exp.id === selectedExpId) ?? null
+      : null;
 
   return (
     <section id="pengalaman" className="py-20 md:py-28 bg-[#F8F8F8] border-y border-[#E4E4E7]">
@@ -31,11 +38,21 @@ export function ExperienceSection() {
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <ScrollReveal key={exp.id} delay={index * 0.1}>
-              <ExperienceCard experience={exp} />
+              <ExperienceCard
+                experience={exp}
+                onViewPhotos={() => setSelectedExpId(exp.id)}
+              />
             </ScrollReveal>
           ))}
         </div>
       </div>
+
+      {/* Experience Activity Photos Lightbox Modal */}
+      <ExperiencePhotoModal
+        key={selectedExperience?.id ?? "closed"}
+        experience={selectedExperience}
+        onClose={() => setSelectedExpId(null)}
+      />
     </section>
   );
 }

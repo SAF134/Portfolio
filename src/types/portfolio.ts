@@ -20,6 +20,7 @@ export interface ExperienceItem {
   bulletPoints: string[];
   technologies: string[];
   logo?: string;
+  activityPhotos?: string[];
 }
 
 export interface ProjectItem {

@@ -9,13 +9,21 @@ const englishContent = {
       "I am a Computer Engineering graduate from Telkom University focused on software engineering, particularly modern mobile and web application development. Experienced in designing and building functional digital solutions ranging from integrated real-time IoT and energy monitoring systems, interactive geospatial mapping platforms, to mobile productivity utility apps. Combining intuitive user interface design with structured, adaptable code architecture oriented towards solving real-world problems.",
   },
   experiences: {
+    magang: {
+      role: "Programmer",
+      period: "November 2026 – May 2027",
+      location: "Bogor City, West Java.",
+      bulletPoints: [
+        "Designed and built the Dokter Azra mobile application, including doctor schedules and leave management features.",
+      ],
+    },
     koperasi: {
       role: "Information and Technology",
       period: "October 2026 – Now",
       location: "Bogor City, West Java.",
       bulletPoints: [
         "Designed and built the official website for Koperasi Produsen Dirga Pangan Mandiri.",
-        "Co-founded the cooperative as one of its founding members.",
+        "Co-founded the producer cooperative as one of its founding members.",
       ],
     },
     "proyek dosen": {

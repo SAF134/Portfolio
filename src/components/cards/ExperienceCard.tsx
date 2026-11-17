@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Briefcase, Users, Calendar, MapPin, Wrench } from "lucide-react";
+import { Briefcase, Users, Calendar, MapPin, Wrench, Camera } from "lucide-react";
 import { ExperienceItem } from "@/data/portfolioData";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/data/translations";
@@ -11,9 +11,10 @@ import { cn } from "@/lib/utils";
 interface ExperienceCardProps {
   experience: ExperienceItem;
   className?: string;
+  onViewPhotos?: () => void;
 }
 
-export function ExperienceCard({ experience, className }: ExperienceCardProps) {
+export function ExperienceCard({ experience, className, onViewPhotos }: ExperienceCardProps) {
   const { language } = useLanguage();
   const t = translations[language];
   const isOrganisasi =
@@ -84,24 +85,37 @@ export function ExperienceCard({ experience, className }: ExperienceCardProps) {
         ))}
       </div>
 
-      {/* Technologies / Tools Footer */}
-      {experience.technologies && experience.technologies.length > 0 && (
-        <div className="pt-5 border-t-2 border-[var(--card-border)] flex flex-wrap items-center gap-2">
-          <div className="flex items-center gap-1.5 text-xs font-mono font-semibold tracking-wider text-[#000000] uppercase mr-1 drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">
-            <Wrench className="w-3.5 h-3.5 text-[#000000]" />
-            <span>{t.experience.toolsLabel}</span>
+      {/* Technologies / Tools Footer & Foto Kegiatan Button */}
+      <div className="pt-5 border-t-2 border-[var(--card-border)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        {experience.technologies && experience.technologies.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <div className="flex items-center gap-1.5 text-xs font-mono font-semibold tracking-wider text-[#000000] uppercase mr-1 drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">
+              <Wrench className="w-3.5 h-3.5 text-[#000000]" />
+              <span>{t.experience.toolsLabel}</span>
+            </div>
+            {experience.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full bg-zinc-50 hover:bg-gradient-to-r hover:from-white hover:to-indigo-50/40 border-2 border-[var(--card-border)] hover:border-black shadow-[0_2px_8px_rgba(0,0,0,0.14)] hover:shadow-[0_6px_16px_rgba(0,0,0,0.22)] hover:scale-105 hover:-translate-y-0.5 active:scale-95 text-[#000000] transition-all duration-150 select-none cursor-default"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0" />
+                <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">{tech}</span>
+              </span>
+            ))}
           </div>
-          {experience.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full bg-zinc-50 hover:bg-gradient-to-r hover:from-white hover:to-indigo-50/40 border-2 border-[var(--card-border)] hover:border-black shadow-[0_2px_8px_rgba(0,0,0,0.14)] hover:shadow-[0_6px_16px_rgba(0,0,0,0.22)] hover:scale-105 hover:-translate-y-0.5 active:scale-95 text-[#000000] transition-all duration-150 select-none cursor-default"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0" />
-              <span className="drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)]">{tech}</span>
-            </span>
-          ))}
-        </div>
-      )}
+        )}
+
+        <button
+          type="button"
+          onClick={onViewPhotos}
+          className="group/btn inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-zinc-900 via-black to-zinc-900 hover:from-black hover:to-zinc-900 text-white text-xs font-semibold shadow-[0_6px_20px_rgba(0,0,0,0.32)] hover:shadow-[0_10px_28px_rgba(0,0,0,0.48)] border-2 border-black hover:border-blue-500/80 hover:scale-[1.02] active:scale-95 transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 shrink-0 sm:ml-auto"
+        >
+          <Camera className="w-3.5 h-3.5 group-hover/btn:scale-110 transition-transform duration-200" />
+          <span className="drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]">
+            {t.experience.btnActivityPhoto}
+          </span>
+        </button>
+      </div>
     </article>
   );
 }
