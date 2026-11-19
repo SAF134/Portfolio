@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
 import { GraduationCap, Calendar, MapPin, BookOpen, Award } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { useLanguage } from "@/context/LanguageContext";
@@ -39,7 +39,7 @@ export function EducationSection() {
                 <div className="flex items-start gap-4">
                   <div className="relative w-12 h-12 rounded-2xl bg-[var(--card-inner-bg)] border-2 border-[var(--card-border)] shadow-[0_4px_12px_rgba(0,0,0,0.12)] overflow-hidden flex items-center justify-center shrink-0 text-zinc-800 group-hover:scale-105 transition-transform duration-300">
                     {item.logo ? (
-                      <Image
+                      <ShimmerImage
                         src={item.logo}
                         alt={`Logo ${item.institution || item.degree}`}
                         fill

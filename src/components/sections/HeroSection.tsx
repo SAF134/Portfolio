@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
 import { Download, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/ui/Icons";
 import { useLanguage } from "@/context/LanguageContext";
@@ -136,7 +136,7 @@ export function HeroSection() {
 
             {/* Main Profile Card Container with Elevated Frame Shadow */}
             <div className="relative w-[280px] sm:w-[320px] md:w-[340px] lg:w-[350px] aspect-[9/16] rounded-[32px] overflow-hidden bg-[var(--card-bg)] border-2 border-[var(--card-border)] shadow-[0_18px_45px_rgba(0,0,0,0.25),0_8px_20px_rgba(37,99,235,0.3)] group-hover:-translate-y-1.5 group-hover:shadow-[0_24px_55px_rgba(0,0,0,0.32),0_10px_24px_rgba(37,99,235,0.4)] transition-all duration-300 ease-out">
-              <Image
+              <ShimmerImage
                 src={profile.heroCardImage}
                 alt="Foto Profil Syauqi Akmal Fadhali"
                 fill

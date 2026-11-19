@@ -2,7 +2,7 @@
 
 import React from "react";
 import { createPortal } from "react-dom";
-import Image from "next/image";
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
 import { motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { CertificateItem } from "@/types/portfolio";
@@ -87,7 +87,7 @@ export function CertificateModal({
 
           {/* Certificate Image Frame (A4 Landscape 29,7 : 21) */}
           <div className="relative w-full max-w-4xl aspect-[297/210] bg-white rounded-xl overflow-hidden shadow-[0_4px_16px_rgba(0,0,0,0.18)] border-2 border-black">
-            <Image
+            <ShimmerImage
               src={certificate.image}
               alt={`${t.certificates.certificateBadge} ${currentIndex + 1}`}
               fill

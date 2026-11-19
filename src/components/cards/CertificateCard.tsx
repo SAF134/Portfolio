@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
 import { Maximize2, Award } from "lucide-react";
 import { CertificateItem } from "@/data/portfolioData";
 import { cn } from "@/lib/utils";
@@ -35,7 +35,7 @@ export function CertificateCard({ certificate, index, className, onClick }: Cert
       {/* A4 Landscape (29,7 : 21 / 1,414:1) Aspect Ratio Image Frame */}
       <div className="relative w-full aspect-[297/210] bg-zinc-50 overflow-hidden">
         {hasImage ? (
-          <Image
+          <ShimmerImage
             src={certificate.image}
             alt={t.certificates.certificateBadge}
             fill

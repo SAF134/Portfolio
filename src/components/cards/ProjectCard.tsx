@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
 import { ExternalLink, Maximize2, FolderKanban, Image as ImageIcon } from "lucide-react";
 import { TechBadge } from "@/components/ui/TechBadge";
 import { ProjectItem } from "@/data/portfolioData";
@@ -38,7 +38,7 @@ export function ProjectCard({ project, index, className, onViewDetail }: Project
       {/* Mockup Preview Container (Strict 16:9 Aspect Ratio) */}
       <div className="relative w-full aspect-[16/9] bg-zinc-100 border-b-2 border-[var(--card-border)] overflow-hidden">
         {hasImage ? (
-          <Image
+          <ShimmerImage
             src={project.mockupImage}
             alt={language === "ID" ? `Pratinjau antarmuka ${project.title}` : `${project.title} interface preview`}
             fill

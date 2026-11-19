@@ -2,7 +2,7 @@
 
 import React from "react";
 import { createPortal } from "react-dom";
-import Image from "next/image";
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
 import { motion } from "framer-motion";
 import { X, ExternalLink, ChevronLeft, ChevronRight, Image as ImageIcon } from "lucide-react";
 import { TechBadge } from "@/components/ui/TechBadge";
@@ -103,7 +103,7 @@ export function ProjectDetailModal({
 
             {/* Mockup Image or Placeholder */}
             {hasImage ? (
-              <Image
+              <ShimmerImage
                 src={project.mockupImage}
                 alt={`${project.title} mockup`}
                 fill

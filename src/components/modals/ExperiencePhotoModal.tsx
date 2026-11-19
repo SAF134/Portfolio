@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import { createPortal } from "react-dom";
-import Image from "next/image";
+import { ShimmerImage } from "@/components/ui/ShimmerImage";
 import { motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Image as ImageIcon } from "lucide-react";
 import { ExperienceItem } from "@/types/portfolio";
@@ -127,16 +127,18 @@ export function ExperiencePhotoModal({
                 </button>
               )}
 
-              <Image
-                key={currentPhoto}
-                src={currentPhoto}
-                alt={`${t.experiencePhotoModal.title} - ${experience.company} (${safeIndex + 1})`}
-                width={0}
-                height={0}
-                sizes="(max-width: 768px) 90vw, 896px"
-                quality={85}
-                className="w-auto h-auto max-w-full max-h-[72vh] object-contain rounded-xl border-2 border-black shadow-[0_4px_16px_rgba(0,0,0,0.18)] bg-white"
-              />
+              <div className="relative flex items-center justify-center min-w-[260px] sm:min-w-[380px] min-h-[220px] sm:min-h-[300px] max-w-full max-h-[72vh] overflow-hidden rounded-xl border-2 border-black shadow-[0_4px_16px_rgba(0,0,0,0.18)] bg-white">
+                <ShimmerImage
+                  key={currentPhoto}
+                  src={currentPhoto}
+                  alt={`${t.experiencePhotoModal.title} - ${experience.company} (${safeIndex + 1})`}
+                  width={1200}
+                  height={800}
+                  sizes="(max-width: 768px) 90vw, 896px"
+                  quality={85}
+                  className="w-auto h-auto max-w-full max-h-[72vh] object-contain"
+                />
+              </div>
 
               {/* Next Button */}
               {totalPhotos > 1 && (

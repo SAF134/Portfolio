@@ -91,7 +91,8 @@ export const portfolioData: PortfolioData = {
         "Menjadi salah satu pendiri koperasi produsen."
       ],
       activityPhotos: [
-        "",
+        "/images/experience/koperasi1.webp",
+        "/images/experience/koperasi2.webp"
       ],
       technologies: ["Next JS", "Typescript", "TailwindCSS"],
       logo: "/images/experience/koperasi-produsen.png"
