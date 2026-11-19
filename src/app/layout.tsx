@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://syauqiaf.my.id"),
   title: "Syauqi-Akmal-Fadhali/Portfolio",
   description:
     "Portfolio profesional Syauqi Akmal Fadhali - Fullstack Developer berpengalaman membangun aplikasi web fungsional, interaktif, dan terukur.",
@@ -30,12 +31,32 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   authors: [{ name: "Syauqi Akmal Fadhali" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Syauqi Akmal Fadhali | Fullstack Developer",
     description:
       "Membangun aplikasi web yang fungsional, interaktif, dan berpusat pada pengalaman pengguna.",
+    url: "https://syauqiaf.my.id",
+    siteName: "Syauqi Akmal Fadhali Portfolio",
+    images: [
+      {
+        url: "/images/profile/foto-profil-syauqi.webp",
+        width: 1200,
+        height: 630,
+        alt: "Syauqi Akmal Fadhali - Portfolio",
+      },
+    ],
     type: "website",
     locale: "id_ID",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Syauqi Akmal Fadhali | Fullstack Developer",
+    description:
+      "Portfolio profesional Syauqi Akmal Fadhali - Fullstack Developer berpengalaman membangun aplikasi web fungsional, interaktif, dan terukur.",
+    images: ["/images/profile/foto-profil-syauqi.webp"],
   },
 };
 
