@@ -72,12 +72,13 @@ export const portfolioData: PortfolioData = {
       period: "November 2026 - Mei 2027",
       location: "Kota Bogor, Jawa Barat.",
       bulletPoints: [
-        "Merancang dan membangun aplikasi mobile dokter azra seperti jadwal dan cuti dokter.",
+        "Merancang dan membangun aplikasi dan website untuk dokter seperti informasi rumah sakit, data pasien, jadwal visite, dan cuti dokter.",
+        "Merancang dan membangun dashboard untuk cuti dokter."
       ],
       activityPhotos: [
         "",
       ],
-      technologies: ["Flutter", "Google Stitch"],
+      technologies: ["Flutter", "Google Stitch", "Figma"],
       logo: "/images/experience/azra.png"
     },
     {

@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://syauqiaf.my.id"),
-  title: "Syauqi-Akmal-Fadhali/Portfolio",
+  title: "Syauqi Akmal Fadhali | Portfolio",
   description:
-    "Portfolio profesional Syauqi Akmal Fadhali - Fullstack Developer berpengalaman membangun aplikasi web fungsional, interaktif, dan terukur.",
+    "Portfolio Syauqi Akmal Fadhali - Fullstack Developer berpengalaman membangun aplikasi web fungsional, interaktif, dan terukur.",
   keywords: [
     "Syauqi Akmal Fadhali",
     "Fullstack Developer",

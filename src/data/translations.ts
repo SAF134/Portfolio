@@ -224,7 +224,7 @@ export const translations: Record<Language, Translations> = {
       toolsHeading: "Tools & Technologies Used",
       linksHeading: "Project Proof & Links",
       openProofBtn: "Open Project Proof",
-      noLinkNotice: "Project proof link has not been added yet (can be configured in portfolioData.ts).",
+      noLinkNotice: "Project proof link has not been added yet.",
       placeholderRatio: "16:9 Ratio",
       placeholderNotice: "No image provided yet",
     },
@@ -239,7 +239,7 @@ export const translations: Record<Language, Translations> = {
       closeAria: "Close activity photos",
       prevAria: "Previous photo",
       nextAria: "Next photo",
-      emptyNotice: "No activity photos have been added yet (can be configured in activityPhotos in src/data/portfolioData.ts).",
+      emptyNotice: "No activity photos have been added yet.",
     },
     footer: {
       copyright: "All Rights Reserved.",

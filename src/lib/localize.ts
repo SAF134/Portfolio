@@ -14,7 +14,8 @@ const englishContent = {
       period: "November 2026 – May 2027",
       location: "Bogor City, West Java.",
       bulletPoints: [
-        "Designed and built the Dokter Azra mobile application, including doctor schedules and leave management features.",
+        "Designing and building applications and websites for doctors, covering areas such as hospital information, patient data, visitation schedules, and doctor leave.",
+        "Designing and building a dashboard for doctor leave."
       ],
     },
     koperasi: {
